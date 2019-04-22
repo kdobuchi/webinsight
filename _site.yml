@@ -1,0 +1,11 @@
+name: "TEST"
+navbar: 
+  title: "アクセス解析"
+  left:
+    - text: "HOME"
+      href: index.html
+    - text: "エラー状況"
+      href: report.html
+output:
+  html_document:
+output_dir: "docs"

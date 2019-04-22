@@ -1,0 +1,72 @@
+
+---
+title: "投信提供情報のエラーチェック"
+author: '@kenji_dobuchi'
+date: "`r format(Sys.time(), '%Y/%m/%d %H:%M:%OS')`"
+output: html_document
+---
+
+```{r include=FALSE}
+# パッケージの読み込みなどの前処理。レポートには表示しません。
+require("RPostgreSQL")
+library(knitr)
+library(pander)
+library(DBI)
+library(ggplot2)
+library(rvest)
+library(tidyverse)
+library(magrittr)
+library(reshape2)
+library(stringr)
+
+pw <- {
+  "kabu"
+}
+
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "postgres",
+                 host = "localhost", port = 5432,
+                 user = "postgres", password = pw)
+rm(pw) # removes the password
+
+dbExistsTable(con, "error_check")
+myTable <- dbReadTable(con,"error_check")
+myTable[1] <- data.frame(lapply(myTable[1],iconv,from="utf-8",to="cp932"))
+
+
+dbExistsTable(con, "plus_minus")
+plus_minus <- dbReadTable(con,"plus_minus")
+plus_minus[1] <- data.frame(lapply(plus_minus[1],iconv,from="utf-8",to="cp932"))
+
+
+
+```
+
+
+## クライアントごとのエラー件数
+
+```{r results='asis'}
+kable(myTable)
+```
+
+## 上がった投信と下がった投信の銘柄数
+
+```{r results='asis'}
+kable(plus_minus)
+```
+
+## 図表
+
+```{r }
+
+trans_formed <-   plus_minus %>%
+  select(company,plus,minus) %>%
+  gather(key = plus,value = minus, -company) # そのまま維持したい項目は「-」をつけて記載しておく
+  
+tgMapping = ggplot(trans_formed,aes(x = company,y = minus, fill=plus))
+tgMapping + geom_bar(stat="identity",position = "dodge")  +  scale_fill_brewer(palette = "Pastel1") + labs(fill = "ポジネガ銘柄数") + xlab("") + ylab("銘柄数")
+```
+
+
+
+
