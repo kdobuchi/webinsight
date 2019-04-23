@@ -1,0 +1,76 @@
+---
+title: "運用レポート利用状況報告"
+author: '@kenji_dobuchi'
+date: "`r format(Sys.time(), '%Y/%m/%d %H:%M:%OS')`"
+output: html_document
+---
+
+```{r include=FALSE}
+# パッケージの読み込みなどの前処理。レポートには表示しません。
+require("RPostgreSQL")
+library(knitr)
+library(pander)
+library(DBI)
+library(ggplot2)
+library(rvest)
+library(tidyverse)
+library(magrittr)
+library(reshape2)
+library(stringr)
+
+pw <- {
+  "kabu"
+}
+
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "postgres",
+                 host = "localhost", port = 5432,
+                 user = "postgres", password = pw)
+rm(pw) # removes the password
+
+data_all <- dbGetQuery(con,"select * from public.web_explore_toshin_rep")
+
+
+data_all[3] <- data.frame(lapply(data_all[3],iconv,from="utf-8",to="cp932"))
+data_all[4] <- data.frame(lapply(data_all[4],iconv,from="utf-8",to="cp932"))
+data_all[5] <- data.frame(lapply(data_all[5],iconv,from="utf-8",to="cp932"))
+data_all[6] <- data.frame(lapply(data_all[6],iconv,from="utf-8",to="cp932"))
+columnList <- c("id", "name", "sales_co", "man_co","nickname","weekly_rep","monthly_rep")
+```
+
+
+## 三菱UFJ国際
+
+```{r results='asis'}
+mitubushi <- data_all[data_all$man_co=="三菱UFJ国際",]
+mitubushi <- mitubushi[, columnList] #access data
+kable(mitubushi)
+```
+
+## 野村アセット
+
+```{r results='asis'}
+nomura <- data_all[data_all$man_co=="野村アセット",]
+nomura <- nomura[, columnList] #access data
+kable(nomura)
+```
+
+
+
+##ピクテ投信
+
+```{r results='asis'}
+pikute <- data_all[data_all$man_co=="ピクテ",]
+pikute <- pikute[, columnList] #access data
+kable(pikute)
+```
+
+
+
+## 三井住友DS
+
+```{r results='asis'}
+ds <- data_all[data_all$man_co=="三井住友DS",]
+kable(ds)
+```
+

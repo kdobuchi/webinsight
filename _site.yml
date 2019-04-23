@@ -6,6 +6,8 @@ navbar:
       href: index.html
     - text: "エラー状況"
       href: report.html
+    - text: "運用レポート利用状況報告"
+      href: monthly_report_toshin.html
 output:
   html_document:
 output_dir: "docs"
