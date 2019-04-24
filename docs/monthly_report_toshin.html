@@ -307,7 +307,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">運用レポート利用状況報告</h1>
 <h4 class="author"><span class="citation">@kenji_dobuchi</span></h4>
-<h4 class="date">2019/04/24 15:09:17</h4>
+<h4 class="date">2019/04/24 15:15:41</h4>
 
 </div>
 
@@ -3880,5521 +3880,940 @@ kable(pikute)</code></pre>
 <h2>三井住友DS</h2>
 <pre class="r"><code>DS &lt;- subset(all_data2 , asset_manage_co == &quot;三井住友DS&quot;)
 DS  &lt;- DS[order(DS$sales_co, DS$fund_code),]
-kable(ds)</code></pre>
+kable(DS)</code></pre>
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">serial</th>
-<th align="left">id</th>
-<th align="left">name</th>
-<th align="left">sales_co</th>
-<th align="left">man_co</th>
+<th align="left">asset_manage_co</th>
+<th align="left">fund_true_name</th>
 <th align="left">nickname</th>
+<th align="left">fund_code</th>
+<th align="left">sales_co</th>
 <th align="left">weekly_rep</th>
 <th align="left">monthly_rep</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>33</td>
-<td align="right">33</td>
-<td align="left">MRF75</td>
-<td align="left">三井住友MRF</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>167</td>
-<td align="right">166</td>
-<td align="left">7931101A</td>
-<td align="left">三井住友・ＤＣバランスファンド（安定型）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>168</td>
-<td align="right">167</td>
-<td align="left">7931201A</td>
-<td align="left">三井住友・ＤＣバランスファンド(安定成長)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>169</td>
-<td align="right">168</td>
-<td align="left">7931301A</td>
-<td align="left">三井住友・ＤＣバランスファンド（成長型）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>170</td>
-<td align="right">169</td>
-<td align="left">7931401A</td>
-<td align="left">三井住友・ＤＣ国内株式アクティブＳ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>171</td>
-<td align="right">170</td>
-<td align="left">7931501A</td>
-<td align="left">三井住友・ＤＣ国内債券アクティブ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>172</td>
-<td align="right">171</td>
-<td align="left">7931601A</td>
-<td align="left">三井住友・ＤＣ外国株式アクティブ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>173</td>
-<td align="right">172</td>
-<td align="left">7931701A</td>
-<td align="left">三井住友・ＤＣ外国債券アクティブ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>206</td>
-<td align="right">205</td>
-<td align="left">79311001</td>
-<td align="left">三井住友・日本株グロース・オープン</td>
-<td align="left">藍澤証券 ＳＢＩ証券 共和証券 東洋証券 内藤証券 北洋証券 松井証券 三菱ＵＦＪモルガン・スタンレー証券 むさし証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">勝ち組！</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>207</td>
-<td align="right">206</td>
-<td align="left">79311011</td>
-<td align="left">三井住友・ライフビュー・日本株式ファンド</td>
-<td align="left">ＳＢＩ証券 松井証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>208</td>
-<td align="right">207</td>
-<td align="left">79311016</td>
-<td align="left">三井住友・ワールド・パッケージ・オープン</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>209</td>
-<td align="right">208</td>
-<td align="left">79311021</td>
-<td align="left">チャイナ・フロンティアオープン</td>
-<td align="left">池田泉州ＴＴ証券 ＳＢＩ証券 高木証券 東海東京証券 東洋証券 内藤証券 西日本シティＴＴ証券 マネックス証券 丸八証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>210</td>
-<td align="right">209</td>
-<td align="left">79311946</td>
-<td align="left">スーパー小型株ポートフォリオ</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 高木証券 東洋証券 内藤証券 西村証券 二浪証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>211</td>
-<td align="right">210</td>
-<td align="left">79311949</td>
-<td align="left">三井住友・日本株オープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 極東証券 高木証券 松井証券 マネックス証券 楽天証券 三井住友銀行 群馬銀行 筑波銀行 西日本シティ銀行 宮崎銀行 熊本銀行 富山第一銀行 長野銀行 名古屋銀行 みなと銀行 ソニー銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>212</td>
-<td align="right">211</td>
-<td align="left">7931197A</td>
-<td align="left">三井住友・株式アナライザー・オープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 極東証券 高木証券 東洋証券 マネックス証券 丸三証券 楽天証券 北都銀行 みなと銀行 宮崎太陽銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>213</td>
-<td align="right">212</td>
-<td align="left">7931198B</td>
-<td align="left">三井住友・２２５オープン</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 極東証券 大和証券 高木証券 マネックス証券 楽天証券 三井住友銀行 みなと銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>214</td>
-<td align="right">213</td>
-<td align="left">79311997</td>
-<td align="left">三井住友・スーパーアクティブ・オープン</td>
-<td align="left">藍澤証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 高木証券 東洋証券 内藤証券 丸三証券 三菱ＵＦＪモルガン・スタンレー証券 楽天証券 住友生命</td>
-<td align="left">三井住友DS</td>
-<td align="left">元気！</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>215</td>
-<td align="right">214</td>
-<td align="left">79312009</td>
-<td align="left">三井住友・年金プラン５０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>216</td>
-<td align="right">215</td>
-<td align="left">79312011</td>
-<td align="left">三井住友・ライフビュー・日本債券ファンド</td>
-<td align="left">ＳＢＩ証券 松井証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>217</td>
-<td align="right">216</td>
-<td align="left">79312013</td>
-<td align="left">三井住友・ＤＣ年金プランＴＹ２０２０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>218</td>
-<td align="right">217</td>
-<td align="left">79312021</td>
-<td align="left">三井住友・日本債券インデックスＦ</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 東海東京証券 松井証券 マネックス証券 楽天証券 みずほ銀行 三井住友銀行 住友生命 大樹生命 三井住友海上火災</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>219</td>
-<td align="right">218</td>
-<td align="left">79312023</td>
-<td align="left">三井住友・日本債券年金ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>220</td>
-<td align="right">219</td>
-<td align="left">79313007</td>
-<td align="left">三井住友・グローバル株式年金ファンドＡ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>221</td>
-<td align="right">220</td>
-<td align="left">79313008</td>
-<td align="left">三井住友・バリュー株式年金ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>222</td>
-<td align="right">221</td>
-<td align="left">79313009</td>
-<td align="left">三井住友・年金プラン７０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>223</td>
-<td align="right">222</td>
-<td align="left">79313011</td>
-<td align="left">三井住友・ライフビュー・バランスＦ３０</td>
-<td align="left">直販 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 松井証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>224</td>
-<td align="right">223</td>
-<td align="left">79313013</td>
-<td align="left">三井住友・ＤＣ年金プランＴＹ２０３０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>225</td>
-<td align="right">224</td>
-<td align="left">79313995</td>
-<td align="left">シナプス</td>
-<td align="left">三菱ＵＦＪモルガン・スタンレー証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>226</td>
-<td align="right">225</td>
-<td align="left">79314007</td>
-<td align="left">三井住友・グローバル株式年金ファンドＢ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>227</td>
-<td align="right">226</td>
-<td align="left">79314009</td>
-<td align="left">三井住友・年金プラン３０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>228</td>
-<td align="right">227</td>
-<td align="left">79314011</td>
-<td align="left">三井住友・ライフビュー・バランスＦ５０</td>
-<td align="left">直販 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 松井証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>229</td>
-<td align="right">228</td>
-<td align="left">79314013</td>
-<td align="left">三井住友・ＤＣ年金プランＴＹ２０４０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>230</td>
-<td align="right">229</td>
-<td align="left">79315007</td>
-<td align="left">三井住友・日経２２５オープン</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 香川銀行 大正銀行 徳島銀行 住友生命</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>231</td>
-<td align="right">230</td>
-<td align="left">79315011</td>
-<td align="left">三井住友・ライフビュー・バランスＦ７０</td>
-<td align="left">直販 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 松井証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>232</td>
-<td align="right">231</td>
-<td align="left">79315999</td>
-<td align="left">三井住友・日本株・成長力ファンド</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 極東証券 高木証券 三木証券 みずほ証券 三菱ＵＦＪモルガン・スタンレー証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">杉の子</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>233</td>
-<td align="right">232</td>
-<td align="left">79316007</td>
-<td align="left">三井住友・ＤＣ 日本株式リサーチファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>234</td>
-<td align="right">233</td>
-<td align="left">79318013</td>
-<td align="left">三井住友・ＤＣ年金プランＴＹ２０１０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>235</td>
-<td align="right">234</td>
-<td align="left">7931901A</td>
-<td align="left">三井住友・ＤＣ年金日本債券ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>236</td>
-<td align="right">235</td>
-<td align="left">7931A01A</td>
-<td align="left">三井住友・ＤＣ年金日本株式２２５ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>240</td>
-<td align="right">236</td>
-<td align="left">7931C01A</td>
-<td align="left">三井住友・ニュー・チャイナ・ファンド</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 岩井コスモ証券 エイチ・エス証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 岡三証券 岡三オンライン証券 カブドットコム証券 木村証券 極東証券 ぐんぎん証券 スターツ証券 大熊本証券 高木証券 ちばぎん証券 東海東京証券 東洋証券 内藤証券 西日本シティＴＴ証券 日産証券 野村証券 浜銀ＴＴ証券 ばんせい証券 ひろぎん証券 フィデリティ証券 二浪証券 ほくほくＴＴ証券 松井証券 マネックス証券 丸三証券 丸八証券 三木証券 三菱ＵＦＪモルガン・スタンレー証券 水戸証券 むさし証券 明和証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 きらぼし銀行 群馬銀行 南都銀行 西日本シティ銀行 北都銀行 北國銀行 三重銀行 武蔵野銀行 富山第一銀行 名古屋銀行 福島銀行 もみじ銀行 ソニー銀行 あぶくま信金 飯田信金 石巻信金 愛媛信金 大垣西濃信金 おおかわ信金 大阪信金 大阪シティ信金 岡崎信金 おかやま信金 鹿児島相互信金 金沢信金 亀有信金 観音寺信金 北伊勢上野信金 北おおさか信金 吉備信金 岐阜信金 京都信金 京都中央信金 京都北都信金 桐生信金 呉信金 神戸信金 さがみ信金 しずおか信金 しののめ信金 芝信金 城北信金 新庄信金 静清信金 西武信金 瀬戸信金 空知信金 大地みらい信金 高崎信金 高松信金 玉島信金 多摩信金 知多信金 東京東信金 東濃信金 長野信金 奈良信金 浜松磐田信金 播州信金 備北信金 平塚信金 広島信金 福井信金 福岡ひびき信金 北海道信金 水島信金 室蘭信金 盛岡信金 杜の都信金 大和信金 米子信金 留萌信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>245</td>
-<td align="right">241</td>
-<td align="left">79312032</td>
-<td align="left">三井住友・日本株式インデックス年金Ｆ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>246</td>
-<td align="right">242</td>
-<td align="left">79311032</td>
-<td align="left">三井住友・ヨーロッパ国債ファンド</td>
-<td align="left">岩井コスモ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 岡安証券 カブドットコム証券 極東証券 証券ジャパン 大熊本証券 高木証券 中銀証券 東洋証券 内藤証券 日産証券 フィデリティ証券 北洋証券 松井証券 マネックス証券 三木証券 水戸証券 むさし証券 明和証券 楽天証券 リテラ・クレア証券 京都銀行 スルガ銀行 中国銀行 愛媛銀行 北日本銀行 長野銀行 福島銀行 北洋銀行 みなと銀行 ジャパンネット銀行 観音寺信金 北群馬信金 京都北都信金 桐生信金 熊本第一信金 三条信金 新庄信金 須賀川信金 高松信金 但馬信金 多摩信金 知多信金 東京東信金 長野信金 西尾信金 姫路信金 平塚信金 大和信金 結城信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>256</td>
-<td align="right">252</td>
-<td align="left">79311036</td>
-<td align="left">三井住友・豪ドル債ファンド</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 高木証券 内藤証券 むさし証券 明和証券 楽天証券 三井住友銀行 きらぼし銀行 東京スター銀行 徳島銀行 ジャパンネット銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>263</td>
-<td align="right">261</td>
-<td align="left">79311039</td>
-<td align="left">三井住友・中小型株ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 岡三オンライン証券 岡三にいがた証券 カブドットコム証券 極東証券 ＧＭＯクリック証券 高木証券 東洋証券 内藤証券 ひろぎん証券 松井証券 マネックス証券 明和証券 楽天証券 三菱ＵＦＪ信託銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>273</td>
-<td align="right">271</td>
-<td align="left">79311041</td>
-<td align="left">三井住友・グローバル・リート・オープン</td>
-<td align="left">藍澤証券 あかつき証券 いちよし証券 岩井コスモ証券 エイチ・エス証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 おきぎん証券 香川証券 カブドットコム証券 木村証券 九州ＦＧ証券 ごうぎん証券 四国アライアンス証券 スターツ証券 高木証券 ちばぎん証券 中銀証券 東洋証券 とちぎんTT証券 内藤証券 ＰＷＭ日本証券 ひろぎん証券 フィデリティ証券 フィリップ証券 二浪証券 松井証券 マネックス証券 丸八証券 むさし証券 明和証券 楽天証券 リテラ・クレア証券 ワイエム証券 あおぞら銀行 青森銀行 伊予銀行 北九州銀行 きらぼし銀行 山陰合同銀行 千葉興業銀行 富山銀行 肥後銀行 北國銀行 山口銀行 仙台銀行 みなと銀行 もみじ銀行 ジャパンネット銀行 会津信金 青い森信金 青木信金 朝日信金 旭川信金 足利小山信金 足立成和信金 あぶくま信金 尼崎信金 飯田信金 飯塚信金 石巻信金 伊万里信金 上田信金 愛媛信金 遠州信金 青梅信金 おおかわ信金 大阪信金 大阪シティ信金 大田原信金 大牟田柳川信金 おかやま信金 帯広信金 鹿児島相互信金 柏崎信金 金沢信金 鹿沼相互信金 亀有信金 川口信金 川崎信金 北伊勢上野信金 北おおさか信金 北群馬信金 吉備信金 京都中央信金 京都北都信金 呉信金 熊本第一信金 桑名三重信金 甲府信金 神戸信金 郡山信金 湖東信金 埼玉県信金 さがみ信金 佐野信金 三条信金 滋賀中央信金 しずおか信金 しののめ信金 芝信金 城北信金 白河信金 新宮信金 新庄信金 巣鴨信金 諏訪信金 静清信金 瀬戸信金 仙南信金 空知信金 大地みらい信金 高崎信金 高鍋信金 玉島信金 但馬信金 多摩信金 知多信金 中南信金 東京東信金 東濃信金 東予信金 栃木信金 鳥取信金 豊川信金 豊田信金 長浜信金 長野信金 奈良信金 奈良中央信金 新潟信金 西尾信金 西中国信金 のと共栄信金 八幡信金 浜松磐田信金 播州信金 半田信金 飯能信金 備前信金 備北信金 ひまわり信金 姫路信金 兵庫信金 平塚信金 福井信金 福岡ひびき信金 碧海信金 北門信金 北海道信金 松本信金 三島信金 水島信金 水戸信金 宮城第一信金 室蘭信金 杜の都信金 焼津信金 大和信金 結城信金 横浜信金 米子信金 留萌信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">世界の大家さん</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>282</td>
-<td align="right">280</td>
-<td align="left">79311046</td>
-<td align="left">三井住友グローバルリートＯＰ(３ヵ月決算)</td>
-<td align="left">ＳＢＩ証券 高木証券 楽天証券 アイオー信金 青木信金 朝日信金 旭川信金 足立成和信金 尼崎信金 石巻信金 大垣西濃信金 大阪シティ信金 帯広信金 遠賀信金 鹿児島信金 鹿児島相互信金 蒲郡信金 観音寺信金 北伊勢上野信金 北おおさか信金 きのくに信金 京都信金 京都中央信金 京都北都信金 桐生信金 熊本中央信金 桑名三重信金 神戸信金 埼玉県信金 さがみ信金 佐野信金 上越信金 静清信金 西武信金 高崎信金 高松信金 高山信金 高鍋信金 瀧野川信金 知多信金 中南信金 東京東信金 東春信金 東濃信金 鳥取信金 豊川信金 長浜信金 長岡信金 中兵庫信金 奈良中央信金 沼津信金 のと共栄信金 広島信金 福岡ひびき信金 碧海信金 北海道信金 宮古信金 室蘭信金 盛岡信金 杜の都信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">世界ビル紀行</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>285</td>
-<td align="right">283</td>
-<td align="left">79311047</td>
-<td align="left">三井住友・メインランド・チャイナ・ＯＰ</td>
-<td align="left">内藤証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>292</td>
-<td align="right">292</td>
-<td align="left">COM_79</td>
-<td align="left"></td>
-<td align="left">21 31</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>297</td>
-<td align="right">297</td>
-<td align="left">7931104B</td>
-<td align="left">ウツミ屋 日本株ファンド「あゆみ」</td>
-<td align="left">ひろぎん証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>298</td>
-<td align="right">298</td>
-<td align="left">7931204B</td>
-<td align="left">三井住友・ＤＣ外国株式インデックスＦ Ｓ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>299</td>
-<td align="right">299</td>
-<td align="left">7931304B</td>
-<td align="left">三井住友・ＤＣ外国債券インデックスＦ Ｓ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>312</td>
-<td align="right">312</td>
-<td align="left">79311055</td>
-<td align="left">三井住友・グローバル好配当株式オープン</td>
-<td align="left">藍澤証券 あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 カブドットコム証券 極東証券 高木証券 ちばぎん証券 内藤証券 日産証券 ＰＷＭ日本証券 ひろぎん証券 フィデリティ証券 二浪証券 松井証券 マネックス証券 むさし証券 明和証券 楽天証券 リテラ・クレア証券 みなと銀行 ジャパンネット銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">世界の豆の木</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>318</td>
-<td align="right">318</td>
-<td align="left">79311057</td>
-<td align="left">三井住友・アジア・オセアニア好配当株式ＯＰ</td>
-<td align="left">あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 カブドットコム証券 極東証券 ごうぎん証券 ＧＭＯクリック証券 静岡東海証券 高木証券 ちばぎん証券 東洋証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 松井証券 マネックス証券 水戸証券 むさし証券 明和証券 豊証券 楽天証券 リテラ・クレア証券 大分銀行 関西みらい銀行 京都銀行 きらぼし銀行 山陰合同銀行 四国銀行 十八銀行 常陽銀行 南都銀行 福井銀行 北陸銀行 北國銀行 横浜銀行 香川銀行 京葉銀行 大光銀行 徳島銀行 名古屋銀行 みなと銀行 ソニー銀行 ジャパンネット銀行 おかやま信金 岐阜信金 広島信金 沖縄県労働金庫 近畿労働金庫 九州労働金庫 四国労働金庫 静岡県労働金庫 中央労働金庫 中国労働金庫 東海労働金庫 東北労働金庫 長野県労働金庫 新潟県労働金庫 北陸労働金庫 北海道労働金庫</td>
-<td align="left">三井住友DS</td>
-<td align="left">椰子の実（やしのみ）</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>321</td>
-<td align="right">321</td>
-<td align="left">79311059</td>
-<td align="left">グローバル３資産ファンド</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 ぐんぎん証券 高木証券 東海東京証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ひろぎん証券 ほくほくＴＴ証券 三木証券 楽天証券 ワイエム証券 あおぞら銀行 足利銀行 大垣共立銀行 関西みらい銀行 紀陽銀行 きらぼし銀行 群馬銀行 四国銀行 第四銀行 南都銀行 北都銀行 武蔵野銀行 山梨中央銀行 愛媛銀行 北日本銀行 熊本銀行 大光銀行 長野銀行 北洋銀行 みなと銀行 ジャパンネット銀行 京都信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">ワンプレートランチ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>322</td>
-<td align="right">322</td>
-<td align="left">79312059</td>
-<td align="left">三井住友・ＤＣ年金バランス３０(債券重点)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">マイパッケージ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>323</td>
-<td align="right">323</td>
-<td align="left">79313059</td>
-<td align="left">三井住友・ＤＣ年金バランス５０(標準)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">マイパッケージ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>324</td>
-<td align="right">324</td>
-<td align="left">79314059</td>
-<td align="left">三井住友・ＤＣ年金バランス７０(株式重点)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">マイパッケージ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>378</td>
-<td align="right">378</td>
-<td align="left">7931105A</td>
-<td align="left">三井住友・フォーカス・ジャパン・オープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 東洋証券 日産証券 松井証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 ソニー銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>392</td>
-<td align="right">392</td>
-<td align="left">79311064</td>
-<td align="left">三井住友・グローバル・リートＯＰ(１年決算)</td>
-<td align="left">いちよし証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 ごうぎん証券 高木証券 フィデリティ証券 松井証券 マネックス証券 楽天証券 ワイエム証券 青森銀行 山陰合同銀行 仙台銀行 旭川信金 足利小山信金 足立成和信金 あぶくま信金 尼崎信金 新井信金 飯塚信金 愛媛信金 遠州信金 大阪信金 柏崎信金 川口信金 川崎信金 北伊勢上野信金 北おおさか信金 桐生信金 呉信金 桑名三重信金 湖東信金 さがみ信金 滋賀中央信金 芝信金 城北信金 白河信金 静清信金 高崎信金 玉島信金 中南信金 東京東信金 東濃信金 豊川信金 長浜信金 長野信金 奈良信金 奈良中央信金 新潟信金 西中国信金 沼津信金 のと共栄信金 飯能信金 兵庫信金 平塚信金 水島信金 横浜信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">世界の大家さん（１年決算型）</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>393</td>
-<td align="right">393</td>
-<td align="left">79312064</td>
-<td align="left">三井住友・インド・中国株オープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 カブドットコム証券 高木証券 東洋証券 内藤証券 フィデリティ証券 松井証券 マネックス証券 むさし証券 明和証券 めぶき証券 楽天証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>399</td>
-<td align="right">397</td>
-<td align="left">79311066</td>
-<td align="left">世界高金利債券ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 マネックス証券 水戸証券 楽天証券 関西みらい銀行 東北銀行 大光銀行 南日本銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">債券万博</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>401</td>
-<td align="right">399</td>
-<td align="left">79311067</td>
-<td align="left">グローバル不動産投信(隔月決算型)</td>
-<td align="left">愛媛銀行 きらやか銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">家主生活</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>402</td>
-<td align="right">400</td>
-<td align="left">79312067</td>
-<td align="left">三井住友・グローバル・リート・プラス</td>
-<td align="left">いちよし証券 ＳＢＩ証券 カブドットコム証券 高木証券 東洋証券 内藤証券 日産証券 マネックス証券 明和証券 楽天証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>408</td>
-<td align="right">406</td>
-<td align="left">79311069</td>
-<td align="left">三井住友グローバル債券オープン</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>420</td>
-<td align="right">418</td>
-<td align="left">79311005</td>
-<td align="left">三井住友・げんきシニアライフ・オープン</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 今村証券 岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 岡三オンライン証券 岡安証券 カブドットコム証券 ぐんぎん証券 ＧＭＯクリック証券 高木証券 東海東京証券 東洋証券 内藤証券 中原証券 西日本シティＴＴ証券 野村証券 浜銀ＴＴ証券 播陽証券 フィデリティ証券 二浪証券 ほくほくＴＴ証券 松井証券 マネックス証券 水戸証券 楽天証券 リテラ・クレア証券 ワイエム証券 新生銀行 足利銀行 静岡銀行 親和銀行 福岡銀行 愛媛銀行 香川銀行 熊本銀行 京葉銀行 東日本銀行 ソニー銀行 イオン銀行 アイオー信金 朝日信金 足立成和信金 いちい信金 青梅信金 大阪シティ信金 大牟田柳川信金 帯広信金 蒲郡信金 きのくに信金 京都信金 京都北都信金 呉信金 さわやか信金 三条信金 しののめ信金 城北信金 瀬戸信金 東京東信金 鳥取信金 豊川信金 奈良信金 奈良中央信金 西尾信金 飯能信金 兵庫信金 平塚信金 大和信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>429</td>
-<td align="right">427</td>
-<td align="left">7931106C</td>
-<td align="left">ニュー・グローバル・バランス・ファンド</td>
-<td align="left">常陽銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">世界一周</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>439</td>
-<td align="right">438</td>
-<td align="left">79311074</td>
-<td align="left">三井住友・中国Ａ株・香港株オープン</td>
-<td align="left">高木証券 東洋証券 明和証券 中国銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>443</td>
-<td align="right">442</td>
-<td align="left">79312074</td>
-<td align="left">三井住友Ａ株メインランドチャイナオープン</td>
-<td align="left">ＳＢＩ証券 内藤証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>458</td>
-<td align="right">457</td>
-<td align="left">79311077</td>
-<td align="left">三井住友・アジア４大成長国オープン</td>
-<td align="left">ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 東洋証券 内藤証券 松井証券 マネックス証券 三木証券 楽天証券 リテラ・クレア証券 みなと銀行 ジャパンネット銀行 京都信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>487</td>
-<td align="right">487</td>
-<td align="left">7931207C</td>
-<td align="left">三井住友・アジア・オセアニア好配当株式Ｆ</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">アジアンスター</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>488</td>
-<td align="right">488</td>
-<td align="left">7931107C</td>
-<td align="left">アセアン成長国株ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 内藤証券 フィデリティ証券 松井証券 マネックス証券 水戸証券 楽天証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>489</td>
-<td align="right">489</td>
-<td align="left">79311081</td>
-<td align="left">グローバル高金利通貨ファンド</td>
-<td align="left">池田泉州ＴＴ証券 ＳＢＩ証券 カブドットコム証券 高木証券 東海東京証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 マネックス証券 楽天証券 ワイエム証券 仙台銀行 東京スター銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">プレミアムエイト</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>499</td>
-<td align="right">499</td>
-<td align="left">79311083</td>
-<td align="left">ＤＣニュー・チャイナ・ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>500</td>
-<td align="right">500</td>
-<td align="left">79312083</td>
-<td align="left">ＤＣグローバル・リート・オープン</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">世界ビルコレクション</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>506</td>
-<td align="right">1163</td>
-<td align="left">79315146</td>
-<td align="left">ＮＹダウ・ジョーンズ指数ＯＰ(ヘッジなし)</td>
-<td align="left">三井住友銀行 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>523</td>
-<td align="right">519</td>
-<td align="left">79313083</td>
-<td align="left">ＳＭＡＭ・ＧバランスＦ(機動的資産配分)</td>
-<td align="left">直販 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 松井証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">資産配分おまかせくん</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>524</td>
-<td align="right">520</td>
-<td align="left">79314083</td>
-<td align="left">ＤＣターゲットイヤーＦ２０２０（４資産）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>525</td>
-<td align="right">521</td>
-<td align="left">79315083</td>
-<td align="left">ＤＣターゲットイヤーＦ２０２５（４資産）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>526</td>
-<td align="right">522</td>
-<td align="left">79316083</td>
-<td align="left">ＤＣターゲットイヤーＦ２０３０（４資産）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>527</td>
-<td align="right">523</td>
-<td align="left">79317083</td>
-<td align="left">ＤＣターゲットイヤーＦ２０３５（４資産）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>528</td>
-<td align="right">524</td>
-<td align="left">79318083</td>
-<td align="left">ＤＣターゲットイヤーＦ２０４０（４資産）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>529</td>
-<td align="right">525</td>
-<td align="left">79319083</td>
-<td align="left">ＤＣターゲットイヤーＦ２０４５（４資産）</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>531</td>
-<td align="right">527</td>
-<td align="left">79311086</td>
-<td align="left">三井住友・ロシア株式オープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 ＧＭＯクリック証券 東洋証券 松井証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>585</td>
-<td align="right">583</td>
-<td align="left">79311094</td>
-<td align="left">米国ハイ・イールド債券Ｆ(為替ヘッジ型)</td>
-<td align="left">岩井コスモ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 スターツ証券 高木証券 ちばぎん証券 東洋証券 内藤証券 日産証券 播陽証券 ひろぎん証券 松井証券 マネックス証券 水戸証券 むさし証券 明和証券 楽天証券 あおぞら銀行 紀陽銀行 南都銀行 三重銀行 ジャパンネット銀行 岐阜信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>586</td>
-<td align="right">584</td>
-<td align="left">79312094</td>
-<td align="left">米国ハイ・イールド債券Ｆ(ノーヘッジ型)</td>
-<td align="left">岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 スターツ証券 高木証券 ちばぎん証券 東洋証券 日産証券 ひろぎん証券 松井証券 マネックス証券 水戸証券 むさし証券 明和証券 楽天証券 あおぞら銀行 紀陽銀行 南都銀行 福井銀行 三重銀行 ジャパンネット銀行 イオン銀行 朝日信金 尼崎信金 大阪信金 蒲郡信金 観音寺信金 北伊勢上野信金 北群馬信金 桐生信金 呉信金 桑名三重信金 しののめ信金 瀬戸信金 高松信金 東京東信金 東春信金 奈良信金 浜松磐田信金 播州信金 飯能信金 姫路信金 福井信金 大和信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>588</td>
-<td align="right">586</td>
-<td align="left">79311095</td>
-<td align="left">コーポレート・ボンド・インカム(為替ヘッジ)</td>
-<td align="left">藍澤証券 あかつき証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 ごうぎん証券 高木証券 とうほう証券 東洋証券 内藤証券 浜銀ＴＴ証券 播陽証券 百五証券 フィデリティ証券 北洋証券 松井証券 マネックス証券 明和証券 豊証券 楽天証券 ワイエム証券 三井住友銀行 新生銀行 青森銀行 阿波銀行 岩手銀行 大分銀行 北九州銀行 紀陽銀行 京都銀行 きらぼし銀行 群馬銀行 山陰合同銀行 清水銀行 十八銀行 十六銀行 常陽銀行 千葉興業銀行 中国銀行 東邦銀行 富山銀行 南都銀行 百五銀行 北越銀行 北都銀行 北陸銀行 北海道銀行 山形銀行 山口銀行 横浜銀行 香川銀行 京葉銀行 大正銀行 中京銀行 徳島銀行 栃木銀行 トマト銀行 富山第一銀行 長野銀行 名古屋銀行 東日本銀行 福島銀行 北洋銀行 みなと銀行 もみじ銀行 ジャパンネット銀行 イオン銀行 信金中央金庫 大阪信金 大阪シティ信金 柏崎信金 川崎信金 観音寺信金 北伊勢上野信金 きのくに信金 桐生信金 桑名三重信金 コザ信金 埼玉県信金 しののめ信金 高松信金 玉島信金 但馬信金 知多信金 東京東信金 東濃信金 豊川信金 奈良信金 西中国信金 浜松磐田信金 姫路信金 兵庫信金 福岡ひびき信金 水戸信金 大和信金 結城信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">泰平航路</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>589</td>
-<td align="right">587</td>
-<td align="left">79312095</td>
-<td align="left">コーポレート・ボンド・インカム(ノーヘッジ)</td>
-<td align="left">藍澤証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 ごうぎん証券 高木証券 中銀証券 とうほう証券 東洋証券 内藤証券 浜銀ＴＴ証券 播陽証券 フィデリティ証券 松井証券 マネックス証券 明和証券 豊証券 楽天証券 ワイエム証券 三井住友銀行 青森銀行 阿波銀行 岩手銀行 北九州銀行 紀陽銀行 山陰合同銀行 清水銀行 千葉興業銀行 富山銀行 南都銀行 北越銀行 北都銀行 北海道銀行 山口銀行 横浜銀行 香川銀行 大正銀行 中京銀行 東和銀行 徳島銀行 トマト銀行 富山第一銀行 東日本銀行 福島銀行 もみじ銀行 イオン銀行 青木信金 あぶくま信金 大阪シティ信金 柏崎信金 川崎信金 滋賀中央信金 しののめ信金 しまね信金 白河信金 西武信金 瀬戸信金 高崎信金 知多信金 東京東信金 東濃信金 長野信金 奈良信金 のと共栄信金 浜松磐田信金 兵庫信金 広島信金 碧海信金 水戸信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">泰平航路</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>618</td>
-<td align="right">617</td>
-<td align="left">79311098</td>
-<td align="left">香港ハンセン指数ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 ごうぎん証券 ＧＭＯクリック証券 高木証券 東洋証券 松井証券 マネックス証券 楽天証券 三井住友銀行 大分銀行 京都銀行 山陰合同銀行 スルガ銀行 千葉興業銀行 筑波銀行 東北銀行 広島銀行 ソニー銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>641</td>
-<td align="right">640</td>
-<td align="left">79311099</td>
-<td align="left">三井住友・中国・台湾株式オープン</td>
-<td align="left">東洋証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>642</td>
-<td align="right">641</td>
-<td align="left">7931309A</td>
-<td align="left">ＳＭＢＣ日興ニューワールド債券Ｆ(レアル)</td>
-<td align="left">あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 みずほ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>643</td>
-<td align="right">642</td>
-<td align="left">7931409A</td>
-<td align="left">ＳＭＢＣ日興ニューワールド債券Ｆ(ランド)</td>
-<td align="left">あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 みずほ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>644</td>
-<td align="right">643</td>
-<td align="left">7931509A</td>
-<td align="left">ＳＭＢＣ日興ニューワールド債券Ｆ(中国元)</td>
-<td align="left">あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 みずほ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>646</td>
-<td align="right">644</td>
-<td align="left">7931609A</td>
-<td align="left">ＳＭＢＣ日興ニューワールド債券Ｆ(豪ドル)</td>
-<td align="left">あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 みずほ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>647</td>
-<td align="right">645</td>
-<td align="left">7931709A</td>
-<td align="left">ＳＭＢＣ日興ニューワールド債券Ｆ(円)</td>
-<td align="left">あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 みずほ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>648</td>
-<td align="right">646</td>
-<td align="left">7931809A</td>
-<td align="left">国内株式指数ファンド（ＴＯＰＩＸ）</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>649</td>
-<td align="right">647</td>
-<td align="left">7931A09A</td>
-<td align="left">外国株式指数ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 松井証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>694</td>
-<td align="right">762</td>
-<td align="left">79311111</td>
-<td align="left">三井住友・公益債券投信（毎月決算型）</td>
-<td align="left">ＳＢＩ証券 楽天証券 三井住友銀行 関西みらい銀行 岐阜信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>714</td>
-<td align="right">711</td>
-<td align="left">79311107</td>
-<td align="left">欧州株式指数ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 松井証券 楽天証券 三井住友銀行 りそな銀行 埼玉りそな銀行 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>715</td>
-<td align="right">712</td>
-<td align="left">79312107</td>
-<td align="left">ベトナム株式ファンド</td>
-<td align="left">あかつき証券 エイチ・エス証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 寿証券 ＧＭＯクリック証券 高木証券 東洋証券 ひろぎん証券 松井証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>741</td>
-<td align="right">738</td>
-<td align="left">7931110A</td>
-<td align="left">米国ハイ・イールド債券・ブラジルレアルＦ</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 スターツ証券 高木証券 ちばぎん証券 東洋証券 南都まほろば証券 播陽証券 マネックス証券 水戸証券 むさし証券 明和証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>752</td>
-<td align="right">761</td>
-<td align="left">7931110C</td>
-<td align="left">ＪＡＳＤＡＱ－ＴＯＰ２０指数ファンド</td>
-<td align="left">安藤証券 今村証券 岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 東洋証券 内藤証券 南都まほろば証券 ひろぎん証券 松井証券 マネックス証券 楽天証券 ジャパンネット銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>800</td>
-<td align="right">1167</td>
-<td align="left">79312146</td>
-<td align="left">ハイ・クオリティ・アロケーションＦ(Ｈなし)</td>
-<td align="left">ＳＭＢＣ日興証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>802</td>
-<td align="right">797</td>
-<td align="left">79311114</td>
-<td align="left">ＤＣつみたてＮＩＳＡ全海外株インデＦ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>803</td>
-<td align="right">798</td>
-<td align="left">79312114</td>
-<td align="left">三井住友・ＤＣ新興国株式インデックスＦ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>813</td>
-<td align="right">808</td>
-<td align="left">79311115</td>
-<td align="left">日興ワールドＣＢ Ｆ(通貨アルファ戦略)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>814</td>
-<td align="right">809</td>
-<td align="left">79312115</td>
-<td align="left">日興ワールドＣＢ Ｆ(円ヘッジあり)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>815</td>
-<td align="right">810</td>
-<td align="left">79313115</td>
-<td align="left">日興ワールドＣＢ Ｆ(円ヘッジなし)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>818</td>
-<td align="right">813</td>
-<td align="left">79311117</td>
-<td align="left">インド内需関連株式ファンド</td>
-<td align="left">あかつき証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 松井証券 マネックス証券 楽天証券 沖縄海邦銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>819</td>
-<td align="right">814</td>
-<td align="left">79315117</td>
-<td align="left">米国小型ハイクオリティＦ毎月決算</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 松井証券 マネックス証券 明和証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>820</td>
-<td align="right">815</td>
-<td align="left">79316117</td>
-<td align="left">米国小型ハイクオリティＦ資産成長</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 マネックス証券 明和証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>826</td>
-<td align="right">821</td>
-<td align="left">79311118</td>
-<td align="left">高成長インド・中型株式ファンド</td>
-<td align="left">藍澤証券 あかつき証券 エイチ・エス証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 岡三証券 岡三オンライン証券 香川証券 カブドットコム証券 ぐんぎん証券 ごうぎん証券 静岡東海証券 スターツ証券 第四証券 高木証券 東海東京証券 東洋証券 内藤証券 野村証券 百五証券 ひろぎん証券 フィデリティ証券 松井証券 マネックス証券 水戸証券 明和証券 楽天証券 紀陽銀行 清水銀行 但馬銀行 千葉興業銀行 鳥取銀行 富山銀行 北越銀行 北陸銀行 愛媛銀行 大光銀行 富山第一銀行 岡崎信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>834</td>
-<td align="right">829</td>
-<td align="left">79312119</td>
-<td align="left">アジア好利回りリート・Ｆ</td>
-<td align="left">藍澤証券 あかつき証券 エイチ・エス証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 九州ＦＧ証券 ぐんぎん証券 ごうぎん証券 証券ジャパン 頭川証券 スターツ証券 大熊本証券 高木証券 中銀証券 東洋証券 内藤証券 南都まほろば証券 西日本シティＴＴ証券 日産証券 野村証券 播陽証券 ＰＷＭ日本証券 百五証券 フィデリティ証券 松井証券 マネックス証券 三木証券 水戸証券 楽天証券 リテラ・クレア証券 三井住友銀行 あおぞら銀行 池田泉州銀行 大分銀行 鹿児島銀行 関西みらい銀行 紀陽銀行 京都銀行 きらぼし銀行 群馬銀行 四国銀行 常陽銀行 但馬銀行 千葉興業銀行 筑波銀行 富山銀行 南都銀行 北越銀行 北都銀行 三重銀行 武蔵野銀行 愛知銀行 北日本銀行 京葉銀行 大光銀行 東和銀行 トマト銀行 富山第一銀行 東日本銀行 福岡中央銀行 みなと銀行 ソニー銀行 ジャパンネット銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>862</td>
-<td align="right">855</td>
-<td align="left">7931211C</td>
-<td align="left">ＤＣつみたてＮＩＳＡ日本株インデＦ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>882</td>
-<td align="right">875</td>
-<td align="left">79311123</td>
-<td align="left">日本割安株オープン</td>
-<td align="left">あかつき証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 日産証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">ザ・バリューオープン</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>897</td>
-<td align="right">923</td>
-<td align="left">79316011</td>
-<td align="left">ジャパン・アクティブ・セレクト・オープン</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>901</td>
-<td align="right">892</td>
-<td align="left">79311125</td>
-<td align="left">米国短期ハイ・イールド・ボンドＦ(ヘッジ有)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>902</td>
-<td align="right">893</td>
-<td align="left">79312125</td>
-<td align="left">米国短期ハイ・イールド・ボンドＦ(ヘッジ無)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>903</td>
-<td align="right">894</td>
-<td align="left">79313125</td>
-<td align="left">インド債券ファンド（毎月分配型）</td>
-<td align="left">藍澤証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 証券ジャパン スターツ証券 高木証券 日産証券 フィデリティ証券 松井証券 丸八証券 楽天証券 池田泉州銀行 富山銀行 愛媛銀行 沖縄海邦銀行 高知銀行 大光銀行 トマト銀行 富山第一銀行 東日本銀行 福島銀行 おかやま信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>907</td>
-<td align="right">898</td>
-<td align="left">79311126</td>
-<td align="left">オーストラリア・高配当株ファンド(毎月)</td>
-<td align="left">ＳＢＩ証券 岡三にいがた証券 カブドットコム証券 静銀ティーエム証券 高木証券 東洋証券 松井証券 マネックス証券 水戸証券 楽天証券 名古屋銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>908</td>
-<td align="right">899</td>
-<td align="left">79312126</td>
-<td align="left">Ｇ・ハイブリッド証券Ｆ(為替ヘッジ)</td>
-<td align="left">藍澤証券 あかつき証券 ＳＢＩ証券 カブドットコム証券 極東証券 高木証券 東洋証券 日産証券 フィデリティ証券 松井証券 むさし証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>909</td>
-<td align="right">900</td>
-<td align="left">79313126</td>
-<td align="left">Ｇ・ハイブリッド証券Ｆ(為替ノーヘッジ)</td>
-<td align="left">藍澤証券 あかつき証券 ＳＢＩ証券 カブドットコム証券 極東証券 高木証券 東洋証券 フィデリティ証券 松井証券 むさし証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>918</td>
-<td align="right">909</td>
-<td align="left">79311127</td>
-<td align="left">アジア・ハイイールド債毎月(通貨アＨ)</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 楽天証券 南都銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>930</td>
-<td align="right">924</td>
-<td align="left">79317011</td>
-<td align="left">日本株・アクティブ・セレクト・オープン</td>
-<td align="left">安藤証券 いちよし証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 東洋証券 ＰＷＭ日本証券 丸三証券 楽天証券 沖縄銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>931</td>
-<td align="right">925</td>
-<td align="left">7931112B</td>
-<td align="left">グローイング台湾株式ファンド</td>
-<td align="left">ＳＢＩ証券 岡三オンライン証券 楽天証券 ゆうちょ銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>946</td>
-<td align="right">940</td>
-<td align="left">79311133</td>
-<td align="left">メキシコ債券ファンド（毎月分配型）</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">ラ・バンバ</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>947</td>
-<td align="right">941</td>
-<td align="left">79312133</td>
-<td align="left">メキシコ債券ファンド（資産成長型）</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">ラ・バンバ</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>955</td>
-<td align="right">949</td>
-<td align="left">79315133</td>
-<td align="left">Ｊリート・アジアミックス・ＯＰ(毎月決算型)</td>
-<td align="left">いちよし証券 ＳＢＩ証券 高木証券 フィデリティ証券 ほくほくＴＴ証券 松井証券 水戸証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>956</td>
-<td align="right">950</td>
-<td align="left">79313133</td>
-<td align="left">日興・新経済成長国エクイティ・ファンド</td>
-<td align="left">あかつき証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＥＧ５</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>957</td>
-<td align="right">951</td>
-<td align="left">79214133</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３０３</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>960</td>
-<td align="right">954</td>
-<td align="left">79311097</td>
-<td align="left">新世代自動車株式ファンド</td>
-<td align="left">池田泉州ＴＴ証券 ＳＢＩ証券 高木証券 東海東京証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 松井証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">自動車革命</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>961</td>
-<td align="right">955</td>
-<td align="left">79312024</td>
-<td align="left">三井住友・ＤＣ外国債券インデックスＦ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>962</td>
-<td align="right">956</td>
-<td align="left">79312046</td>
-<td align="left">三井住友・配当フォーカスオープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 東海東京証券 フィデリティ証券 松井証券 マネックス証券 楽天証券 オリックス銀行 愛知銀行 名古屋銀行 豊田信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>963</td>
-<td align="right">957</td>
-<td align="left">79313057</td>
-<td align="left">ＤＣトヨタグループ株式ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>964</td>
-<td align="right">958</td>
-<td align="left">79313118</td>
-<td align="left">三井住友・国債プラスファンド(毎月分配型)</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 松井証券 楽天証券 名古屋銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">円の達人</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>965</td>
-<td align="right">959</td>
-<td align="left">7931603B</td>
-<td align="left">トヨタグループ株式ファンド</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 岡三オンライン証券 カブドットコム証券 ぐんぎん証券 ごうぎん証券 七十七証券 スターツ証券 高木証券 東海東京証券 内藤証券 西日本シティＴＴ証券 日産証券 野村証券 浜銀ＴＴ証券 百五証券 ほくほくＴＴ証券 松井証券 マネックス証券 丸八証券 むさし証券 明和証券 楽天証券 あおぞら銀行 大垣共立銀行 七十七銀行 十六銀行 荘内銀行 親和銀行 東北銀行 百五銀行 福岡銀行 北海道銀行 三重銀行 愛知銀行 熊本銀行 京葉銀行 仙台銀行 西京銀行 第三銀行 中京銀行 名古屋銀行 ジャパンネット銀行 イオン銀行 旭川信金 足立成和信金 尼崎信金 遠州信金 大垣西濃信金 おおかわ信金 岡崎信金 おかやま信金 蒲郡信金 北伊勢上野信金 吉備信金 岐阜信金 京都北都信金 桐生信金 桑名三重信金 しののめ信金 静清信金 西武信金 関信金 瀬戸信金 高山信金 館林信金 但馬信金 知多信金 東春信金 東濃信金 栃木信金 豊川信金 豊田信金 豊橋信金 長野信金 西尾信金 沼津信金 浜松磐田信金 半田信金 尾西信金 兵庫信金 碧海信金 米沢信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>966</td>
-<td align="right">960</td>
-<td align="left">79316059</td>
-<td align="left">中部経済圏株式ファンド</td>
-<td align="left">池田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 高木証券 東海東京証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 松井証券 楽天証券 ワイエム証券 十六銀行 愛知銀行 中京銀行 名古屋銀行 豊田信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">ゲンキ・中部</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>967</td>
-<td align="right">961</td>
-<td align="left">7931A085</td>
-<td align="left">高格付海外債券ファンド（毎月分配型）</td>
-<td align="left">池田泉州ＴＴ証券 ＳＢＩ証券 カブドットコム証券 高木証券 東海東京証券 内藤証券 マネックス証券 楽天証券 愛知銀行 中京銀行 名古屋銀行 豊田信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">きらきら星</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>968</td>
-<td align="right">962</td>
-<td align="left">7931B036</td>
-<td align="left">三井住友・バンガード海外株式ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 東海東京証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 松井証券 マネックス証券 楽天証券 三井住友銀行 沖縄県労働金庫 近畿労働金庫 九州労働金庫 四国労働金庫 静岡県労働金庫 中央労働金庫 中国労働金庫 東海労働金庫 東北労働金庫 長野県労働金庫 新潟県労働金庫 北陸労働金庫 北海道労働金庫</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>971</td>
-<td align="right">965</td>
-<td align="left">79211134</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３０４</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>975</td>
-<td align="right">969</td>
-<td align="left">79211135</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３０５</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>987</td>
-<td align="right">981</td>
-<td align="left">79211136</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３０６</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1010</td>
-<td align="right">1004</td>
-<td align="left">79312136</td>
-<td align="left">日興・ロスチャイルド・ラグジュアリーＦ</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 日産証券 松井証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1011</td>
-<td align="right">1005</td>
-<td align="left">79313136</td>
-<td align="left">北米エネルギーファンド（毎月決算型）</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ゴールドマン・サックス証券 証券ジャパン スターツ証券 高木証券 日産証券 浜銀ＴＴ証券 三重銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1012</td>
-<td align="right">1006</td>
-<td align="left">79314136</td>
-<td align="left">北米エネルギーファンド（年２回決算型）</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ゴールドマン・サックス証券 スターツ証券 高木証券 日産証券 浜銀ＴＴ証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1023</td>
-<td align="right">1038</td>
-<td align="left">79311139</td>
-<td align="left">ＳＭＢＣ・日興資産成長ナビゲーション</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1026</td>
-<td align="right">1019</td>
-<td align="left">79211137</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３０７</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1027</td>
-<td align="right">1020</td>
-<td align="left">79211138</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３０８</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1034</td>
-<td align="right">1027</td>
-<td align="left">79313138</td>
-<td align="left">ＥＴＦバランス・ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 松井証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1035</td>
-<td align="right">1028</td>
-<td align="left">79314138</td>
-<td align="left">コーポレート・Ｂ・インカム(ヘッジ１Ｙ)</td>
-<td align="left">ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 高木証券 播陽証券 松井証券 明和証券 楽天証券 三井住友銀行 岩手銀行 北九州銀行 きらぼし銀行 清水銀行 荘内銀行 北越銀行 北都銀行 山口銀行 横浜銀行 京葉銀行 もみじ銀行 イオン銀行 沖縄県労働金庫 近畿労働金庫 九州労働金庫 四国労働金庫 静岡県労働金庫 中央労働金庫 中国労働金庫 東海労働金庫 東北労働金庫 長野県労働金庫 新潟県労働金庫 北陸労働金庫 北海道労働金庫</td>
-<td align="left">三井住友DS</td>
-<td align="left">泰平航路１年決算型</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1036</td>
-<td align="right">1029</td>
-<td align="left">79315138</td>
-<td align="left">コーポレート・Ｂ・インカム(ノーヘッジ１Ｙ)</td>
-<td align="left">ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 高木証券 播陽証券 松井証券 明和証券 楽天証券 三井住友銀行 岩手銀行 北九州銀行 清水銀行 荘内銀行 北越銀行 北都銀行 山口銀行 横浜銀行 もみじ銀行 イオン銀行 白河信金 碧海信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">泰平航路１年決算型</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1037</td>
-<td align="right">1030</td>
-<td align="left">79213139</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３０９</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1046</td>
-<td align="right">1041</td>
-<td align="left">7931113A</td>
-<td align="left">三井住友・公益債券投信（資産成長型）</td>
-<td align="left">ＳＢＩ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1055</td>
-<td align="right">1050</td>
-<td align="left">7931213A</td>
-<td align="left">三井住友・バンクローン・Ｆ(ヘッジ有)毎月</td>
-<td align="left">ＳＭＢＣ日興証券 水戸証券 あおぞら銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1056</td>
-<td align="right">1051</td>
-<td align="left">7931313A</td>
-<td align="left">三井住友・バンクローン・Ｆ(ヘッジ有)年２回</td>
-<td align="left">ＳＭＢＣ日興証券 水戸証券 あおぞら銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1073</td>
-<td align="right">1068</td>
-<td align="left">7921113A</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３１０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1074</td>
-<td align="right">1069</td>
-<td align="left">7931413A</td>
-<td align="left">Ｊリート・アジアミックス・ＯＰ(資産成長型)</td>
-<td align="left">いちよし証券 ＳＢＩ証券 高木証券 フィデリティ証券 ほくほくＴＴ証券 松井証券 水戸証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1079</td>
-<td align="right">1074</td>
-<td align="left">7921113B</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３１１</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1086</td>
-<td align="right">1081</td>
-<td align="left">7931613B</td>
-<td align="left">米国ハイ・インカムＢＤＣファンド(毎月)</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 極東証券 静岡東海証券 高木証券 東海東京証券 東洋証券 むさし証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1087</td>
-<td align="right">1082</td>
-<td align="left">7931713B</td>
-<td align="left">米国ハイ・インカムＢＤＣファンド(年１回)</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 静岡東海証券 高木証券 東海東京証券 東洋証券 むさし証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1101</td>
-<td align="right">1096</td>
-<td align="left">7921113C</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１３１２</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1102</td>
-<td align="right">1097</td>
-<td align="left">79311141</td>
-<td align="left">ＮＹダウ・ジョーンズ・インデ(ヘッジ型)</td>
-<td align="left">スターツ証券 高木証券 岩手銀行 足利小山信金 あぶくま信金 尼崎信金 新井信金 愛媛信金 おおかわ信金 大阪シティ信金 帯広信金 柏崎信金 川崎信金 京都中央信金 京都北都信金 桐生信金 桑名三重信金 興能信金 湖東信金 滋賀中央信金 しののめ信金 須賀川信金 瀬戸信金 大地みらい信金 玉島信金 東春信金 富山信金 長浜信金 長野信金 西中国信金 八幡信金 浜松磐田信金 飯能信金 兵庫信金 福岡ひびき信金 大和信金 横浜信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＮＹドリーム</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1103</td>
-<td align="right">1160</td>
-<td align="left">79311147</td>
-<td align="left">トヨタグループ・バランスファンド</td>
-<td align="left">池田泉州ＴＴ証券 ＳＢＩ証券 高木証券 東海東京証券 とちぎんTT証券 西日本シティＴＴ証券 百五証券 ほくほくＴＴ証券 ワイエム証券 百五銀行 第三銀行 名古屋銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1104</td>
-<td align="right">1161</td>
-<td align="left">79212146</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０６</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1105</td>
-<td align="right">1098</td>
-<td align="left">79312141</td>
-<td align="left">ＮＹダウ・ジョーンズ・インデ(ノーヘッジ型)</td>
-<td align="left">スターツ証券 高木証券 岩手銀行 三重銀行 みなと銀行 アイオー信金 あぶくま信金 尼崎信金 飯田信金 永和信金 愛媛信金 おおかわ信金 大阪シティ信金 帯広信金 柏崎信金 金沢信金 蒲郡信金 川崎信金 北伊勢上野信金 岐阜信金 京都中央信金 京都北都信金 桐生信金 呉信金 桑名三重信金 興能信金 湖東信金 埼玉県信金 佐野信金 滋賀中央信金 しずおか信金 しののめ信金 城北信金 静清信金 瀬戸信金 大地みらい信金 高崎信金 玉島信金 多摩信金 知多信金 中南信金 東京東信金 東春信金 栃木信金 富山信金 長浜信金 長野信金 西中国信金 沼津信金 八幡信金 浜松磐田信金 播州信金 半田信金 飯能信金 日生信金 姫路信金 兵庫信金 平塚信金 福井信金 福岡ひびき信金 碧海信金 水戸信金 焼津信金 大和信金 結城信金 横浜信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＮＹドリーム</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1106</td>
-<td align="right">1099</td>
-<td align="left">79315141</td>
-<td align="left">ＮＹダウ・ジョーンズ・インデックスオープン</td>
-<td align="left">りそな銀行 埼玉りそな銀行 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1115</td>
-<td align="right">1108</td>
-<td align="left">79313141</td>
-<td align="left">日興・中国構造改革ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">チャイナルネサンス</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1116</td>
-<td align="right">1109</td>
-<td align="left">79211141</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０１</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1120</td>
-<td align="right">1113</td>
-<td align="left">79311142</td>
-<td align="left">三井住友・ＪＰＸ日経４００オープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 東洋証券 楽天証券 ＳＭＢＣ信託銀行 岩手銀行 大分銀行 第三銀行 東京スター銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1121</td>
-<td align="right">1114</td>
-<td align="left">79211142</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０２</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1123</td>
-<td align="right">1116</td>
-<td align="left">79211143</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０３</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1124</td>
-<td align="right">1117</td>
-<td align="left">79311143</td>
-<td align="left">日興グラビティ・ヨーロピアン・ファンド</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">ユーロビート</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1131</td>
-<td align="right">1162</td>
-<td align="left">79314146</td>
-<td align="left">ＮＹダウ・ジョーンズ指数ＯＰ(ヘッジあり)</td>
-<td align="left">三井住友銀行 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1134</td>
-<td align="right">1126</td>
-<td align="left">79211144</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０４</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1147</td>
-<td align="right">1139</td>
-<td align="left">79311145</td>
-<td align="left">日本再興戦略株式オープン２０１４</td>
-<td align="left">ＳＭＢＣ日興証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">なでしこ</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1153</td>
-<td align="right">1145</td>
-<td align="left">79212145</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０５</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1159</td>
-<td align="right">1151</td>
-<td align="left">79313145</td>
-<td align="left">ピムコ・ストラテ・インカムＦ(Ｈ有/年１回)</td>
-<td align="left">藍澤証券 あかつき証券 岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 岡三オンライン証券 カブドットコム証券 静岡東海証券 高木証券 東洋証券 フィデリティ証券 松井証券 水戸証券 むさし証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1160</td>
-<td align="right">1152</td>
-<td align="left">79314145</td>
-<td align="left">ピムコ・ストラテ・インカムＦ(Ｈ無/年１回)</td>
-<td align="left">藍澤証券 あかつき証券 岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 岡三オンライン証券 カブドットコム証券 静岡東海証券 高木証券 東洋証券 フィデリティ証券 松井証券 水戸証券 むさし証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1161</td>
-<td align="right">1153</td>
-<td align="left">79315145</td>
-<td align="left">ピムコ・ストラテ・インカムＦ(Ｈ有/３カ月)</td>
-<td align="left">藍澤証券 今村証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 岡三オンライン証券 静岡東海証券 高木証券 東洋証券 フィデリティ証券 松井証券 水戸証券 むさし証券 楽天証券 三井住友銀行 鳥取銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1162</td>
-<td align="right">1154</td>
-<td align="left">79316145</td>
-<td align="left">ピムコ・ストラテ・インカムＦ(Ｈ無/３カ月)</td>
-<td align="left">藍澤証券 今村証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 岡三オンライン証券 静岡東海証券 高木証券 東洋証券 フィデリティ証券 松井証券 水戸証券 むさし証券 楽天証券 三井住友銀行 鳥取銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1169</td>
-<td align="right">1168</td>
-<td align="left">79313146</td>
-<td align="left">ハイ・クオリティ・アロケーションＦ(限定Ｈ)</td>
-<td align="left">ＳＭＢＣ日興証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1172</td>
-<td align="right">1171</td>
-<td align="left">79312147</td>
-<td align="left">トヨタグループ・バランスファンド(年１回)</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 高木証券 東海東京証券 ほくほくＴＴ証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1173</td>
-<td align="right">1172</td>
-<td align="left">79211147</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０７</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1175</td>
-<td align="right">1174</td>
-<td align="left">79313147</td>
-<td align="left">アッシュモア新興国短期社債Ｆ 毎月(Ｈ無)</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1176</td>
-<td align="right">1175</td>
-<td align="left">79314147</td>
-<td align="left">アッシュモア新興国短期社債Ｆ 毎月(Ｈ有)</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1177</td>
-<td align="right">1176</td>
-<td align="left">79315147</td>
-<td align="left">アッシュモア新興国短期社債Ｆ 資産(Ｈ無)</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1178</td>
-<td align="right">1177</td>
-<td align="left">79316147</td>
-<td align="left">アッシュモア新興国短期社債Ｆ 資産(Ｈ有)</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1183</td>
-<td align="right">1182</td>
-<td align="left">79211148</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０８</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1185</td>
-<td align="right">1184</td>
-<td align="left">79311148</td>
-<td align="left">ＹＯＵＲＭＩＲＡＩ ワールド・リゾート</td>
-<td align="left">エイチ・エス証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三証券 岡三オンライン証券 カブドットコム証券 ＧＭＯクリック証券 スターツ証券 高木証券 フィデリティ証券 松井証券 マネックス証券 楽天証券 清水銀行 ソニー銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1202</td>
-<td align="right">1201</td>
-<td align="left">79211149</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４０９</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1206</td>
-<td align="right">1205</td>
-<td align="left">7921114A</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４１０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1207</td>
-<td align="right">1206</td>
-<td align="left">7931114A</td>
-<td align="left">ＢＮＰパリバＧ金融機関ハイブリ(Ｈ有)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1213</td>
-<td align="right">1213</td>
-<td align="left">7931214A</td>
-<td align="left">アジア・ハイイールド債毎月(ヘッジ無)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 楽天証券 南都銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1214</td>
-<td align="right">1214</td>
-<td align="left">7921114B</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４１１</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1226</td>
-<td align="right">1226</td>
-<td align="left">7931214B</td>
-<td align="left">三井住友・ＪリートアクティブＦ＜ラップ＞</td>
-<td align="left">いちよし証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1232</td>
-<td align="right">1232</td>
-<td align="left">7931114C</td>
-<td align="left">三井住友・ＤＣ年金バランスゼロ(債券型)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">マイパッケージＺＥＲＯ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1238</td>
-<td align="right">1238</td>
-<td align="left">7931214C</td>
-<td align="left">ＵＳエクイティ・プレミアム・インカム(毎月)</td>
-<td align="left">東洋証券 播陽証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1239</td>
-<td align="right">1239</td>
-<td align="left">7931314C</td>
-<td align="left">ＵＳエクイティ・プレミアム・インカム(年１)</td>
-<td align="left">東洋証券 播陽証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1240</td>
-<td align="right">1240</td>
-<td align="left">7921114C</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１４１２</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1242</td>
-<td align="right">1242</td>
-<td align="left">79311151</td>
-<td align="left">米国ハイクオリティ株式ファンド(ヘッジ有)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1243</td>
-<td align="right">1243</td>
-<td align="left">79312151</td>
-<td align="left">米国ハイクオリティ株式ファンド(ヘッジ無)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1244</td>
-<td align="right">1244</td>
-<td align="left">79313151</td>
-<td align="left">新興国ハイクオリティ株式ファンド</td>
-<td align="left">ＳＢＩ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1245</td>
-<td align="right">1245</td>
-<td align="left">79314151</td>
-<td align="left">新興国債券トータルリターン・Ｆ(ヘッジ有)</td>
-<td align="left">ＳＢＩ証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1246</td>
-<td align="right">1246</td>
-<td align="left">79315151</td>
-<td align="left">新興国債券トータルリターン・Ｆ(ヘッジ無)</td>
-<td align="left">ＳＢＩ証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1247</td>
-<td align="right">1247</td>
-<td align="left">79211151</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１５０１</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1256</td>
-<td align="right">1256</td>
-<td align="left">79316152</td>
-<td align="left">オーストラリア・バランス（資産成長型）</td>
-<td align="left">ＳＢＩ証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1257</td>
-<td align="right">1257</td>
-<td align="left">79317152</td>
-<td align="left">オーストラリア・バランス（毎月決算型）</td>
-<td align="left">ＳＢＩ証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1258</td>
-<td align="right">1258</td>
-<td align="left">79318152</td>
-<td align="left">オーストラリア・バランス（為替ヘッジ型）</td>
-<td align="left">ＳＢＩ証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1259</td>
-<td align="right">1259</td>
-<td align="left">79312152</td>
-<td align="left">三井住友・ニュー・アジア・ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三にいがた証券 カブドットコム証券 ＧＭＯクリック証券 高木証券 東洋証券 水戸証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1260</td>
-<td align="right">1260</td>
-<td align="left">79212152</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１５０２</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1265</td>
-<td align="right">1265</td>
-<td align="left">79213153</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１５０３</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1278</td>
-<td align="right">1278</td>
-<td align="left">79311153</td>
-<td align="left">ＳＭＡＭ 日経２２５上場投信</td>
-<td align="left">エービーエヌ・アムロ・クリアリング証券 ＳＭＢＣ日興証券 クレディ・スイス証券 ゴールドマン・サックス証券 ＪＰモルガン証券 シティグループ証券 大和証券 ドイツ証券 東海東京証券 野村証券 ＢＮＰパリバ証券 みずほ証券 三菱ＵＦＪモルガン・スタンレー証券 メリルリンチ日本証券 モルガン・スタンレーＭＵＦＧ証券 ＵＢＳ証券 上場投信</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1279</td>
-<td align="right">1279</td>
-<td align="left">79312153</td>
-<td align="left">ＳＭＡＭ 東証ＲＥＩＴ指数上場投信</td>
-<td align="left">エービーエヌ・アムロ・クリアリング証券 ＳＭＢＣ日興証券 クレディ・スイス証券 ゴールドマン・サックス証券 ＪＰモルガン証券 シティグループ証券 大和証券 ドイツ証券 東海東京証券 野村証券 ＢＮＰパリバ証券 みずほ証券 三菱ＵＦＪモルガン・スタンレー証券 モルガン・スタンレーＭＵＦＧ証券 ＵＢＳ証券 上場投信</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1307</td>
-<td align="right">1307</td>
-<td align="left">79211154</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１５０４</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1311</td>
-<td align="right">1311</td>
-<td align="left">79311154</td>
-<td align="left">アセットアロケーション・Ｆ(安定型)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 フィデリティ証券 楽天証券 栃木銀行 福岡中央銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">らっぷちゃん</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1312</td>
-<td align="right">1312</td>
-<td align="left">79312154</td>
-<td align="left">アセットアロケーション・Ｆ(安定成長型)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 フィデリティ証券 楽天証券 栃木銀行 福岡中央銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">らっぷちゃん</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1313</td>
-<td align="right">1313</td>
-<td align="left">79313154</td>
-<td align="left">アセットアロケーション・Ｆ(成長型)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 フィデリティ証券 楽天証券 栃木銀行 福岡中央銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">らっぷちゃん</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1323</td>
-<td align="right">1323</td>
-<td align="left">79211155</td>
-<td align="left">日興・米国バンクローン(為替Ｈ有)１５０５</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1329</td>
-<td align="right">1329</td>
-<td align="left">79311156</td>
-<td align="left">グローバルＣＢ戦略ファンド(ヘッジあり)</td>
-<td align="left">極東証券 高木証券 ちばぎん証券 播陽証券 むさし証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1330</td>
-<td align="right">1330</td>
-<td align="left">79312156</td>
-<td align="left">グローバルＣＢ戦略ファンド(ヘッジなし)</td>
-<td align="left">極東証券 高木証券 ちばぎん証券 播陽証券 フィリップ証券 むさし証券 静岡銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1332</td>
-<td align="right">1332</td>
-<td align="left">79316156</td>
-<td align="left">アジア好利回りリート・Ｆ（年１回決算型）</td>
-<td align="left">藍澤証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 証券ジャパン 高木証券 東洋証券 西日本シティＴＴ証券 播陽証券 ＰＷＭ日本証券 フィデリティ証券 松井証券 マネックス証券 水戸証券 楽天証券 三井住友銀行 あおぞら銀行 但馬銀行 北越銀行 北都銀行 大光銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1333</td>
-<td align="right">1333</td>
-<td align="left">79314156</td>
-<td align="left">ＲＯＥ向上・日本厳選株式ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＦＦＧ証券 高木証券 八十二証券 三木証券 水戸証券 関西みらい銀行 スルガ銀行 山形銀行 福岡中央銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">収穫</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1336</td>
-<td align="right">1336</td>
-<td align="left">79317156</td>
-<td align="left">日本超長期国債ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 松井証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1396</td>
-<td align="right">1542</td>
-<td align="left">7931215A</td>
-<td align="left">日興フィデリティ世界企業債券Ｆ(Ｈ無)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1514</td>
-<td align="right">1513</td>
-<td align="left">79312157</td>
-<td align="left">米国優先リートファンド（為替ヘッジあり）</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1515</td>
-<td align="right">1514</td>
-<td align="left">79313157</td>
-<td align="left">米国優先リートファンド（為替ヘッジなし）</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1522</td>
-<td align="right">1521</td>
-<td align="left">79211158</td>
-<td align="left">日系企業海外債券Ｆ(為替Ｈ有)２０１５０８</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">日本晴</td>
-<td align="left"></td>
-<td align="left">2019/01/31</td>
-</tr>
-<tr class="odd">
-<td>1523</td>
-<td align="right">1522</td>
-<td align="left">79312158</td>
-<td align="left">ＥＵＲＯエクイティ・レンデメント・Ｆ円Ｈ有</td>
-<td align="left">岡三証券 高木証券 播陽証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1524</td>
-<td align="right">1523</td>
-<td align="left">79313158</td>
-<td align="left">ＥＵＲＯエクイティ・レンデメント・Ｆ円Ｈ無</td>
-<td align="left">岡三証券 高木証券 播陽証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1530</td>
-<td align="right">1529</td>
-<td align="left">79211159</td>
-<td align="left">日系企業海外債券Ｆ(為替Ｈ有)２０１５０９</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">日本晴</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1537</td>
-<td align="right">1536</td>
-<td align="left">79313159</td>
-<td align="left">ハイ・クオリティ・アロケーション(Ｈ無年２)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1538</td>
-<td align="right">1537</td>
-<td align="left">79314159</td>
-<td align="left">ハイ・クオリティ・アロケーション(限Ｈ年２)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1540</td>
-<td align="right">1539</td>
-<td align="left">7931115B</td>
-<td align="left">日系企業海外債券オープン(為替ヘッジあり)</td>
-<td align="left">藍澤証券 ＳＢＩ証券 高木証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">日本びより</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1541</td>
-<td align="right">1540</td>
-<td align="left">7931215B</td>
-<td align="left">日系企業海外債券オープン(為替ヘッジなし)</td>
-<td align="left">藍澤証券 ＳＢＩ証券 高木証券 マネックス証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">日本びより</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1542</td>
-<td align="right">1541</td>
-<td align="left">7931115A</td>
-<td align="left">日興フィデリティ世界企業債券Ｆ(Ｈ有)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1543</td>
-<td align="right">1543</td>
-<td align="left">7931315A</td>
-<td align="left">日興・ロスチャイルド・グローバルＣＢ(Ｈ有)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1544</td>
-<td align="right">1544</td>
-<td align="left">7931415A</td>
-<td align="left">日興・ロスチャイルド・グローバルＣＢ(Ｈ無)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1545</td>
-<td align="right">1545</td>
-<td align="left">7921115A</td>
-<td align="left">日系企業海外債券Ｆ(為替Ｈ有)２０１５１０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">日本晴</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1547</td>
-<td align="right">1547</td>
-<td align="left">7931315B</td>
-<td align="left">ダイナミック・マルチアセット戦略Ｆ(Ｈ無)</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1548</td>
-<td align="right">1548</td>
-<td align="left">7931415B</td>
-<td align="left">ダイナミック・マルチアセット戦略Ｆ(限Ｈ)</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1557</td>
-<td align="right">1557</td>
-<td align="left">7931215C</td>
-<td align="left">産業競争力強化ファンド</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1563</td>
-<td align="right">1563</td>
-<td align="left">79311161</td>
-<td align="left">ヘルスケア・リート・プラス</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 証券ジャパン 高木証券 楽天証券 関西みらい銀行 京都銀行 南都銀行 東和銀行 朝日信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1564</td>
-<td align="right">1564</td>
-<td align="left">79312161</td>
-<td align="left">Ｊリート・アジアミックス・ＯＰ(年２回)</td>
-<td align="left">高木証券 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">躍動</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1571</td>
-<td align="right">1571</td>
-<td align="left">79211162</td>
-<td align="left">あしぎん世界コーポ・ハイブリッド １６０２</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">メジャー・スピリット</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1574</td>
-<td align="right">1574</td>
-<td align="left">79311162</td>
-<td align="left">ＵＳテクノロジー・イノベーターズ・ファンド</td>
-<td align="left">あかつき証券 ＳＭＢＣ日興証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1602</td>
-<td align="right">1601</td>
-<td align="left">79312164</td>
-<td align="left">三井住友・ＤＣ世界バランスＦ(動的配分型)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1609</td>
-<td align="right">1607</td>
-<td align="left">79211165</td>
-<td align="left">あしぎん世界コーポ・ハイブリッド １６０５</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">メジャー・スピリット２</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1612</td>
-<td align="right">1610</td>
-<td align="left">79212165</td>
-<td align="left">ストラテジック・インカムＦ１６０５（Ｈ有)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ボンドマスター２０１６－０５(為替Ｈあり)</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1613</td>
-<td align="right">1611</td>
-<td align="left">79213165</td>
-<td align="left">ストラテジック・インカムＦ１６０５（Ｈ無)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ボンドマスター２０１６－０５(為替Ｈなし)</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1621</td>
-<td align="right">1795</td>
-<td align="left">79316179</td>
-<td align="left">三井住友・資産最適化Ｆ（５成長重視型）</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1628</td>
-<td align="right">1625</td>
-<td align="left">79315167</td>
-<td align="left">米国・地方公共事業債ファンド(ヘッジあり)</td>
-<td align="left">ＳＢＩ証券 四国アライアンス証券 高木証券 マネックス証券 明和証券 楽天証券 伊予銀行 関西みらい銀行 東京スター銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">アメリカン・スター</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1629</td>
-<td align="right">1626</td>
-<td align="left">79316167</td>
-<td align="left">米国・地方公共事業債ファンド(ヘッジなし)</td>
-<td align="left">ＳＢＩ証券 四国アライアンス証券 高木証券 マネックス証券 明和証券 楽天証券 池田泉州銀行 伊予銀行 関西みらい銀行 東京スター銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">アメリカン・スター</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1631</td>
-<td align="right">1628</td>
-<td align="left">79312167</td>
-<td align="left">アジア高利回り現地通貨建債券Ｆ(毎月分配)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1632</td>
-<td align="right">1629</td>
-<td align="left">79313167</td>
-<td align="left">アジア高利回り現地通貨建債券Ｆ(資産成長)</td>
-<td align="left">あかつき証券 ＳＭＢＣ日興証券 ＳＢＩ証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1643</td>
-<td align="right">1640</td>
-<td align="left">79211169</td>
-<td align="left">ストラテジック・インカムＦ１６０９（Ｈ有)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ボンドマスター２０１６－０９(為替Ｈあり)</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1644</td>
-<td align="right">1641</td>
-<td align="left">79212169</td>
-<td align="left">ストラテジック・インカムＦ１６０９（Ｈ無)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ボンドマスター２０１６－０９(為替Ｈなし)</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1646</td>
-<td align="right">1643</td>
-<td align="left">79311169</td>
-<td align="left">グローバルＡＩファンド</td>
-<td align="left">今村証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 香川証券 カブドットコム証券 ぐんぎん証券 ごうぎん証券 ＧＭＯクリック証券 静銀ティーエム証券 七十七証券 スターツ証券 大熊本証券 第四証券 高木証券 とうほう証券 東洋証券 西日本シティＴＴ証券 野村証券 八十二証券 浜銀ＴＴ証券 百五証券 ひろぎん証券 フィデリティ証券 北洋証券 松井証券 マネックス証券 水戸証券 楽天証券 リテラ・クレア証券 ワイエム証券 足利銀行 阿波銀行 紀陽銀行 十六銀行 中国銀行 筑波銀行 東邦銀行 富山銀行 南都銀行 西日本シティ銀行 百五銀行 百十四銀行 広島銀行 北陸銀行 三重銀行 武蔵野銀行 山形銀行 愛知銀行 京葉銀行 大光銀行 中京銀行 東京スター銀行 東和銀行 トマト銀行 富山第一銀行 名古屋銀行 東日本銀行 福岡中央銀行 北洋銀行 みなと銀行 ソニー銀行 ジャパンネット銀行 イオン銀行 朝日信金 足立成和信金 遠州信金 青梅信金 大垣西濃信金 大田原信金 大牟田柳川信金 川崎信金 北伊勢上野信金 京都中央信金 京都北都信金 呉信金 甲府信金 しののめ信金 芝信金 城北信金 新庄信金 瀬戸信金 但馬信金 知多信金 鳥取信金 奈良信金 西尾信金 西中国信金 半田信金 飯能信金 姫路信金 兵庫信金 福岡ひびき信金 碧海信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1647</td>
-<td align="right">1644</td>
-<td align="left">79213169</td>
-<td align="left">あしぎん世界コーポ・ハイブリッド １６０９</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">メジャー・スピリット３</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1648</td>
-<td align="right">1645</td>
-<td align="left">79214169</td>
-<td align="left">日系企業外貨建社債Ｆ(為替Ｈ有)１６０９</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">新日本晴</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1649</td>
-<td align="right">1646</td>
-<td align="left">7931116A</td>
-<td align="left">イオン・バランス戦略ファンド</td>
-<td align="left">イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">みらいパレット</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1650</td>
-<td align="right">1647</td>
-<td align="left">79312169</td>
-<td align="left">日系企業海外債券ＯＰ(ヘッジあり)(ＳＭＡ)</td>
-<td align="left">楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1651</td>
-<td align="right">1648</td>
-<td align="left">79313169</td>
-<td align="left">三井住友・ＤＣ日本リートインデックスＦ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1652</td>
-<td align="right">1649</td>
-<td align="left">79314169</td>
-<td align="left">三井住友・ＤＣ外国リートインデックスＦ</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1653</td>
-<td align="right">1650</td>
-<td align="left">79315169</td>
-<td align="left">トヨタモータークレジット/トヨタＧ債券Ｆ</td>
-<td align="left">高木証券 東海東京証券 百五銀行 第三銀行 名古屋銀行 足立成和信金 蒲郡信金 北伊勢上野信金 桑名三重信金 埼玉県信金 白河信金 瀬戸信金 東京東信金 豊川信金 西中国信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1672</td>
-<td align="right">1669</td>
-<td align="left">7931316A</td>
-<td align="left">三井住友・ＤＣターゲットイヤーＦ２０５０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1676</td>
-<td align="right">1673</td>
-<td align="left">7931116B</td>
-<td align="left">ＵＳテクノロジー・イノベーターズ・Ｆ(Ｈ有)</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1679</td>
-<td align="right">1676</td>
-<td align="left">7921116C</td>
-<td align="left">ストラテジック・インカムＦ１６１２（Ｈ有)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ボンドマスター２０１６－１２(為替Ｈあり)</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1680</td>
-<td align="right">1677</td>
-<td align="left">7921216C</td>
-<td align="left">ストラテジック・インカムＦ１６１２（Ｈ無)</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ボンドマスター２０１６－１２(為替Ｈなし)</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1685</td>
-<td align="right">1680</td>
-<td align="left">7931116C</td>
-<td align="left">ＢＤＣプラス（ヘッジあり／年４回決算型）</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1686</td>
-<td align="right">1681</td>
-<td align="left">7931216C</td>
-<td align="left">ＢＤＣプラス（ヘッジなし／年４回決算型）</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1687</td>
-<td align="right">1682</td>
-<td align="left">7931316C</td>
-<td align="left">ＢＤＣプラス（ヘッジあり／年１回決算型）</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1688</td>
-<td align="right">1683</td>
-<td align="left">7931416C</td>
-<td align="left">ＢＤＣプラス（ヘッジなし／年１回決算型）</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1706</td>
-<td align="right">1699</td>
-<td align="left">79311172</td>
-<td align="left">グローバルＡＩファンド（為替ヘッジあり）</td>
-<td align="left">今村証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 香川証券 ごうぎん証券 ＧＭＯクリック証券 静銀ティーエム証券 七十七証券 スターツ証券 大熊本証券 第四証券 高木証券 とうほう証券 東洋証券 西日本シティＴＴ証券 野村証券 八十二証券 浜銀ＴＴ証券 百五証券 ひろぎん証券 フィデリティ証券 北洋証券 松井証券 マネックス証券 水戸証券 楽天証券 リテラ・クレア証券 ワイエム証券 足利銀行 阿波銀行 紀陽銀行 中国銀行 筑波銀行 富山銀行 南都銀行 西日本シティ銀行 百五銀行 百十四銀行 広島銀行 武蔵野銀行 愛知銀行 京葉銀行 大光銀行 中京銀行 東京スター銀行 トマト銀行 富山第一銀行 東日本銀行 北洋銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1707</td>
-<td align="right">1700</td>
-<td align="left">79211173</td>
-<td align="left">世界コーポレート・ハイブリッド １７０３</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">メジャー・スピリット１７－０３</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1733</td>
-<td align="right">1724</td>
-<td align="left">79311174</td>
-<td align="left">グローバル自動運転関連株式Ｆ(ヘッジあり)</td>
-<td align="left">藍澤証券 あかつき証券 池田泉州ＴＴ証券 今村証券 エース証券 ＳＢＩ証券 岡三オンライン証券 岡三にいがた証券 岡地証券 香川証券 カブドットコム証券 木村証券 ぐんぎん証券 ＧＭＯクリック証券 静岡東海証券 第四証券 高木証券 中銀証券 東海東京証券 東洋証券 南都まほろば証券 西日本シティＴＴ証券 野村証券 八十二証券 浜銀ＴＴ証券 播陽証券 フィデリティ証券 フィリップ証券 松井証券 マネックス証券 丸八証券 三菱ＵＦＪモルガン・スタンレー証券 むさし証券 明和証券 めぶき証券 楽天証券 ワイエム証券 三菱ＵＦＪ銀行 みずほ信託銀行 足利銀行 大分銀行 大垣共立銀行 関西みらい銀行 京都銀行 滋賀銀行 親和銀行 富山銀行 南都銀行 百十四銀行 福井銀行 福岡銀行 北越銀行 宮崎銀行 山形銀行 山梨中央銀行 熊本銀行 大光銀行 中京銀行 トマト銀行 富山第一銀行 ジャパンネット銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1734</td>
-<td align="right">1725</td>
-<td align="left">79312174</td>
-<td align="left">グローバル自動運転関連株式Ｆ(ヘッジなし)</td>
-<td align="left">藍澤証券 あかつき証券 池田泉州ＴＴ証券 今村証券 エース証券 ＳＢＩ証券 岡三オンライン証券 岡三にいがた証券 岡地証券 香川証券 カブドットコム証券 木村証券 ぐんぎん証券 ＧＭＯクリック証券 静岡東海証券 第四証券 高木証券 中銀証券 東海東京証券 東洋証券 南都まほろば証券 西日本シティＴＴ証券 野村証券 八十二証券 浜銀ＴＴ証券 播陽証券 フィデリティ証券 フィリップ証券 松井証券 マネックス証券 丸八証券 三菱ＵＦＪモルガン・スタンレー証券 むさし証券 明和証券 めぶき証券 楽天証券 ワイエム証券 三菱ＵＦＪ銀行 みずほ信託銀行 足利銀行 大分銀行 大垣共立銀行 関西みらい銀行 京都銀行 滋賀銀行 親和銀行 富山銀行 南都銀行 百十四銀行 福井銀行 福岡銀行 北越銀行 宮崎銀行 山形銀行 山梨中央銀行 熊本銀行 大光銀行 中京銀行 トマト銀行 富山第一銀行 ジャパンネット銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1745</td>
-<td align="right">1736</td>
-<td align="left">79312176</td>
-<td align="left">グローイング・フロンティア株式ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1771</td>
-<td align="right">1767</td>
-<td align="left">79311177</td>
-<td align="left">三井住友・アジア・オセアニア好配当株式年１</td>
-<td align="left">ＳＢＩ証券 岡三証券 高木証券 ちばぎん証券 東洋証券 松井証券 楽天証券 りそな銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">椰子の実（やしのみ）</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1781</td>
-<td align="right">1779</td>
-<td align="left">79311179</td>
-<td align="left">オーストラリア・高配当株ファンド(年１)</td>
-<td align="left">岡三にいがた証券 静銀ティーエム証券 高木証券 東洋証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1793</td>
-<td align="right">1791</td>
-<td align="left">79312179</td>
-<td align="left">三井住友・資産最適化Ｆ（１安定重視型）</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1794</td>
-<td align="right">1792</td>
-<td align="left">79313179</td>
-<td align="left">三井住友・資産最適化Ｆ（２やや安定型）</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1795</td>
-<td align="right">1793</td>
-<td align="left">79314179</td>
-<td align="left">三井住友・資産最適化Ｆ（３バランス型）</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1796</td>
-<td align="right">1794</td>
-<td align="left">79315179</td>
-<td align="left">三井住友・資産最適化Ｆ（４やや成長型）</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1798</td>
-<td align="right">1797</td>
-<td align="left">79317179</td>
-<td align="left">ニッポン好配当株Ｆ(早期償還条項付限追型)</td>
-<td align="left">筑波銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1806</td>
-<td align="right">1805</td>
-<td align="left">7931217A</td>
-<td align="left">ＤＣつみたてＮＩＳＡ・世界分散ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1810</td>
-<td align="right">1809</td>
-<td align="left">7931317A</td>
-<td align="left">ロックフェラー米国中小型イノベーターズＦ</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡地証券 木村証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1811</td>
-<td align="right">1810</td>
-<td align="left">7931417A</td>
-<td align="left">日興ＦＷ・日本債券ファンド</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1813</td>
-<td align="right">1812</td>
-<td align="left">7931117B</td>
-<td align="left">高成長インド・中型株式ファンド(年１回)</td>
-<td align="left">エース証券 ＳＢＩ証券 岡三証券 高木証券 東海東京証券 東洋証券 野村証券 フィデリティ証券 松井証券 水戸証券 楽天証券 清水銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1839</td>
-<td align="right">1839</td>
-<td align="left">79313181</td>
-<td align="left">三井住友・日経アジア３００ｉインデックス</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 松井証券 マネックス証券 楽天証券 紀陽銀行 千葉興業銀行 三重銀行 武蔵野銀行 山形銀行 大光銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1851</td>
-<td align="right">1851</td>
-<td align="left">79312182</td>
-<td align="left">三井住友・日本株式ＥＳＧファンド</td>
-<td align="left">ＳＢＩ証券 浜銀ＴＴ証券 フィリップ証券 松井証券 明和証券 楽天証券 三井住友銀行 第四銀行 愛知銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1863</td>
-<td align="right">1863</td>
-<td align="left">79313183</td>
-<td align="left">三井住友・豪ドル債ファンド(年１回決算型)</td>
-<td align="left">ＳＢＩ証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1868</td>
-<td align="right">1868</td>
-<td align="left">79312184</td>
-<td align="left">日本中小型成長株発掘ファンド</td>
-<td align="left">東洋証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1870</td>
-<td align="right">1870</td>
-<td align="left">79313184</td>
-<td align="left">アジア・スマートロジスティクスファンド</td>
-<td align="left">ＳＢＩ証券 岡三オンライン証券 木村証券 静岡東海証券 大熊本証券 第四証券 西日本シティＴＴ証券 日産証券 ひろぎん証券 フィリップ証券 むさし証券 明和証券 楽天証券 リテラ・クレア証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1873</td>
-<td align="right">1873</td>
-<td align="left">79311184</td>
-<td align="left">企業価値フォーカス・Ｆ・ヘッジ型(投資一任)</td>
-<td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1875</td>
-<td align="right">1875</td>
-<td align="left">79311185</td>
-<td align="left">ライフ・ジャーニー(かしこく育てるコース)</td>
-<td align="left">エース証券 ＳＢＩ証券 楽天証券 三井住友銀行 みちのく銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1876</td>
-<td align="right">1876</td>
-<td align="left">79312185</td>
-<td align="left">ライフ・ジャーニー(かしこく使うコース)</td>
-<td align="left">エース証券 ＳＢＩ証券 楽天証券 三井住友銀行 みちのく銀行 おかやま信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1877</td>
-<td align="right">1877</td>
-<td align="left">79313185</td>
-<td align="left">ライフ・ジャーニー(充実して楽しむコース)</td>
-<td align="left">エース証券 ＳＢＩ証券 楽天証券 三井住友銀行 みちのく銀行 おかやま信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1881</td>
-<td align="right">1881</td>
-<td align="left">79311186</td>
-<td align="left">ＳＭＡＭベトナム株式ファンド</td>
-<td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1882</td>
-<td align="right">1882</td>
-<td align="left">79312186</td>
-<td align="left">フューチャー・バイオテック</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 香川証券 カブドットコム証券 木村証券 ＧＭＯクリック証券 高木証券 西日本シティＴＴ証券 播陽証券 松井証券 むさし証券 楽天証券 三井住友銀行 愛知銀行 福島銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1884</td>
-<td align="right">1884</td>
-<td align="left">79314186</td>
-<td align="left">イノベーション・インデックス・ＡＩ</td>
-<td align="left">岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 静岡東海証券 スターツ証券 西日本シティＴＴ証券 松井証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1891</td>
-<td align="right">1891</td>
-<td align="left">79311188</td>
-<td align="left">人生１００年時代(資産成長型)</td>
-<td align="left">いちよし証券 静銀ティーエム証券 八十二証券 ひろぎん証券 青森銀行 阿波銀行 四国銀行 親和銀行 中国銀行 百十四銀行 福岡銀行 北越銀行 愛知銀行 熊本銀行 富山第一銀行 みなと銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1892</td>
-<td align="right">1892</td>
-<td align="left">79312188</td>
-<td align="left">人生１００年時代(３％目標受取型)</td>
-<td align="left">いちよし証券 静銀ティーエム証券 八十二証券 ひろぎん証券 青森銀行 阿波銀行 四国銀行 親和銀行 中国銀行 百十四銀行 福岡銀行 北越銀行 愛知銀行 熊本銀行 富山第一銀行 みなと銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1893</td>
-<td align="right">1893</td>
-<td align="left">79313188</td>
-<td align="left">人生１００年時代(６％目標受取型)</td>
-<td align="left">いちよし証券 静銀ティーエム証券 八十二証券 ひろぎん証券 青森銀行 阿波銀行 四国銀行 親和銀行 中国銀行 百十四銀行 福岡銀行 北越銀行 愛知銀行 熊本銀行 富山第一銀行 みなと銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1896</td>
-<td align="right">1937</td>
-<td align="left">79313191</td>
-<td align="left">グローバルＳＤＧｓ株式ファンド</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1907</td>
-<td align="right">1905</td>
-<td align="left">79311189</td>
-<td align="left">げんき１００年ライフ株式ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 岡三にいがた証券 香川証券 静岡東海証券 証券ジャパン ちばぎん証券 八十二証券 浜銀ＴＴ証券 松井証券 水戸証券 めぶき証券 楽天証券 リテラ・クレア証券 三菱ＵＦＪ信託銀行 筑波銀行 富山銀行 京葉銀行 大光銀行 名古屋銀行 東日本銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1921</td>
-<td align="right">1919</td>
-<td align="left">7931118A</td>
-<td align="left">イノベーション・インデックス・フィンテック</td>
-<td align="left">岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 静岡東海証券 スターツ証券 松井証券 マネックス証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1922</td>
-<td align="right">1920</td>
-<td align="left">7931118B</td>
-<td align="left">日本株主還元株ファンド・ヘッジ型</td>
-<td align="left">ＳＢＩ証券 東海東京証券 とちぎんTT証券 松井証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1938</td>
-<td align="right">2082</td>
-<td align="left">7931715B</td>
-<td align="left">ＳＭＢＣ円資産ファンド</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1942</td>
-<td align="right">1941</td>
-<td align="left">79311192</td>
-<td align="left">アクティブ元年・日本株ファンド</td>
-<td align="left">直販</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1946</td>
-<td align="right">1945</td>
-<td align="left">79316192</td>
-<td align="left">イノベーションIシェアリングエコノミー</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 静岡東海証券 スターツ証券 松井証券 マネックス証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1953</td>
-<td align="right">1952</td>
-<td align="left">79311193</td>
-<td align="left">人生１００年応援ファンド(資産成長コース)</td>
-<td align="left">イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">みらいストーリー</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1954</td>
-<td align="right">1953</td>
-<td align="left">79312193</td>
-<td align="left">人生１００年応援Ｆ(ちょっぴり受取)</td>
-<td align="left">イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">みらいストーリー</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1955</td>
-<td align="right">1954</td>
-<td align="left">79313193</td>
-<td align="left">人生１００年応援Ｆ(おもいっきり受取)</td>
-<td align="left">イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">みらいストーリー</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1960</td>
-<td align="right">1959</td>
-<td align="left">7931101B</td>
-<td align="left">大和住銀ＤＣ日本バリュー株ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ＤＣ黒潮</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1961</td>
-<td align="right">1960</td>
-<td align="left">79311034</td>
-<td align="left">短期豪ドル債オープン（毎月分配型）</td>
-<td align="left">藍澤証券 あおぞら証券 いちよし証券 岩井コスモ証券 エイチ・エス証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 岡三オンライン証券 岡三にいがた証券 岡安証券 香川証券 カブドットコム証券 極東証券 クレディ・スイス証券 ぐんぎん証券 寿証券 静岡東海証券 証券ジャパン 大山日ノ丸証券 大和証券 高木証券 立花証券 東海東京証券 とちぎんTT証券 内藤証券 中原証券 日産証券 野村証券 ばんせい証券 ひろぎん証券 廣田証券 フィデリティ証券 北洋証券 マネックス証券 丸八証券 三木証券 みずほ証券 水戸証券 むさし証券 めぶき証券 楽天証券 リーディング証券 リテラ・クレア証券 みずほ銀行 あおぞら銀行 新生銀行 阿波銀行 大垣共立銀行 関西みらい銀行 京都銀行 佐賀銀行 四国銀行 十六銀行 荘内銀行 親和銀行 第四銀行 但馬銀行 千葉興業銀行 中国銀行 筑波銀行 百十四銀行 愛知銀行 熊本銀行 京葉銀行 佐賀共栄銀行 西京銀行 大東銀行 東和銀行 東日本銀行 北洋銀行 オーストラリア・ニュージーランド銀行 ソニー銀行 ジャパンネット銀行 イオン銀行 京都信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1962</td>
-<td align="right">1961</td>
-<td align="left">79311075</td>
-<td align="left">グローバル資産分散オープン</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">メインパートナー</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1963</td>
-<td align="right">1962</td>
-<td align="left">79311132</td>
-<td align="left">ボンド＆カレンシー トータルリターン 毎月</td>
-<td align="left">ＳＢＩ証券 ひろぎん証券 楽天証券 関西みらい銀行 親和銀行 広島銀行 福岡銀行 熊本銀行 西京銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ツインストーリー</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1964</td>
-<td align="right">1963</td>
-<td align="left">79311165</td>
-<td align="left">日本高配当株フォーカス(マイルドジャパン)</td>
-<td align="left">岡三にいがた証券 クレディ・スイス証券 ぐんぎん証券 七十七証券 大和証券 高木証券 内藤証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
 <td>1965</td>
-<td align="right">1964</td>
-<td align="left">79311178</td>
-<td align="left">米国メジャー企業債ファンド</td>
-<td align="left">ＳＢＩ証券 岡三オンライン証券 高木証券 浜銀ＴＴ証券 ほくほくＴＴ証券 松井証券 楽天証券</td>
 <td align="left">三井住友DS</td>
-<td align="left">米国メジャー</td>
+<td align="left">短期豪ドル債オープン（毎月分配型）</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1966</td>
-<td align="right">1965</td>
-<td align="left">79311963</td>
-<td align="left">エス・ビー・日本株オープン２２５</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 三井住友銀行 秋田銀行 オーストラリア・ニュージーランド銀行</td>
-<td align="left">三井住友DS</td>
+<td align="left">79311034</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>1967</td>
-<td align="right">1966</td>
-<td align="left">79311983</td>
-<td align="left">エス・ビー・日本債券ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 九州ＦＧ証券 大和証券 高木証券 立花証券 フィデリティ証券 松井証券 マネックス証券 楽天証券 リテラ・クレア証券 三井住友銀行 三菱ＵＦＪ信託銀行 岩手銀行 鹿児島銀行 紀陽銀行 但馬銀行 南都銀行 三重銀行 山形銀行 栃木銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ベガ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
 <td>1968</td>
-<td align="right">1967</td>
-<td align="left">79312019</td>
-<td align="left">大和住銀ＤＣ外国株式ファンド</td>
-<td align="left"></td>
 <td align="left">三井住友DS</td>
+<td align="left">日本高配当株フォーカス（マイルドジャパン）</td>
 <td align="left"></td>
+<td align="left">79311165</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>1969</td>
-<td align="right">1968</td>
-<td align="left">7931203C</td>
-<td align="left">Ｔ．ロウ・プライス ＵＳインカムファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 内藤証券 楽天証券 三井住友銀行 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>1970</td>
-<td align="right">1969</td>
-<td align="left">79312082</td>
-<td align="left">高金利通貨オープン</td>
-<td align="left">高木証券 三井住友銀行</td>
+<td>1886</td>
 <td align="left">三井住友DS</td>
-<td align="left">ワールドエイト</td>
+<td align="left">ＳＭＡＭベトナム株式ファンド</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">79311186</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>1971</td>
-<td align="right">1970</td>
-<td align="left">79312097</td>
-<td align="left">エマージングボンドＦ円毎月</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 カブドットコム証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 あおぞら銀行 新生銀行 オーストラリア・ニュージーランド銀行 ジャパンネット銀行 イオン銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">エス・ビー・日本債券ファンド</td>
+<td align="left">ベガ</td>
+<td align="left">79311983</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>1972</td>
-<td align="right">1971</td>
-<td align="left">7931209C</td>
-<td align="left">エマージング好配当株オープン（毎月）</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 三井住友銀行</td>
+<td>217</td>
 <td align="left">三井住友DS</td>
+<td align="left">三井住友・２２５オープン</td>
 <td align="left"></td>
+<td align="left">7931198B</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1973</td>
-<td align="right">1972</td>
-<td align="left">79312102</td>
-<td align="left">エマージングボンドＦ中国元毎月</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 カブドットコム証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 あおぞら銀行 新生銀行 オーストラリア・ニュージーランド銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1974</td>
-<td align="right">1973</td>
-<td align="left">7931211A</td>
-<td align="left">日本株２２５・米ドルコース</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 高木証券 内藤証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>1975</td>
-<td align="right">1974</td>
-<td align="left">79312132</td>
-<td align="left">ボンド＆カレンシー トータルリターン 年２</td>
-<td align="left">ＳＢＩ証券 ひろぎん証券 楽天証券 関西みらい銀行 親和銀行 広島銀行 福岡銀行 熊本銀行 西京銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">ツインストーリー</td>
+<td align="left">エマージング・ボンド・ファンド・円コース（毎月分配型）</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">79312097</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>1976</td>
-<td align="right">1975</td>
-<td align="left">79312134</td>
-<td align="left">カナダ高配当株ツインα（毎月分配型） 大</td>
-<td align="left">和証券 三</td>
-<td align="left">井住友DS</td>
-<td align="left"></td>
-<td align="left">20</td>
-<td align="left">19/03/29</td>
-</tr>
-<tr class="even">
 <td>1977</td>
-<td align="right">1976</td>
-<td align="left">79312144</td>
-<td align="left">短期ＮＺドル債オープン（毎月分配型）</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 大和証券 高木証券 立花証券 楽天証券 あおぞら銀行 滋賀銀行 荘内銀行 千葉興業銀行 京都信金</td>
 <td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド・中国元コース（毎月分配型）</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1978</td>
-<td align="right">1977</td>
-<td align="left">79312148</td>
-<td align="left">ＮＢマルチ・ストラテジー・Ｆ(ダイワＳＭＡ)</td>
+<td align="left">79312102</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>1979</td>
-<td align="right">1978</td>
-<td align="left">79312165</td>
-<td align="left">日本高配当株フォーカス(プレミアジャパン)</td>
-<td align="left">岡三にいがた証券 クレディ・スイス証券 ぐんぎん証券 七十七証券 大和証券 高木証券 内藤証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
 <td>1980</td>
-<td align="right">1979</td>
-<td align="left">79312173</td>
-<td align="left">米国短期社債戦略ファンド１７０３(Ｈ有)</td>
-<td align="left">大垣共立銀行 三重銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1981</td>
-<td align="right">1980</td>
-<td align="left">79313019</td>
-<td align="left">大和住銀ＤＣ外国債券ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">カナダ高配当株ツインα（毎月分配型）</td>
+<td align="left">7</td>
+<td align="left">9312134 大</td>
+<td align="left">和証券</td>
+<td align="left">〇</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td>1982</td>
-<td align="right">1981</td>
-<td align="left">79313041</td>
-<td align="left">チャイナ騰飛(チャイナ・エクイティ・ＯＰ)</td>
-<td align="left">大和証券</td>
+<td>1981</td>
 <td align="left">三井住友DS</td>
+<td align="left">短期ＮＺドル債オープン（毎月分配型）</td>
 <td align="left"></td>
+<td align="left">79312144</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>1983</td>
-<td align="right">1982</td>
-<td align="left">79313046</td>
-<td align="left">大和住銀日本小型株ファンド</td>
+<td align="left">三井住友DS</td>
+<td align="left">日本高配当株フォーカス（プレミアジャパン）</td>
+<td align="left"></td>
+<td align="left">79312165</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1984</td>
-<td align="right">1983</td>
-<td align="left">7931305A</td>
-<td align="left">日本好配当株オープン</td>
-<td align="left">寿証券 高木証券 三井住友銀行 秋田銀行 関西みらい銀行 南都銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1985</td>
-<td align="right">1984</td>
-<td align="left">7931306A</td>
-<td align="left">大和住銀ＤＣ国内株式ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>1986</td>
-<td align="right">1985</td>
-<td align="left">7931306C</td>
-<td align="left">大和住銀ＤＣ海外株式アクティブファンド</td>
-<td align="left"></td>
 <td align="left">三井住友DS</td>
+<td align="left">チャイナ騰飛（チャイナ・エクイティ・オープン）</td>
 <td align="left"></td>
+<td align="left">79313041</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>1987</td>
-<td align="right">1986</td>
-<td align="left">79313072</td>
-<td align="left">ＳＭＢＣファンドラップ・日本バリュー株</td>
-<td align="left">ＳＭＢＣ日興証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">大和住銀日本小型株ファンド</td>
 <td align="left"></td>
+<td align="left">79313046</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1988</td>
-<td align="right">1987</td>
-<td align="left">79313073</td>
-<td align="left">アジア好配当株ファンド</td>
-<td align="left">ＳＢＩ証券 大和証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1989</td>
-<td align="right">1988</td>
-<td align="left">79313093</td>
-<td align="left">ＤＣ日本国債プラス</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>1990</td>
-<td align="right">1989</td>
-<td align="left">79313097</td>
-<td align="left">エマージングボンドＦ豪ドル毎月</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 カブドットコム証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 あおぞら銀行 新生銀行 オーストラリア・ニュージーランド銀行 ジャパンネット銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1991</td>
-<td align="right">1990</td>
-<td align="left">7931309C</td>
-<td align="left">エマージング好配当株オープン マネーＰ</td>
-<td align="left">資金待機型投信 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>1992</td>
-<td align="right">1991</td>
-<td align="left">7931311A</td>
-<td align="left">日本株２２５・ブラジルレアルコース</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 高木証券 内藤証券 楽天証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">アジア好配当株ファンド</td>
 <td align="left"></td>
+<td align="left">79313073</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>1993</td>
-<td align="right">1992</td>
-<td align="left">79313127</td>
-<td align="left">オーストラリア高配当株プレミアム(毎月)</td>
-<td align="left">藍澤証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 岡三にいがた証券 香川証券 カブドットコム証券 第四証券 高木証券 百五証券 マネックス証券 丸八証券 めぶき証券 楽天証券 オーストラリア・ニュージーランド銀行 ジャパンネット銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
 <td>1994</td>
-<td align="right">1993</td>
-<td align="left">7931312B</td>
-<td align="left">スマート・ストラテジー・ファンド(毎月)</td>
-<td align="left">ＳＭＢＣ日興証券 三井住友銀行 関西みらい銀行 紀陽銀行 南都銀行 広島信金</td>
 <td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド・豪ドルコース（毎月分配型）</td>
 <td align="left"></td>
+<td align="left">79313097</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1995</td>
-<td align="right">1994</td>
-<td align="left">79313137</td>
-<td align="left">日本株厳選ファンド・米ドルコース</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 ごうぎん証券 寿証券 静岡東海証券 第四証券 大和証券 高木証券 東海東京証券 東洋証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 百五証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 新生銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1996</td>
-<td align="right">1995</td>
-<td align="left">79313142</td>
-<td align="left">ニッポン中小型株ファンド</td>
-<td align="left">藍澤証券 エース証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 寿証券 ＧＭＯクリック証券 四国アライアンス証券 静岡東海証券 大和証券 高木証券 立花証券 内藤証券 西村証券 ひろぎん証券 ほくほくＴＴ証券 松井証券 マネックス証券 めぶき証券 楽天証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1997</td>
-<td align="right">1996</td>
-<td align="left">79313144</td>
-<td align="left">短期ＮＺドル債オープン（資産成長型）</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 大和証券 高木証券 立花証券 楽天証券 あおぞら銀行 滋賀銀行 荘内銀行 千葉興業銀行 京都信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>1998</td>
-<td align="right">1997</td>
-<td align="left">79313148</td>
-<td align="left">ＮＢハイクオリティ・マネジャーズ(部分Ｈ)</td>
-<td align="left">ＳＢＩ証券 大和証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>1999</td>
-<td align="right">1998</td>
-<td align="left">79313161</td>
-<td align="left">米国イノベーション・ファンド(年４回)</td>
-<td align="left">今村証券 ＳＢＩ証券 香川証券 内藤証券 楽天証券 りそな銀行 埼玉りそな銀行 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">アメリカン・アイドル（年４回）</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2000</td>
-<td align="right">1999</td>
-<td align="left">79313164</td>
-<td align="left">ひとくふう世界国債ファンド(ヘッジあり)</td>
-<td align="left">エイチ・エス証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 ＧＭＯクリック証券 証券ジャパン 松井証券 楽天証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">日本株厳選ファンド・米ドルコース</td>
 <td align="left"></td>
+<td align="left">79313137</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2001</td>
-<td align="right">2000</td>
-<td align="left">79313165</td>
-<td align="left">マイ・ウェイ・ジャパン</td>
-<td align="left">静銀ティーエム証券 高木証券 西日本シティＴＴ証券 浜銀ＴＴ証券 北洋証券 千葉興業銀行 西日本シティ銀行 横浜銀行 北洋銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">ニッポン中小型株ファンド</td>
 <td align="left"></td>
+<td align="left">79313142</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2002</td>
-<td align="right">2001</td>
-<td align="left">7931316B</td>
-<td align="left">ひとくふう先進国リートファンド</td>
-<td align="left">エイチ・エス証券 ＳＢＩ証券 岡三オンライン証券 証券ジャパン 松井証券 楽天証券 三井住友信託銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">短期ＮＺドル債オープン（資産成長型）</td>
 <td align="left"></td>
+<td align="left">79313144</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2003</td>
-<td align="right">2002</td>
-<td align="left">79313171</td>
-<td align="left">日本成長テーマフォーカス</td>
-<td align="left">池田泉州ＴＴ証券 ＳＢＩ証券 岡三にいがた証券 高木証券 内藤証券 松井証券 楽天証券 リテラ・クレア証券 ワイエム証券 足利銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">グランシェフ</td>
+<td align="left">ＮＢハイクオリティ・マネジャーズ・ファンド（部分為替ヘッジあり）－予想分配金提示型－</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">79313148</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2004</td>
-<td align="right">2003</td>
-<td align="left">79313173</td>
-<td align="left">米ドル高利回り社債Ｆ１７０３(ヘッジあり)</td>
-<td align="left">北洋証券 北洋銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＵＳＡギフト（為替ヘッジあり）</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2005</td>
-<td align="right">2004</td>
-<td align="left">79314019</td>
-<td align="left">大和住銀ＤＣ日本株式ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>2006</td>
-<td align="right">2005</td>
-<td align="left">79314021</td>
-<td align="left">ニュートラル・コース（ヘッジあり）</td>
-<td align="left">大和証券 高木証券 東京スター銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ギアチェンジ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2007</td>
-<td align="right">2006</td>
-<td align="left">79314057</td>
-<td align="left">グローバル好配当株オープン</td>
-<td align="left">ＳＭＢＣ日興証券 ＦＦＧ証券 四国アライアンス証券 高木証券 めぶき証券 楽天証券 三井住友銀行 あおぞら銀行 阿波銀行 伊予銀行 岩手銀行 関西みらい銀行 紀陽銀行 京都銀行 荘内銀行 親和銀行 第四銀行 筑邦銀行 筑波銀行 百十四銀行 広島銀行 福岡銀行 三重銀行 熊本銀行 島根銀行 大東銀行 東京スター銀行 岡崎信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2008</td>
-<td align="right">2007</td>
-<td align="left">79314072</td>
-<td align="left">ＳＭＢＣファンドラップ・Ｊ－ＲＥＩＴ</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>2009</td>
-<td align="right">2008</td>
-<td align="left">79314097</td>
-<td align="left">エマージングボンドＦニュージーランド毎月</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 カブドットコム証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 あおぞら銀行 新生銀行 オーストラリア・ニュージーランド銀行 ジャパンネット銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2010</td>
-<td align="right">2009</td>
-<td align="left">79314109</td>
-<td align="left">グローバルハイイールド債(円)</td>
-<td align="left">池田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 高木証券 東海東京証券 とちぎんTT証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 マネックス証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
 <td>2011</td>
-<td align="right">2010</td>
-<td align="left">7931411A</td>
-<td align="left">日本株２２５・豪ドルコース</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 高木証券 内藤証券 楽天証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">大和住銀ジャパン・スペシャル ニュートラル・コース（ヘッジあり）</td>
+<td align="left">ギアチェンジ</td>
+<td align="left">79314021</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2012</td>
-<td align="right">2011</td>
-<td align="left">7931412B</td>
-<td align="left">スマート・ストラテジー・ファンド(年２回)</td>
-<td align="left">ＳＭＢＣ日興証券 三井住友銀行 関西みらい銀行 紀陽銀行 南都銀行 広島信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2013</td>
-<td align="right">2012</td>
-<td align="left">79314137</td>
-<td align="left">日本株厳選ファンド・メキシコペソコース</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 ごうぎん証券 寿証券 静岡東海証券 第四証券 大和証券 高木証券 東海東京証券 東洋証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 百五証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 新生銀行 オーストラリア・ニュージーランド銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
 <td>2014</td>
-<td align="right">2013</td>
-<td align="left">79314139</td>
-<td align="left">エマージング好配当株オープン(資産成長型)</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 三井住友銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド・ニュージーランドドルコース（毎月分配型）</td>
 <td align="left"></td>
+<td align="left">79314097</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2015</td>
-<td align="right">2014</td>
-<td align="left">79314143</td>
-<td align="left">Ｊ－ＲＥＩＴオープン（米ドルコース）</td>
-<td align="left">エース証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 寿証券 静岡東海証券 高木証券 ちばぎん証券 丸八証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2016</td>
-<td align="right">2015</td>
-<td align="left">79314144</td>
-<td align="left">日本株アルファ・カルテット(毎月分配型)</td>
-<td align="left">藍澤証券 安藤証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 香川証券 カブドットコム証券 極東証券 証券ジャパン 大和証券 高木証券 立花証券 ＰＷＭ日本証券 ひろぎん証券 フィデリティ証券 マネックス証券 丸八証券 水戸証券 楽天証券 ワイエム証券 新生銀行 ジャパンネット銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2017</td>
-<td align="right">2016</td>
-<td align="left">79314148</td>
-<td align="left">ＮＢハイクオリティ・マネジャーズ(Ｈなし)</td>
-<td align="left">ＳＢＩ証券 大和証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2018</td>
-<td align="right">2017</td>
-<td align="left">79314149</td>
-<td align="left">フレキシブル日本株ファンド</td>
-<td align="left">今村証券 ＳＢＩ証券 楽天証券 筑波銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">先読みセンス</td>
+<td align="left">日本株厳選ファンド・メキシコペソコース</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2019</td>
-<td align="right">2018</td>
-<td align="left">79314161</td>
-<td align="left">米国イノベーション・ファンド(年１回)</td>
-<td align="left">ＳＢＩ証券 香川証券 内藤証券 楽天証券 りそな銀行 埼玉りそな銀行 関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">アメリカン・アイドル（年１回）</td>
+<td align="left">79314137</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2020</td>
-<td align="right">2019</td>
-<td align="left">79314162</td>
-<td align="left">ＮＢマルチ戦略ファンド</td>
-<td align="left">東海東京証券 西日本シティＴＴ証券 ほくほくＴＴ証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2021</td>
-<td align="right">2020</td>
-<td align="left">79314164</td>
-<td align="left">世界国債プラス</td>
-<td align="left">三井住友銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">日本株アルファ・カルテット（毎月分配型）</td>
 <td align="left"></td>
+<td align="left">79314144</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2022</td>
-<td align="right">2021</td>
-<td align="left">79314168</td>
-<td align="left">世界インパクト投資ファンド</td>
-<td align="left">ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 寿証券 四国アライアンス証券 静岡東海証券 七十七証券 第四証券 大和証券 高木証券 ちばぎん証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 野村証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 みずほ銀行 三井住友銀行 あおぞら銀行 関西みらい銀行 滋賀銀行 親和銀行 福岡銀行 宮崎銀行 熊本銀行 ソニー銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">Ｂｅｔｔｅｒ　Ｗｏｒｌｄ</td>
+<td align="left">ＮＢハイクオリティ・マネジャーズ・ファンド（為替ヘッジなし）－予想分配金提示型－</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2023</td>
-<td align="right">2022</td>
-<td align="left">7931416A</td>
-<td align="left">オージー・リート・ファンド（毎月分配型）</td>
+<td align="left">79314148</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2024</td>
-<td align="right">2023</td>
-<td align="left">79314173</td>
-<td align="left">米ドル高利回り社債Ｆ１７０３(ヘッジなし)</td>
-<td align="left">北洋証券 北洋銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＵＳＡギフト（為替ヘッジなし）</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2025</td>
-<td align="right">2024</td>
-<td align="left">7931417B</td>
-<td align="left">米国中期債運用戦略Ｆ(ダイワ投資一任専用)</td>
-<td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2026</td>
-<td align="right">2025</td>
-<td align="left">79314181</td>
-<td align="left">グローバルＥＶ関連株ファンド(ヘッジあり)</td>
-<td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＥＶ革命</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2027</td>
-<td align="right">2026</td>
-<td align="left">79314184</td>
-<td align="left">大和住銀 先進国国債Ｆ（リスク抑制）</td>
-<td align="left">ＳＢＩ証券 寿証券 楽天証券 中京銀行 ゆうちょ銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">未来のコツ</td>
+<td align="left">世界インパクト投資ファンド</td>
+<td align="left">Ｂｅｔｔｅｒ　Ｗｏｒｌｄ</td>
+<td align="left">79314168</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2028</td>
-<td align="right">2027</td>
-<td align="left">79314188</td>
-<td align="left">＜七十七＞ＥＳＧ日本株オープン</td>
-<td align="left">七十七証券 七十七銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">みやぎの絆</td>
+<td align="left">オージー・リート・ファンド（毎月分配型）</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2029</td>
-<td align="right">2028</td>
-<td align="left">79314191</td>
-<td align="left">ひとくふうターゲット・デート・ファンド2030</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left">ひとくふうTDF2030</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>2030</td>
-<td align="right">2029</td>
-<td align="left">79314192</td>
-<td align="left">世界小型株厳選ファンド</td>
-<td align="left">岡三オンライン証券 証券ジャパン 大和証券 ＰＷＭ日本証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2031</td>
-<td align="right">2030</td>
-<td align="left">79314997</td>
-<td align="left">大和住銀日本バリュー株ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 大和証券 高木証券 立花証券 東海東京証券 内藤証券 南都まほろば証券 日産証券 フィデリティ証券 マネックス証券 楽天証券 リテラ・クレア証券 三井住友銀行 三井住友信託銀行 三菱ＵＦＪ信託銀行 関西みらい銀行 紀陽銀行 南都銀行 三重銀行 東和銀行 東日本銀行 みなと銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">黒潮</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2032</td>
-<td align="right">2031</td>
-<td align="left">7931500B</td>
-<td align="left">大和住銀日本グロース株ファンド</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 大和証券 高木証券 立花証券 内藤証券 日産証券 マネックス証券 楽天証券 リテラ・クレア証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">海のくに</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2033</td>
-<td align="right">2032</td>
-<td align="left">79315019</td>
-<td align="left">大和住銀ＤＣ日本債券ファンド</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>2034</td>
-<td align="right">2033</td>
-<td align="left">79315021</td>
-<td align="left">マーケット・コース（ヘッジなし）</td>
-<td align="left">大和証券 高木証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">ギアチェンジ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2035</td>
-<td align="right">2034</td>
-<td align="left">79315039</td>
-<td align="left">エマージング債券ファンド(毎月分配型)</td>
+<td align="left">7931416A</td>
 <td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>2032</td>
 <td align="left">三井住友DS</td>
+<td align="left">グローバルＥＶ関連株ファンド（為替ヘッジあり）</td>
+<td align="left">ＥＶ革命</td>
+<td align="left">79314181</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2036</td>
-<td align="right">2035</td>
-<td align="left">79315069</td>
-<td align="left">グローバル・ベスト・ファンド</td>
-<td align="left">ＳＢＩ証券 岡三にいがた証券 大和証券 高木証券 楽天証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">世界小型株厳選ファンド</td>
 <td align="left"></td>
+<td align="left">79314192</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2037</td>
-<td align="right">2036</td>
-<td align="left">79315072</td>
-<td align="left">ＳＭＢＣファンドラップ・Ｇ－ＲＥＩＴ</td>
-<td align="left">ＳＭＢＣ日興証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">大和住銀日本バリュー株ファンド</td>
+<td align="left">黒潮</td>
+<td align="left">79314997</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2038</td>
-<td align="right">2037</td>
-<td align="left">79315097</td>
-<td align="left">エマージングボンドＦブラジルレアル毎月</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 カブドットコム証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 あおぞら銀行 新生銀行 百十四銀行 オーストラリア・ニュージーランド銀行 ジャパンネット銀行 イオン銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2039</td>
-<td align="right">2038</td>
-<td align="left">79315099</td>
-<td align="left">大和住銀 中国株式ファンド</td>
+<td align="left">大和住銀日本グロース株ファンド</td>
+<td align="left">海のくに</td>
+<td align="left">7931500B</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2040</td>
-<td align="right">2039</td>
-<td align="left">79315109</td>
-<td align="left">グローバルハイイールド債(中・印・インドネ)</td>
-<td align="left">池田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 高木証券 東海東京証券 とちぎんTT証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 マネックス証券 楽天証券 ワイエム証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">大和住銀ジャパン・スペシャル マーケット・コース（ヘッジなし）</td>
+<td align="left">ギアチェンジ</td>
+<td align="left">79315021</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2041</td>
-<td align="right">2040</td>
-<td align="left">79315125</td>
-<td align="left">短期豪ドル債オープン（年２回決算型）</td>
-<td align="left">岩井コスモ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 寿証券 証券ジャパン 大和証券 高木証券 立花証券 中原証券 日産証券 百五証券 フィデリティ証券 マネックス証券 むさし証券 楽天証券 リテラ・クレア証券 親和銀行 百五銀行 熊本銀行 京葉銀行 佐賀共栄銀行 大東銀行 イオン銀行 京都信金</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2042</td>
-<td align="right">2041</td>
-<td align="left">79315137</td>
-<td align="left">日本株厳選ファンド・トルコリラコース</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 ごうぎん証券 寿証券 静岡東海証券 第四証券 大和証券 高木証券 東海東京証券 東洋証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 百五証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 新生銀行 オーストラリア・ニュージーランド銀行 イオン銀行</td>
+<td>2041</td>
 <td align="left">三井住友DS</td>
+<td align="left">エマージング債券ファンド（毎月分配型）</td>
 <td align="left"></td>
+<td align="left">79315039</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2043</td>
-<td align="right">2042</td>
-<td align="left">79315143</td>
-<td align="left">Ｊ－ＲＥＩＴオープン（円コース）</td>
-<td align="left">エース証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 寿証券 静岡東海証券 高木証券 ちばぎん証券 丸八証券 楽天証券</td>
+<td>2042</td>
 <td align="left">三井住友DS</td>
+<td align="left">グローバル・ベスト・ファンド</td>
 <td align="left"></td>
+<td align="left">79315069</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2044</td>
-<td align="right">2043</td>
-<td align="left">79315144</td>
-<td align="left">北欧ダブルインカムＦ－予想分配金提示型－</td>
-<td align="left">大和証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド・ブラジルレアルコース（毎月分配型）</td>
 <td align="left"></td>
+<td align="left">79315097</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2045</td>
-<td align="right">2044</td>
-<td align="left">79315149</td>
-<td align="left">英国国債ファンド－ギルト１０－(ヘッジ有)</td>
+<td align="left">三井住友DS</td>
+<td align="left">大和住銀 中国株式ファンド</td>
+<td align="left"></td>
+<td align="left">79315099</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2046</td>
-<td align="right">2045</td>
-<td align="left">79315157</td>
-<td align="left">米国リート・アルファ・カルテット(毎月分配)</td>
-<td align="left">エース証券 ＳＢＩ証券 カブドットコム証券 クレディ・スイス証券 立花証券 丸八証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
 <td>2047</td>
-<td align="right">2046</td>
-<td align="left">79315158</td>
-<td align="left">米国コア・バランス・Ｆ(Ｈ有　毎月分配型)</td>
-<td align="left">ＳＢＩ証券 高木証券 楽天証券 みなと銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">ＵＳヒーロー</td>
+<td align="left">短期豪ドル債オープン（年２回決算型）</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2048</td>
-<td align="right">2047</td>
-<td align="left">79315164</td>
-<td align="left">大和住銀ＤＣ日本株式アクティブファンド</td>
+<td align="left">79315125</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2049</td>
-<td align="right">2048</td>
-<td align="left">79315173</td>
-<td align="left">世界リアルアセット・バランス(毎月決算型)</td>
-<td align="left">三井住友信託銀行</td>
+<td>2048</td>
 <td align="left">三井住友DS</td>
+<td align="left">日本株厳選ファンド・トルコリラコース</td>
 <td align="left"></td>
+<td align="left">79315137</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2050</td>
-<td align="right">2049</td>
-<td align="left">79315181</td>
-<td align="left">グローバルＥＶ関連株ファンド(ヘッジなし)</td>
-<td align="left">大和証券</td>
 <td align="left">三井住友DS</td>
-<td align="left">ＥＶ革命</td>
+<td align="left">北欧ダブルインカム・ファンド－予想分配金提示型－</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">79315144</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2051</td>
-<td align="right">2050</td>
-<td align="left">79315191</td>
-<td align="left">ひとくふうターゲット・デート・ファンド2040</td>
-<td align="left">三井住友銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">ひとくふうTDF2040</td>
+<td align="left">英国国債ファンド －ギルト10－ （為替ヘッジあり）</td>
 <td align="left"></td>
+<td align="left">79315149</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-</tr>
-<tr class="odd">
-<td>2052</td>
-<td align="right">2051</td>
-<td align="left">79316019</td>
-<td align="left">大和住銀ＤＣ年金設計ファンド３０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>2053</td>
-<td align="right">2052</td>
-<td align="left">79316063</td>
-<td align="left">Ｍ＆Ａフォーカス・ファンド</td>
-<td align="left">ＳＢＩ証券 大和証券 高木証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2054</td>
-<td align="right">2053</td>
-<td align="left">79316072</td>
-<td align="left">ＳＭＢＣファンドラップ・ヘッジファンド</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>2055</td>
-<td align="right">2054</td>
-<td align="left">79316097</td>
-<td align="left">エマージングボンドＦ南アフリカランド毎月</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 カブドットコム証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 あおぞら銀行 新生銀行 オーストラリア・ニュージーランド銀行 ジャパンネット銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2056</td>
-<td align="right">2055</td>
-<td align="left">79316099</td>
-<td align="left">大和住銀 中国株式Ｆ マネーポートフォリオ</td>
-<td align="left">資金待機型投信 大和証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">グローバルＥＶ関連株ファンド（為替ヘッジなし）</td>
+<td align="left">ＥＶ革命</td>
+<td align="left">79315181</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2057</td>
-<td align="right">2056</td>
-<td align="left">79316107</td>
-<td align="left">アジア・ハイインカムＦ・アジア３通貨コース</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2058</td>
-<td align="right">2057</td>
-<td align="left">79316109</td>
-<td align="left">グローバルハイイールド債(ＢＲＩＣｓ)</td>
-<td align="left">池田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 高木証券 東海東京証券 とちぎんTT証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 マネックス証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2059</td>
-<td align="right">2058</td>
-<td align="left">7931611A</td>
-<td align="left">日本株２２５・資源３通貨コース</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 カブドットコム証券 高木証券 内藤証券 楽天証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">Ｍ＆Ａフォーカス・ファンド</td>
 <td align="left"></td>
+<td align="left">79316063</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2060</td>
-<td align="right">2059</td>
-<td align="left">79316138</td>
-<td align="left">エマージングボンドＦカナダドル毎月</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 ほくほくＴＴ証券 丸八証券 水戸証券 めぶき証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
 <td>2061</td>
-<td align="right">2060</td>
-<td align="left">79316144</td>
-<td align="left">欧州株ツインα（毎月分配型） 池</td>
-<td align="left">田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 クレディ・スイス証券 高木証券 ちばぎん証券 中銀証券 ひろぎん証券 フィデリティ証券 楽天証券 ワイエム証券 三</td>
-<td align="left">井住友DS</td>
+<td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド・南アフリカランドコース（毎月分配型）</td>
 <td align="left"></td>
-<td align="left">20</td>
-<td align="left">19/03/29</td>
+<td align="left">79316097</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2062</td>
-<td align="right">2061</td>
-<td align="left">79316149</td>
-<td align="left">英国国債ファンド－ギルト１０－(ヘッジ無)</td>
+<td align="left">三井住友DS</td>
+<td align="left">大和住銀 中国株式ファンド（マネー・ポートフォリオ）</td>
+<td align="left"></td>
+<td align="left">79316099</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2063</td>
-<td align="right">2062</td>
-<td align="left">79316153</td>
-<td align="left">ファンダメンタル・アクティブ・Ｆ(ＳＭＡ)</td>
-<td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2064</td>
-<td align="right">2063</td>
-<td align="left">79316157</td>
-<td align="left">短期米ドル社債オープン(毎月分配)</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2065</td>
-<td align="right">2064</td>
-<td align="left">79316158</td>
-<td align="left">米国コア・バランス・Ｆ(Ｈ無　毎月分配型)</td>
-<td align="left">ＳＢＩ証券 高木証券 楽天証券 足利銀行 佐賀銀行 みなと銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＵＳヒーロー</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2066</td>
-<td align="right">2065</td>
-<td align="left">7931615A</td>
-<td align="left">米国短期社債戦略ファンド１５１０(Ｈ有)</td>
-<td align="left">関西みらい銀行</td>
 <td align="left">三井住友DS</td>
-<td align="left">ドルサイくん2015-10</td>
+<td align="left">エマージング・ボンド・ファンド・カナダドルコース（毎月分配型）</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2067</td>
-<td align="right">2066</td>
-<td align="left">7931615C</td>
-<td align="left">日本消費関連株ファンド(予想分配金提示型)</td>
-<td align="left">ＳＭＢＣ日興証券 三井住友銀行 新生銀行 親和銀行 福岡銀行 熊本銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ジャパニーズ・クオリティー</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2068</td>
-<td align="right">2067</td>
-<td align="left">79316173</td>
-<td align="left">世界リアルアセット・バランス(資産成長型)</td>
-<td align="left">三井住友信託銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2069</td>
-<td align="right">2068</td>
-<td align="left">79316191</td>
-<td align="left">ひとくふうターゲット・デート・ファンド2050</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ひとくふうTDF2050</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>2070</td>
-<td align="right">2069</td>
-<td align="left">79317019</td>
-<td align="left">大和住銀ＤＣ年金設計ファンド５０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>2071</td>
-<td align="right">2070</td>
-<td align="left">7931703B</td>
-<td align="left">Ｊ－Ｓｔｏｃｋアクティブ・オープン</td>
-<td align="left">安藤証券 いちよし証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 ＧＭＯクリック証券 証券ジャパン 高木証券 立花証券 内藤証券 野村証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 楽天証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2072</td>
-<td align="right">2071</td>
-<td align="left">79317072</td>
-<td align="left">ＳＭＢＣファンドラップ・米国株</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>2073</td>
-<td align="right">2072</td>
-<td align="left">79317097</td>
-<td align="left">エマージングボンドＦトルコリラ毎月</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 カブドットコム証券 極東証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 楽天証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 あおぞら銀行 新生銀行 オーストラリア・ニュージーランド銀行 ジャパンネット銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2074</td>
-<td align="right">2073</td>
-<td align="left">79317107</td>
-<td align="left">アジア・ハイインカムＦ・円コース</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2075</td>
-<td align="right">2074</td>
-<td align="left">79317109</td>
-<td align="left">グローバルハイイールド債(世界６地域)</td>
-<td align="left">池田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 高木証券 東海東京証券 とちぎんTT証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 マネックス証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2076</td>
-<td align="right">2075</td>
-<td align="left">79317126</td>
-<td align="left">メキシコ債券オープン(毎月分配型)</td>
-<td align="left">岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 九州ＦＧ証券 ぐんぎん証券 ごうぎん証券 寿証券 四国アライアンス証券 七十七証券 大和証券 高木証券 立花証券 内藤証券 西日本シティＴＴ証券 日産証券 野村証券 浜銀ＴＴ証券 百五証券 フィデリティ証券 北洋証券 マネックス証券 三木証券 楽天証券 リテラ・クレア証券 新生銀行 三井住友信託銀行 足利銀行 大垣共立銀行 鹿児島銀行 関西みらい銀行 京都銀行 滋賀銀行 四国銀行 清水銀行 十八銀行 十六銀行 常陽銀行 第四銀行 但馬銀行 筑邦銀行 千葉興業銀行 西日本シティ銀行 百十四銀行 福井銀行 北陸銀行 三重銀行 宮崎銀行 愛知銀行 香川銀行 北日本銀行 京葉銀行 島根銀行 大東銀行 中京銀行 東和銀行 栃木銀行 富山第一銀行 北洋銀行 ソニー銀行 ジャパンネット銀行 イオン銀行 おかやま信金 京都信金 ゆうちょ銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">アミーゴ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2077</td>
-<td align="right">2076</td>
-<td align="left">79317138</td>
-<td align="left">エマージングボンドＦメキシコペソ毎月</td>
-<td align="left">池田泉州ＴＴ証券 エース証券 ＳＢＩ証券 ＦＦＧ証券 香川証券 寿証券 大和証券 高木証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 ほくほくＴＴ証券 丸八証券 水戸証券 めぶき証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2078</td>
-<td align="right">2077</td>
-<td align="left">79317144</td>
-<td align="left">欧州株ツインα（資産成長型） 池</td>
-<td align="left">田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 クレディ・スイス証券 高木証券 ちばぎん証券 中銀証券 ひろぎん証券 フィデリティ証券 楽天証券 ワイエム証券 三</td>
-<td align="left">井住友DS</td>
-<td align="left"></td>
-<td align="left">20</td>
-<td align="left">19/03/29</td>
-</tr>
-<tr class="even">
-<td>2079</td>
-<td align="right">2078</td>
-<td align="left">79317145</td>
-<td align="left">短期米ドル社債オープン(毎月分配)</td>
-<td align="left">ＳＢＩ証券 カブドットコム証券 高木証券 楽天証券 リテラ・クレア証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2080</td>
-<td align="right">2079</td>
-<td align="left">7931714C</td>
-<td align="left">米国リバーサル戦略ツインαネオ(毎月分配) 大</td>
-<td align="left">和証券 三</td>
-<td align="left">井住友DS</td>
-<td align="left"></td>
-<td align="left">20</td>
-<td align="left">19/03/29</td>
-</tr>
-<tr class="even">
-<td>2081</td>
-<td align="right">2080</td>
-<td align="left">79317158</td>
-<td align="left">米国コア・バランス・Ｆ(Ｈ有　資産成長型)</td>
-<td align="left">ＳＢＩ証券 七十七証券 高木証券 楽天証券 七十七銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＵＳヒーロー</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2082</td>
-<td align="right">2081</td>
-<td align="left">7931715A</td>
-<td align="left">米国短期社債戦略ファンド１５１０(Ｈ無)</td>
-<td align="left">関西みらい銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ドルサイくん2015-10</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2083</td>
-<td align="right">2083</td>
-<td align="left">7931715C</td>
-<td align="left">日本消費関連株ファンド(資産成長型)</td>
-<td align="left">ＳＭＢＣ日興証券 三井住友銀行 親和銀行 福岡銀行 熊本銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ジャパニーズ・クオリティー</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2084</td>
-<td align="right">2084</td>
-<td align="left">79317169</td>
-<td align="left">米国株リバーサル戦略 Ａ(ダイワ投資一任)</td>
+<td align="left">79316138</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2085</td>
-<td align="right">2085</td>
-<td align="left">79317191</td>
-<td align="left">ひとくふうターゲット・デート・ファンド2060</td>
-<td align="left">三井住友銀行</td>
+<td>2068</td>
 <td align="left">三井住友DS</td>
-<td align="left">ひとくふうTDF2060</td>
+<td align="left">英国国債ファンド －ギルト10－ （為替ヘッジなし）</td>
 <td align="left"></td>
+<td align="left">79316149</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
+<td>2079</td>
+<td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド・トルコリラコース（毎月分配型）</td>
+<td align="left"></td>
+<td align="left">79317097</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>2082</td>
+<td align="left">三井住友DS</td>
+<td align="left">メキシコ債券オープン（毎月分配型）</td>
+<td align="left">アミーゴ</td>
+<td align="left">79317126</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>2083</td>
+<td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド・メキシコペソコース（毎月分配型）</td>
+<td align="left"></td>
+<td align="left">79317138</td>
+<td align="left">大和証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
 <td>2086</td>
-<td align="right">2086</td>
-<td align="left">79317192</td>
-<td align="left">インターナショナル株式アクティブＦラップ</td>
-<td align="left">東海東京証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">米国リバーサル戦略ツインαネオ（毎月分配型）</td>
+<td align="left">7</td>
+<td align="left">931714C 大</td>
+<td align="left">和証券</td>
+<td align="left">〇</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2087</td>
-<td align="right">2087</td>
-<td align="left">79318019</td>
-<td align="left">大和住銀ＤＣ年金設計ファンド７０</td>
-<td align="left"></td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>2088</td>
-<td align="right">2088</td>
-<td align="left">79318072</td>
-<td align="left">ＳＭＢＣファンドラップ・欧州株</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>2089</td>
-<td align="right">2089</td>
-<td align="left">79318096</td>
-<td align="left">環境ビジネス日本株オープン</td>
-<td align="left">寿証券 内藤証券 リテラ・クレア証券 三井住友銀行 関西みらい銀行 三重銀行 北日本銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
 </tr>
 <tr class="odd">
 <td>2090</td>
-<td align="right">2090</td>
-<td align="left">79318097</td>
-<td align="left">エマージングボンドＦマネープール</td>
-<td align="left">資金待機型投信 池田泉州ＴＴ証券 エース証券 ＦＦＧ証券 香川証券 寿証券 大和証券 東海東京証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 浜銀ＴＴ証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 むさし証券 めぶき証券 リテラ・クレア証券 ワイエム証券 三井住友銀行 オーストラリア・ニュージーランド銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">大和住銀／コロンビア米国株リバーサル戦略ファンド　Ａコース（ダイワ投資一任専用）</td>
 <td align="left"></td>
+<td align="left">79317169</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2091</td>
-<td align="right">2091</td>
-<td align="left">79318107</td>
-<td align="left">アジア・ハイインカムＦ・(マネープールＦ)</td>
-<td align="left">資金待機型投信 ＳＭＢＣ日興証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2092</td>
-<td align="right">2092</td>
-<td align="left">79318109</td>
-<td align="left">グローバルハイイールド債(マネープールＦ)</td>
-<td align="left">資金待機型投信 池田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 高木証券 東海東京証券 とちぎんTT証券 西日本シティＴＴ証券 浜銀ＴＴ証券 ほくほくＴＴ証券 マネックス証券 楽天証券 ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2093</td>
-<td align="right">2093</td>
-<td align="left">79318114</td>
-<td align="left">日本株厳選ファンド・円コース</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 ごうぎん証券 寿証券 静岡東海証券 第四証券 大和証券 高木証券 東海東京証券 東洋証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 百五証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 新生銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2094</td>
-<td align="right">2094</td>
-<td align="left">7931811B</td>
-<td align="left">グローバルＣＢオープン・高金利通貨コース</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2095</td>
-<td align="right">2095</td>
-<td align="left">79318138</td>
-<td align="left">メキシコ債券オープン(資産成長型)</td>
-<td align="left">岩井コスモ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 ぐんぎん証券 寿証券 七十七証券 大和証券 高木証券 立花証券 西日本シティＴＴ証券 日産証券 野村証券 浜銀ＴＴ証券 フィデリティ証券 三木証券 楽天証券 リテラ・クレア証券 足利銀行 関西みらい銀行 四国銀行 清水銀行 但馬銀行 西日本シティ銀行 京葉銀行 栃木銀行 ソニー銀行 イオン銀行 岡崎信金</td>
-<td align="left">三井住友DS</td>
-<td align="left">アミーゴ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
 <td>2096</td>
-<td align="right">2096</td>
-<td align="left">79318141</td>
-<td align="left">カナダ高配当株ファンド</td>
+<td align="left">三井住友DS</td>
+<td align="left">エマージング・ボンド・ファンド（マネープールファンド）</td>
+<td align="left"></td>
+<td align="left">79318097</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2097</td>
-<td align="right">2097</td>
-<td align="left">79318151</td>
-<td align="left">米国リート厳選ファンド（毎月決算型）</td>
-<td align="left">三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2098</td>
-<td align="right">2098</td>
-<td align="left">79318158</td>
-<td align="left">米国コア・バランス・Ｆ(Ｈ無　資産成長型)</td>
-<td align="left">ＳＢＩ証券 七十七証券 高木証券 楽天証券 足利銀行 静岡銀行 七十七銀行 十八銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">ＵＳヒーロー</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
 <td>2099</td>
-<td align="right">2099</td>
-<td align="left">79318169</td>
-<td align="left">米国株リバーサル戦略 Ｂ(ダイワ投資一任)</td>
+<td align="left">三井住友DS</td>
+<td align="left">日本株厳選ファンド・円コース</td>
+<td align="left"></td>
+<td align="left">79318114</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2100</td>
-<td align="right">2100</td>
-<td align="left">79318191</td>
-<td align="left">日本中小型クオリティバリュー株ファンド</td>
-<td align="left">内藤証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">花の山</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2101</td>
-<td align="right">2101</td>
-<td align="left">79319072</td>
-<td align="left">ＳＭＢＣファンドラップ・新興国株</td>
-<td align="left">ＳＭＢＣ日興証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">メキシコ債券オープン（資産成長型）</td>
+<td align="left">アミーゴ</td>
+<td align="left">79318138</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2102</td>
-<td align="right">2102</td>
-<td align="left">79319114</td>
-<td align="left">日本株厳選ファンド・ブラジルレアルコース</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 ごうぎん証券 寿証券 静岡東海証券 第四証券 大和証券 高木証券 東海東京証券 東洋証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 百五証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 新生銀行 イオン銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">カナダ高配当株ファンド</td>
 <td align="left"></td>
+<td align="left">79318141</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2103</td>
-<td align="right">2103</td>
-<td align="left">7931911B</td>
-<td align="left">グローバルＣＢオープン・円コース</td>
-<td align="left">ＳＭＢＣ日興証券 高木証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2104</td>
-<td align="right">2104</td>
-<td align="left">79319138</td>
-<td align="left">タフ・アメリカ(為替ヘッジあり 毎月決算型)</td>
-<td align="left">ひろぎん証券 三井住友銀行 広島銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2105</td>
-<td align="right">2105</td>
-<td align="left">79319151</td>
-<td align="left">米国リート厳選ファンド（資産成長型）</td>
-<td align="left">三井住友銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">大和住銀／コロンビア米国株リバーサル戦略ファンド　Ｂコース（ダイワ投資一任専用）</td>
 <td align="left"></td>
+<td align="left">79318169</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2106</td>
-<td align="right">2106</td>
-<td align="left">79319153</td>
-<td align="left">米国株厳選ファンド・米ドルコース</td>
-<td align="left">エース証券 ＳＢＩ証券 カブドットコム証券 寿証券 高木証券 マネックス証券 丸八証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2107</td>
-<td align="right">2107</td>
-<td align="left">79319155</td>
-<td align="left">ＹＭ・ジャパン・イノベーション・オープン</td>
-<td align="left">ワイエム証券</td>
-<td align="left">三井住友DS</td>
-<td align="left">長州五傑</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2108</td>
-<td align="right">2108</td>
-<td align="left">79319168</td>
-<td align="left">ひとくふう先進国株式ファンド</td>
-<td align="left">エイチ・エス証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 証券ジャパン 松井証券 楽天証券 三井住友信託銀行 香川銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">日本株厳選ファンド・ブラジルレアルコース</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2109</td>
-<td align="right">2109</td>
-<td align="left">7931A072</td>
-<td align="left">ＳＭＢＣファンドラップ・コモディティ</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td>2110</td>
-<td align="right">2110</td>
-<td align="left">7931A114</td>
-<td align="left">日本株厳選ファンド・豪ドルコース</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 ごうぎん証券 寿証券 静岡東海証券 第四証券 大和証券 高木証券 東海東京証券 東洋証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 百五証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 新生銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2111</td>
-<td align="right">2111</td>
-<td align="left">7931A116</td>
-<td align="left">株式＆通貨 資源ダブルフォーカス(毎月)</td>
+<td align="left">79319114</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2112</td>
-<td align="right">2112</td>
-<td align="left">7931A11B</td>
-<td align="left">グローバルＣＢオープン（マネープールＦ）</td>
-<td align="left">資金待機型投信 ＳＭＢＣ日興証券 高木証券 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2113</td>
-<td align="right">2113</td>
-<td align="left">7931A138</td>
-<td align="left">タフ・アメリカ(為替ヘッジなし 毎月決算型)</td>
-<td align="left">ひろぎん証券 三井住友銀行 広島銀行 愛媛銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2114</td>
-<td align="right">2114</td>
-<td align="left">7931A152</td>
-<td align="left">米国株アルファ・カルテット（毎月分配型）</td>
-<td align="left">エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 岡三オンライン証券 香川証券 カブドットコム証券 クレディ・スイス証券 高木証券 立花証券 マネックス証券 丸八証券 楽天証券 新生銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2115</td>
-<td align="right">2115</td>
-<td align="left">7931A153</td>
-<td align="left">米国株厳選ファンド・ブラジルレアルコース</td>
-<td align="left">エース証券 ＳＢＩ証券 カブドットコム証券 寿証券 高木証券 マネックス証券 丸八証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
 <td>2116</td>
-<td align="right">2116</td>
-<td align="left">7931A156</td>
-<td align="left">短期米ドル社債ファンド１５０６(ヘッジ有)</td>
+<td align="left">三井住友DS</td>
+<td align="left">日本株厳選ファンド・豪ドルコース</td>
+<td align="left"></td>
+<td align="left">7931A114</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2117</td>
-<td align="right">2117</td>
-<td align="left">7931A163</td>
-<td align="left">ひとくふう日本株式ファンド</td>
-<td align="left">エイチ・エス証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 ＧＭＯクリック証券 証券ジャパン ひろぎん証券 松井証券 楽天証券 ジャパンネット銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">株式＆通貨 資源ダブルフォーカス（毎月分配型）</td>
 <td align="left"></td>
+<td align="left">7931A116</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2118</td>
-<td align="right">2118</td>
-<td align="left">7931A167</td>
-<td align="left">ひとくふう新興国株式ファンド</td>
-<td align="left">エイチ・エス証券 ＳＢＩ証券 岡三オンライン証券 カブドットコム証券 証券ジャパン 松井証券 楽天証券 三井住友信託銀行 香川銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2119</td>
-<td align="right">2119</td>
-<td align="left">7931A184</td>
-<td align="left">欧州バンクローン・オープン（ヘッジあり）</td>
-<td align="left">三井住友信託銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/02/28</td>
-</tr>
-<tr class="odd">
-<td>2120</td>
-<td align="right">2120</td>
-<td align="left">7931B114</td>
-<td align="left">日本株厳選ファンド・アジア３通貨コース</td>
-<td align="left">藍澤証券 池田泉州ＴＴ証券 エース証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 極東証券 ごうぎん証券 寿証券 静岡東海証券 第四証券 大和証券 高木証券 東海東京証券 東洋証券 とちぎんTT証券 内藤証券 西日本シティＴＴ証券 日産証券 百五証券 ひろぎん証券 フィデリティ証券 ほくほくＴＴ証券 マネックス証券 丸八証券 水戸証券 明和証券 楽天証券 リテラ・クレア証券 新生銀行 イオン銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2121</td>
-<td align="right">2121</td>
-<td align="left">7931B138</td>
-<td align="left">タフ・アメリカ(為替ヘッジあり 資産成長型)</td>
-<td align="left">ひろぎん証券 三井住友銀行 関西みらい銀行 広島銀行 愛媛銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">短期米ドル社債ファンド2015-06（為替ヘッジあり）</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2122</td>
-<td align="right">2122</td>
-<td align="left">7931B13B</td>
-<td align="left">米国小型株ツインα（毎月分配型） 池</td>
-<td align="left">田泉州ＴＴ証券 今村証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 クレディ・スイス証券 高木証券 ちばぎん証券 ひろぎん証券 丸八証券 楽天証券 ワイエム証券 三</td>
-<td align="left">井住友DS</td>
-<td align="left"></td>
-<td align="left">20</td>
-<td align="left">19/03/29</td>
-</tr>
-<tr class="even">
-<td>2123</td>
-<td align="right">2123</td>
-<td align="left">7931B153</td>
-<td align="left">米国株厳選ファンド・豪ドルコース</td>
-<td align="left">エース証券 ＳＢＩ証券 カブドットコム証券 寿証券 高木証券 マネックス証券 丸八証券 楽天証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2124</td>
-<td align="right">2124</td>
-<td align="left">7931B155</td>
-<td align="left">７－１０年カナダ国債ラダー・ファンドＨ有</td>
+<td align="left">7931A156</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2125</td>
-<td align="right">2125</td>
-<td align="left">7931B156</td>
-<td align="left">短期米ドル社債ファンド１５０６(ヘッジ無)</td>
+<td align="left">三井住友DS</td>
+<td align="left">日本株厳選ファンド・アジア３通貨コース</td>
+<td align="left"></td>
+<td align="left">7931B114</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2126</td>
-<td align="right">2126</td>
-<td align="left">7931B184</td>
-<td align="left">欧州バンクローン・オープン（ヘッジなし）</td>
-<td align="left">三井住友信託銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/02/28</td>
-</tr>
-<tr class="even">
-<td>2127</td>
-<td align="right">2127</td>
-<td align="left">7931B185</td>
-<td align="left">世界インパクト投資ファンド（資産成長型）</td>
-<td align="left">ＳＢＩ証券 岡三オンライン証券 七十七証券 大和証券 ちばぎん証券 内藤証券 西日本シティＴＴ証券 野村証券 マネックス証券 丸八証券 むさし証券 楽天証券 みずほ銀行 三井住友銀行 あおぞら銀行 静岡銀行 百十四銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">Ｂｅｔｔｅｒ　Ｗｏｒｌｄ</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2128</td>
-<td align="right">2128</td>
-<td align="left">7931C136</td>
-<td align="left">北米高配当株ファンド（毎月決算型）</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 証券ジャパン 高木証券 内藤証券 フィデリティ証券 マネックス証券 楽天証券 三重銀行 栃木銀行 東日本銀行 オーストラリア・ニュージーランド銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
 <td>2129</td>
-<td align="right">2129</td>
-<td align="left">7931C138</td>
-<td align="left">タフ・アメリカ(為替ヘッジなし 資産成長型)</td>
-<td align="left">ひろぎん証券 三井住友銀行 関西みらい銀行 広島銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">7-10年カナダ国債ラダー・ファンド －メープル７－ （為替ヘッジあり）</td>
 <td align="left"></td>
+<td align="left">7931B155</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
 <td>2130</td>
-<td align="right">2130</td>
-<td align="left">7931C13B</td>
-<td align="left">米国小型株ツインα（資産成長型） 池</td>
-<td align="left">田泉州ＴＴ証券 ＳＭＢＣ日興証券 ＳＢＩ証券 香川証券 カブドットコム証券 高木証券 ちばぎん証券 ひろぎん証券 丸八証券 楽天証券 ワイエム証券 三</td>
-<td align="left">井住友DS</td>
-<td align="left"></td>
-<td align="left">20</td>
-<td align="left">19/03/29</td>
-</tr>
-<tr class="even">
-<td>2131</td>
-<td align="right">2131</td>
-<td align="left">7931C153</td>
-<td align="left">米国株厳選ファンド・高金利通貨コース</td>
-<td align="left">エース証券 ＳＢＩ証券 カブドットコム証券 寿証券 高木証券 マネックス証券 丸八証券 楽天証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">短期米ドル社債ファンド2015-06（為替ヘッジなし）</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2132</td>
-<td align="right">2132</td>
-<td align="left">7931C155</td>
-<td align="left">７－１０年カナダ国債ラダー・ファンドＨ無</td>
+<td align="left">7931B156</td>
 <td align="left">大和証券</td>
-<td align="left">三井住友DS</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2133</td>
-<td align="right">2133</td>
-<td align="left">7931C163</td>
-<td align="left">日本株アルファ・カルテット(年２回決算型)</td>
-<td align="left">ＳＭＢＣ日興証券 大和証券</td>
+<td>2132</td>
 <td align="left">三井住友DS</td>
+<td align="left">世界インパクト投資ファンド（資産成長型）</td>
+<td align="left">Ｂｅｔｔｅｒ　Ｗｏｒｌｄ</td>
+<td align="left">7931B185</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2134</td>
-<td align="right">2134</td>
-<td align="left">7931D136</td>
-<td align="left">北米高配当株ファンド（年２回決算型）</td>
-<td align="left">ＳＭＢＣ日興証券 ＳＢＩ証券 カブドットコム証券 証券ジャパン 高木証券 内藤証券 フィデリティ証券 マネックス証券 楽天証券 三重銀行 栃木銀行 東日本銀行 オーストラリア・ニュージーランド銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
-<td>2135</td>
-<td align="right">2135</td>
-<td align="left">7931D138</td>
-<td align="left">タフ・アメリカ(マネープールファンド)</td>
-<td align="left">資金待機型投信 三井住友銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="odd">
-<td>2136</td>
-<td align="right">2136</td>
-<td align="left">7931D147</td>
-<td align="left">富岡製糸場・絹産業遺産群保護活動応援Ｆ</td>
-<td align="left">ぐんぎん証券 群馬銀行</td>
-<td align="left">三井住友DS</td>
-<td align="left">群馬の絹遺産</td>
-<td align="left"></td>
-<td align="left">2019/03/29</td>
-</tr>
-<tr class="even">
 <td>2137</td>
-<td align="right">2137</td>
-<td align="left">7931D155</td>
-<td align="left">ウエリントン・ワールド・ボンド(ＳＭＡ専用)</td>
-<td align="left">三井住友信託銀行</td>
 <td align="left">三井住友DS</td>
+<td align="left">7-10年カナダ国債ラダー・ファンド －メープル７－ （為替ヘッジなし）</td>
 <td align="left"></td>
+<td align="left">7931C155</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2138</td>
-<td align="right">2138</td>
-<td align="left">7931E072</td>
-<td align="left">ＳＭＢＣファンドラップ・米国債</td>
-<td align="left">ＳＭＢＣ日興証券</td>
 <td align="left">三井住友DS</td>
+<td align="left">日本株アルファ・カルテット（年２回決算型）</td>
 <td align="left"></td>
+<td align="left">7931C163</td>
+<td align="left">大和証券</td>
 <td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td>2139</td>
-<td align="right">2139</td>
-<td align="left">7931F072</td>
-<td align="left">ＳＭＢＣファンドラップ・欧州債</td>
-<td align="left">ＳＭＢＣ日興証券</td>
-<td align="left">三井住友DS</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2140</td>
-<td align="right">2140</td>
-<td align="left">7931G072</td>
-<td align="left">ＳＭＢＣファンドラップ・新興国債</td>
-<td align="left">ＳＭＢＣ日興証券</td>
+<td>532</td>
 <td align="left">三井住友DS</td>
+<td align="left">三井住友・ロシア株式オープン</td>
 <td align="left"></td>
+<td align="left">79311086</td>
+<td align="left">SMBC日興証券</td>
 <td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2141</td>
-<td align="right">2141</td>
-<td align="left">7931H072</td>
-<td align="left">ＳＭＢＣファンドラップ・日本グロース株</td>
-<td align="left">ＳＭＢＣ日興証券</td>
+<td>588</td>
 <td align="left">三井住友DS</td>
+<td align="left">三井住友・米国ハイ・イールド債券ファンド（為替ヘッジ型）</td>
 <td align="left"></td>
+<td align="left">79311094</td>
+<td align="left">SMBC日興証券</td>
 <td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2142</td>
-<td align="right">2142</td>
-<td align="left">7931I072</td>
-<td align="left">ＳＭＢＣファンドラップ・日本中小型株</td>
-<td align="left">ＳＭＢＣ日興証券</td>
+<td>591</td>
 <td align="left">三井住友DS</td>
+<td align="left">コーポレート・ボンド・インカム（為替ヘッジ型）</td>
+<td align="left">泰平航路</td>
+<td align="left">79311095</td>
+<td align="left">SMBC日興証券</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2143</td>
-<td align="right">2143</td>
-<td align="left">7931J072</td>
-<td align="left">ＳＭＢＣファンドラップ・日本債</td>
-<td align="left">ＳＭＢＣ日興証券</td>
+<td>765</td>
 <td align="left">三井住友DS</td>
+<td align="left">ＪＡＳＤＡＱ－ＴＯＰ２０指数ファンド</td>
 <td align="left"></td>
+<td align="left">7931110C</td>
+<td align="left">SMBC日興証券</td>
 <td align="left"></td>
-<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2144</td>
-<td align="right">2144</td>
-<td align="left">7921115C</td>
-<td align="left">米国短期社債戦略ファンド１５１２(Ｈ有)</td>
-<td align="left"></td>
+<td>1189</td>
 <td align="left">三井住友DS</td>
-<td align="left">ドルサイくん２０１５－１２</td>
+<td align="left">ＹＯＵＲＭＩＲＡＩ　ワールド・リゾート</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">79311148</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2145</td>
-<td align="right">2145</td>
-<td align="left">7921215C</td>
-<td align="left">米国短期社債戦略ファンド１５１２(Ｈ無)</td>
-<td align="left"></td>
+<td>1237</td>
 <td align="left">三井住友DS</td>
-<td align="left">ドルサイくん２０１５－１２</td>
+<td align="left">三井住友・ＤＣ年金バランスゼロ（債券型）</td>
+<td align="left">マイパッケージＺＥＲＯ</td>
+<td align="left">7931114C</td>
+<td align="left">SMBC日興証券</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">〇</td>
 </tr>
 <tr class="odd">
-<td>2146</td>
-<td align="right">2146</td>
-<td align="left">79212162</td>
-<td align="left">世界ハイブリッド証券Ｆ２０１６０２(Ｈ有)</td>
-<td align="left"></td>
+<td>1569</td>
 <td align="left">三井住友DS</td>
-<td align="left">ゆうせん君プラス２０１６０２</td>
+<td align="left">ヘルスケア・リート・プラス</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">79311161</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 <tr class="even">
-<td>2147</td>
-<td align="right">2147</td>
-<td align="left">7921315C</td>
-<td align="left">世界ハイブリッド証券Ｆ２０１５１２(Ｈ有)</td>
-<td align="left"></td>
+<td>1910</td>
 <td align="left">三井住友DS</td>
-<td align="left">ゆうせん君プラス２０１５１２</td>
+<td align="left">げんき１００年ライフ株式ファンド</td>
 <td align="left"></td>
-<td align="left">2019/03/29</td>
+<td align="left">79311189</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>1924</td>
+<td align="left">三井住友DS</td>
+<td align="left">イノベーション・インデックス・フィンテック</td>
+<td align="left"></td>
+<td align="left">7931118A</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>19711</td>
+<td align="left">三井住友DS</td>
+<td align="left">エス・ビー・日本債券ファンド</td>
+<td align="left">ベガ</td>
+<td align="left">79311983</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>960</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・配当フォーカスオープン</td>
+<td align="left"></td>
+<td align="left">79312046</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>326</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・ＤＣ年金バランス30（債券重点型）</td>
+<td align="left">マイパッケージ</td>
+<td align="left">79312059</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>397</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・インド・中国株オープン</td>
+<td align="left"></td>
+<td align="left">79312064</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>589</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・米国ハイ・イールド債券ファンド（為替ノーヘッジ型）</td>
+<td align="left"></td>
+<td align="left">79312094</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>592</td>
+<td align="left">三井住友DS</td>
+<td align="left">コーポレート・ボンド・インカム（為替ノーヘッジ型）</td>
+<td align="left">泰平航路</td>
+<td align="left">79312095</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>327</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・ＤＣ年金バランス50（標準型）</td>
+<td align="left">マイパッケージ</td>
+<td align="left">79313059</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>1845</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・日経アジア３００ｉインデックスファンド</td>
+<td align="left"></td>
+<td align="left">79313181</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>2012</td>
+<td align="left">三井住友DS</td>
+<td align="left">グローバル好配当株オープン</td>
+<td align="left"></td>
+<td align="left">79314057</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>328</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・ＤＣ年金バランス70（株式重点型）</td>
+<td align="left">マイパッケージ</td>
+<td align="left">79314059</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>1889</td>
+<td align="left">三井住友DS</td>
+<td align="left">イノベーション・インデックス・ＡＩ</td>
+<td align="left"></td>
+<td align="left">79314186</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>964</td>
+<td align="left">三井住友DS</td>
+<td align="left">中部経済圏株式ファンド</td>
+<td align="left">ゲンキ・中部</td>
+<td align="left">79316059</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>1950</td>
+<td align="left">三井住友DS</td>
+<td align="left">イノベーション・インデックス・シェアリングエコノミー</td>
+<td align="left"></td>
+<td align="left">79316192</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>529</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・ＤＣターゲットイヤーファンド2040（４資産タイプ）</td>
+<td align="left"></td>
+<td align="left">79318083</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>530</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・ＤＣターゲットイヤーファンド2045（４資産タイプ）</td>
+<td align="left"></td>
+<td align="left">79319083</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>652</td>
+<td align="left">三井住友DS</td>
+<td align="left">外国株式指数ファンド</td>
+<td align="left"></td>
+<td align="left">7931A09A</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>2120</td>
+<td align="left">三井住友DS</td>
+<td align="left">米国株アルファ・カルテット（毎月分配型）</td>
+<td align="left"></td>
+<td align="left">7931A152</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="odd">
+<td>966</td>
+<td align="left">三井住友DS</td>
+<td align="left">三井住友・バンガード海外株式ファンド</td>
+<td align="left"></td>
+<td align="left">7931B036</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
+</tr>
+<tr class="even">
+<td>21381</td>
+<td align="left">三井住友DS</td>
+<td align="left">日本株アルファ・カルテット（年２回決算型）</td>
+<td align="left"></td>
+<td align="left">7931C163</td>
+<td align="left">SMBC日興証券</td>
+<td align="left"></td>
+<td align="left">〇</td>
 </tr>
 </tbody>
 </table>

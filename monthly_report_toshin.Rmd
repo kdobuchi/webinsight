@@ -117,6 +117,6 @@ kable(pikute)
 ```{r results='asis'}
 DS <- subset(all_data2 , asset_manage_co == "三井住友DS")
 DS  <- DS[order(DS$sales_co, DS$fund_code),]
-kable(ds)
+kable(DS)
 ```
 
