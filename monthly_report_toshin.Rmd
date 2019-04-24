@@ -28,30 +28,75 @@ con <- dbConnect(drv, dbname = "postgres",
                  user = "postgres", password = pw)
 rm(pw) # removes the password
 
+# deleted
 data_all <- dbGetQuery(con,"select * from public.web_explore_toshin_rep")
 
-
 data_all[3] <- data.frame(lapply(data_all[3],iconv,from="utf-8",to="cp932"))
-data_all[4] <- data.frame(lapply(data_all[4],iconv,from="utf-8",to="cp932"))
-data_all[5] <- data.frame(lapply(data_all[5],iconv,from="utf-8",to="cp932"))
 data_all[6] <- data.frame(lapply(data_all[6],iconv,from="utf-8",to="cp932"))
-columnList <- c("id", "name", "sales_co", "man_co","nickname","weekly_rep","monthly_rep")
+data_all[8] <- data.frame(lapply(data_all[8],iconv,from="utf-8",to="cp932"))
+data_all[12] <- data.frame(lapply(data_all[12],iconv,from="utf-8",to="cp932"))
+data_all[13] <- data.frame(lapply(data_all[13],iconv,from="utf-8",to="cp932"))
+data_all[14] <- data.frame(lapply(data_all[14],iconv,from="utf-8",to="cp932"))
+data_all[16] <- data.frame(lapply(data_all[16],iconv,from="utf-8",to="cp932"))
+# columnList <- c("fund_code", "fund_true_name", "sales_co","man_co","nickname","weekly_rep","monthly_rep")
+
+columnList <- c("asset_manage_co", "fund_true_name","nickname","fund_code","sales_co","weekly_rep","monthly_rep")
+
+## 三菱UFJ銀行
+
+mitubushi <- subset(data_all , grepl("RPM", btmu_partition))
+sales_co <- rep("三菱UFJ銀行",nrow(mitubushi))
+mitubushi  <- cbind(mitubushi,sales_co)
+mitubushi$monthly_rep[nchar(mitubushi$monthly_rep) > 3] <- "〇"
+mitubushi$weekly_rep[nchar(mitubushi$weekly_rep) > 3] <- "〇"
+mitubushi <- mitubushi[, columnList]
+
+
+
+#kable(mitubushi)
+
+## 大和
+items <- c("03","01","42","79")
+items_fund_type <- c("1","2","3","6","7")
+data_all$fund_type <- as.numeric(data_all$fund_type)
+daiwa_1 <- subset(data_all , fund_type >= 10 & fund_type <= 99 & daiwa_service_partition == "1" & asset_manage_code %in% items & redeem_flag == "0")
+daiwa_2 <- subset(data_all , fund_type %in% items_fund_type & daiwa_service_partition == "1" & asset_manage_code %in% items & redeem_flag == "0")
+daiwa <- rbind(daiwa_1,daiwa_2)
+sales_co <- rep("大和証券",nrow(daiwa))
+daiwa <- cbind(daiwa,sales_co)
+daiwa$monthly_rep[nchar(daiwa$monthly_rep) > 3] <- "〇"
+daiwa$weekly_rep[nchar(daiwa$weekly_rep) > 3] <- "〇"
+daiwa <- daiwa[, columnList]
+
+## SMBC日興証券
+
+smbc <- subset(data_all , fund_type == 31 &  !grepl("XUR", nikko_theme) & !grepl("ALL", nikko_theme)  & grepl("DRT", nikko_theme) & asset_manage_code %in% items & monthly_rep != "," )
+sales_co <- rep("SMBC日興証券",nrow(smbc))
+smbc <- cbind(smbc,sales_co)
+smbc$monthly_rep[nchar(smbc$monthly_rep) > 3] <- "〇"
+smbc$weekly_rep[nchar(smbc$weekly_rep) > 3] <- "〇"
+smbc <- smbc[, columnList]
+
+
+# rbind all securities companies
+
+all_data2 <- rbind(mitubushi,daiwa,smbc)
 ```
 
 
 ## 三菱UFJ国際
 
 ```{r results='asis'}
-mitubushi <- data_all[data_all$man_co=="三菱UFJ国際",]
-mitubushi <- mitubushi[, columnList] #access data
-kable(mitubushi)
+mitsubishi_UFJ_koskusai <- subset(all_data2 , asset_manage_co == "三菱UFJ国際")
+mitsubishi_UFJ_koskusai <- mitsubishi_UFJ_koskusai[order(mitsubishi_UFJ_koskusai$sales_co, mitsubishi_UFJ_koskusai$fund_code),]
+kable(mitsubishi_UFJ_koskusai)
 ```
 
 ## 野村アセット
 
 ```{r results='asis'}
-nomura <- data_all[data_all$man_co=="野村アセット",]
-nomura <- nomura[, columnList] #access data
+nomura <- subset(all_data2 , asset_manage_co == "野村アセット")
+nomura  <- nomura[order(nomura$sales_co, nomura$fund_code),]
 kable(nomura)
 ```
 
@@ -60,8 +105,8 @@ kable(nomura)
 ##ピクテ投信
 
 ```{r results='asis'}
-pikute <- data_all[data_all$man_co=="ピクテ",]
-pikute <- pikute[, columnList] #access data
+pikute <- subset(all_data2 , asset_manage_co == "ピクテ")
+pikute <- pikute[order(pikute$sales_co, pikute$fund_code),]
 kable(pikute)
 ```
 
@@ -70,7 +115,8 @@ kable(pikute)
 ## 三井住友DS
 
 ```{r results='asis'}
-ds <- data_all[data_all$man_co=="三井住友DS",]
+DS <- subset(all_data2 , asset_manage_co == "三井住友DS")
+DS  <- DS[order(DS$sales_co, DS$fund_code),]
 kable(ds)
 ```
 
