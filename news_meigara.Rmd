@@ -1,0 +1,52 @@
+---
+title: "銘柄ニュース一日"
+author: '@kenji_dobuchi'
+date: "`r format(Sys.time(), '%Y/%m/%d %H:%M:%OS')`"
+output: html_document
+---
+
+```{r include=FALSE}
+# パッケージの読み込みなどの前処理。レポートには表示しません。
+require("RPostgreSQL")
+library(knitr)
+library(pander)
+library(DBI)
+library(ggplot2)
+library(rvest)
+library(tidyverse)
+library(magrittr)
+library(reshape2)
+library(stringr)
+library(formattable)
+
+pw <- {
+  "kabu"
+}
+
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "postgres",
+                 host = "localhost", port = 5432,
+                 user = "postgres", password = pw)
+rm(pw) # removes the password
+
+data_all2 <- dbGetQuery(con,"select code,name,title,time_zone,changed_val,score from public.news_by_change_value_zones_limited")
+data_all2[2] <- data.frame(lapply(data_all2[2],iconv,from="utf-8",to="cp932"))
+data_all2[3] <- data.frame(lapply(data_all2[3],iconv,from="utf-8",to="cp932"))
+
+
+
+
+```
+
+
+```{r results='asis'}
+formattable(data_all2, list(
+  time_zone = color_tile("white", "orange"), #　年齢は高いほど白→オレンジへ
+  #--score = formatter("span", #grade　の列について、次の行で色々指定。"span"は気にしない。デフォルト。
+                    #--style = x ~ ifelse(x == "A", style(color = "green", font.weight = "bold"), NA)),
+  changed_val = color_bar("tomato"),#test1の得点には、棒グラフ表示をつける。色は”tomato”。Rのデフォルトカラーの一つ
+  score = formatter("span",#ランキングfunctionの追加
+                          style = x ~ style(color = ifelse(rank(-x) <= 3, "green", "gray")),
+                          x ~ sprintf("%.2f (rank: %g)", x, rank(-x)))
+))
+  ```

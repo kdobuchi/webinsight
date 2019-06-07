@@ -1,0 +1,3504 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="@kenji_dobuchi" />
+
+
+<title>銘柄ニュース一日</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">アクセス解析</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">HOME</a>
+</li>
+<li>
+  <a href="report.html">エラー状況</a>
+</li>
+<li>
+  <a href="monthly_report_toshin.html">運用レポート利用状況報告</a>
+</li>
+<li>
+  <a href="news_meigara.html">銘柄ニュース一日</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">銘柄ニュース一日</h1>
+<h4 class="author"><span class="citation">@kenji_dobuchi</span></h4>
+<h4 class="date">2019/06/07 11:33:29</h4>
+
+</div>
+
+
+<pre class="r"><code>formattable(data_all2, list(
+  time_zone = color_tile(&quot;white&quot;, &quot;orange&quot;), #　年齢は高いほど白→オレンジへ
+  #--score = formatter(&quot;span&quot;, #grade　の列について、次の行で色々指定。&quot;span&quot;は気にしない。デフォルト。
+                    #--style = x ~ ifelse(x == &quot;A&quot;, style(color = &quot;green&quot;, font.weight = &quot;bold&quot;), NA)),
+  changed_val = color_bar(&quot;tomato&quot;),#test1の得点には、棒グラフ表示をつける。色は”tomato”。Rのデフォルトカラーの一つ
+  score = formatter(&quot;span&quot;,#ランキングfunctionの追加
+                          style = x ~ style(color = ifelse(rank(-x) &lt;= 3, &quot;green&quot;, &quot;gray&quot;)),
+                          x ~ sprintf(&quot;%.2f (rank: %g)&quot;, x, rank(-x)))
+))</code></pre>
+<pre><code>## Warning in fun(as.numeric(x), ...): 強制変換により NA が生成されました</code></pre>
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+code
+</th>
+<th style="text-align:right;">
+name
+</th>
+<th style="text-align:right;">
+title
+</th>
+<th style="text-align:right;">
+time_zone
+</th>
+<th style="text-align:right;">
+changed_val
+</th>
+<th style="text-align:right;">
+score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2914
+</td>
+<td style="text-align:right;">
+ＪＴ
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -23-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.2600%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">24.00 (rank: 92)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2914
+</td>
+<td style="text-align:right;">
+ＪＴ
+</td>
+<td style="text-align:right;">
+今週の注目銘柄─ ブル/ベア比率は更に低下、注目銘柄も分散化し牽引役が見当たらない状態
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">-180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.2600%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">24.00 (rank: 92)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4063
+</td>
+<td style="text-align:right;">
+信越化学工業(株)
+</td>
+<td style="text-align:right;">
+先物・OP市況－日経平均寄与度ランキング（大引け）のプラス寄与トップはファーストリテイ
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.4800%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4063
+</td>
+<td style="text-align:right;">
+信越化学工業(株)
+</td>
+<td style="text-align:right;">
+再)企業の想定為替レート、資源価格の一覧、直近60日分
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.4800%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5411
+</td>
+<td style="text-align:right;">
+ジェイ　エフ　イー　ホールディングス(株)
+</td>
+<td style="text-align:right;">
+RR【野村證券】　松本 裕司||鉄鋼：4～5月統計 - 国内在庫多い状態続く、中国鉄鋼業PMI悪化 鉄屑の国際価格は反転しているが、普通鋼電炉が相対的に良好
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.5100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5411
+</td>
+<td style="text-align:right;">
+ジェイ　エフ　イー　ホールディングス(株)
+</td>
+<td style="text-align:right;">
+前場コメント No.13　ハナツアー、日本製鉄、グローリー、ニチイ学館、ファーマライズなど
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.5100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8601
+</td>
+<td style="text-align:right;">
+(株)大和証券グループ本社
+</td>
+<td style="text-align:right;">
+◆名古屋市、10年債のマーケティングを開始
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca6a">-240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.5900%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8601
+</td>
+<td style="text-align:right;">
+(株)大和証券グループ本社
+</td>
+<td style="text-align:right;">
+エレコム－大和が目標株価引き上げ　短期・中期利益成長に安心感のある銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.5900%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6301
+</td>
+<td style="text-align:right;">
+コマツ
+</td>
+<td style="text-align:right;">
+5月31日の業績予想更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc150">-45</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.6800%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">31.00 (rank: 69.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6301
+</td>
+<td style="text-align:right;">
+コマツ
+</td>
+<td style="text-align:right;">
+企業の想定為替レート、資源価格の一覧、直近60日分
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc41">60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.6800%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">31.00 (rank: 69.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5020
+</td>
+<td style="text-align:right;">
+ＪＸＴＧホールディングス(株)
+</td>
+<td style="text-align:right;">
+再)企業の想定為替レート、資源価格の一覧、直近60日分
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.8200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">14.00 (rank: 145)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5020
+</td>
+<td style="text-align:right;">
+ＪＸＴＧホールディングス(株)
+</td>
+<td style="text-align:right;">
+自社株買 発表会社一覧 (06/03 16:10)現在114件
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.8200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">14.00 (rank: 145)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8035
+</td>
+<td style="text-align:right;">
+東京エレクトロン(株)
+</td>
+<td style="text-align:right;">
+▼トリケミカル(4369)― 一時７％安　米半導体株安の煽りか、１Ｑ決算「先端技術の再評価につながる内容」＝三菱ＵＦＪ証
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbd45">30</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.8300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8035
+</td>
+<td style="text-align:right;">
+東京エレクトロン(株)
+</td>
+<td style="text-align:right;">
+★日経平均寄与度ランキング(14:00)マイナストップはソフトバンクG(9984)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb020">300</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-0.8300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4739
+</td>
+<td style="text-align:right;">
+伊藤忠テクノソリューションズ(株)
+</td>
+<td style="text-align:right;">
+ＣＴＣ－東海東京が目標株価引き上げ　20.3期営業利益は会社計画比で上振れを見込む
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbf4c">-15</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.2100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">27.00 (rank: 82)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4739
+</td>
+<td style="text-align:right;">
+伊藤忠テクノソリューションズ(株)
+</td>
+<td style="text-align:right;">
+前場コメント No.7　ホンダ、山一電機、ＣＴＣ、サカイ引越センター、東和フードなど
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.2100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">27.00 (rank: 82)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7519
+</td>
+<td style="text-align:right;">
+五洋インテックス(株)
+</td>
+<td style="text-align:right;">
+分割実施・新株交付リスト／分割実施・新株交付リスト
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.2200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">18.00 (rank: 124)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6324
+</td>
+<td style="text-align:right;">
+(株)ハーモニック・ドライブ・システムズ
+</td>
+<td style="text-align:right;">
+【売り気配スタート】日経レバやソフトバンクG、武田など616銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbf4c">-15</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.2700%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6324
+</td>
+<td style="text-align:right;">
+(株)ハーモニック・ドライブ・システムズ
+</td>
+<td style="text-align:right;">
+◇新興株前引け　ジャスダック、マザーズ続落　バルテス株購入で換金売りも
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.2700%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5019
+</td>
+<td style="text-align:right;">
+出光興産(株)
+</td>
+<td style="text-align:right;">
+東証1部（11：30現在）／マーケットプロファイル・ＩＲブレイク銘柄一覧
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.4500%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">37.00 (rank: 62.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5019
+</td>
+<td style="text-align:right;">
+出光興産(株)
+</td>
+<td style="text-align:right;">
+再)企業の想定為替レート、資源価格の一覧、直近60日分
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.4500%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">37.00 (rank: 62.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5301
+</td>
+<td style="text-align:right;">
+東海カーボン(株)
+</td>
+<td style="text-align:right;">
+発行登録：ザ・ホンコン・アンド・シャンハイ・バンキング、売出5000億円
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc41">60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.5600%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">43.00 (rank: 58.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5301
+</td>
+<td style="text-align:right;">
+東海カーボン(株)
+</td>
+<td style="text-align:right;">
+大和ハウス、東芝など（追加）Rating／証券各社レーティング
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb020">300</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.5600%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">43.00 (rank: 58.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4689
+</td>
+<td style="text-align:right;">
+ヤフー(株)
+</td>
+<td style="text-align:right;">
+◇ヤフー、個人の信用スコアを外部提供
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.6000%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">22.00 (rank: 96.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4689
+</td>
+<td style="text-align:right;">
+ヤフー(株)
+</td>
+<td style="text-align:right;">
+ココカラＦが値上がりトップ／東証１部 出来高・上昇率・下落率 上位10銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.6000%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">22.00 (rank: 96.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6095
+</td>
+<td style="text-align:right;">
+メドピア(株)
+</td>
+<td style="text-align:right;">
+分割実施・新株交付リスト／分割実施・新株交付リスト
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.6200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">98.00 (rank: 35.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6095
+</td>
+<td style="text-align:right;">
+メドピア(株)
+</td>
+<td style="text-align:right;">
+エクイティ 発表会社一覧 (06/03 17:40)現在 11件
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.6200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">98.00 (rank: 35.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3902
+</td>
+<td style="text-align:right;">
+メディカル・データ・ビジョン(株)
+</td>
+<td style="text-align:right;">
+雲抜け銘柄一覧（週足）／一目均衡表・雲抜け銘柄一覧
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbe47">15</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.7000%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">47.00 (rank: 56)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3902
+</td>
+<td style="text-align:right;">
+メディカル・データ・ビジョン(株)
+</td>
+<td style="text-align:right;">
+上昇率ランキング(期間別)-大引時点
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.7000%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">47.00 (rank: 56)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6736
+</td>
+<td style="text-align:right;">
+サン電子(株)
+</td>
+<td style="text-align:right;">
+【売り気配スタート】日経レバやソフトバンクG、武田など616銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbf4c">-15</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.9100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">29.00 (rank: 76)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6736
+</td>
+<td style="text-align:right;">
+サン電子(株)
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -8-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-1.9100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">29.00 (rank: 76)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3825
+</td>
+<td style="text-align:right;">
+(株)リミックスポイント
+</td>
+<td style="text-align:right;">
+仮想通貨取引に新規制 改正法成立／本日の物色テーマ
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">-180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-2.2800%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">14.00 (rank: 145)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7575
+</td>
+<td style="text-align:right;">
+日本ライフライン(株)
+</td>
+<td style="text-align:right;">
+▼日中リタリバ(リバーサル)[10:00] アトラエ、ネクシィーズG、レオパレス21 が上位
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc41">60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-2.5500%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">15.00 (rank: 141)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7575
+</td>
+<td style="text-align:right;">
+日本ライフライン(株)
+</td>
+<td style="text-align:right;">
+◇日中リタリバ(ハイ＆ロー)[10:00] スマートバリュ、明和産、日本通信 が上位
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc41">60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-2.5500%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">15.00 (rank: 141)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3092
+</td>
+<td style="text-align:right;">
+(株)ＺＯＺＯ
+</td>
+<td style="text-align:right;">
+日経平均は273円安でスタート、ソフトバンクGや村田製などがさえない／東京市場・寄り付き概況【EMW】
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc43">45</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-2.9300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">298.00 (rank: 9.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3092
+</td>
+<td style="text-align:right;">
+(株)ＺＯＺＯ
+</td>
+<td style="text-align:right;">
+オンライン証券動向（31日）～ファストリ、ソフトバンクＧが買い越し
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">-60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-2.9300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">298.00 (rank: 9.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2436
+</td>
+<td style="text-align:right;">
+共同ピーアール(株)
+</td>
+<td style="text-align:right;">
+日本一Ｓ&lt;3851&gt;などが引き続きランクイン、スマホゲーム「魔界戦記ディスガイアRPG」のサービス再開を19年秋に延期／出来高変化動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-3.0300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">18.00 (rank: 124)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2436
+</td>
+<td style="text-align:right;">
+共同ピーアール(株)
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-3.0300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">18.00 (rank: 124)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4316
+</td>
+<td style="text-align:right;">
+(株)ビーマップ
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb020">300</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-3.2800%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">27.00 (rank: 82)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4427
+</td>
+<td style="text-align:right;">
+(株)ＥｄｕＬａｂ
+</td>
+<td style="text-align:right;">
+【買い気配スタート】コロプラやスクエニHD、ココカラファインなど27銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04e">-30</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-3.9200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">24.00 (rank: 92)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8848
+</td>
+<td style="text-align:right;">
+(株)レオパレス２１
+</td>
+<td style="text-align:right;">
+▼日中リタリバ(リバーサル)[15:00] 日本通信、トリケミカル、ライク が上位に浮上
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-4.5000%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">180.00 (rank: 19.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8848
+</td>
+<td style="text-align:right;">
+(株)レオパレス２１
+</td>
+<td style="text-align:right;">
+【初動銘柄】東証１部／エムアップ、スマートバリュなどが上にブレーク
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-4.5000%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">180.00 (rank: 19.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7036
+</td>
+<td style="text-align:right;">
+(株)イーエムネットジャパン
+</td>
+<td style="text-align:right;">
+丸井Ｇ　積極的株主還元もあり22/3期にかけてEPS年率14％成長、配当同22％成長へ（リサーチネット6/3）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-4.6700%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">81.00 (rank: 39.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7036
+</td>
+<td style="text-align:right;">
+(株)イーエムネットジャパン
+</td>
+<td style="text-align:right;">
+RR【Q企研岩井コスモ証券】　原田大輔 ||19/12期1Qは増収増益。地方中小企業のネット広告需要の取り込み進む／イーエムネットJ(7036)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">-60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-4.6700%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">81.00 (rank: 39.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4420
+</td>
+<td style="text-align:right;">
+イーソル(株)
+</td>
+<td style="text-align:right;">
+【空売り規制】はてなや日本色材など発動（18銘柄：11時）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-4.7700%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">171.00 (rank: 21.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4420
+</td>
+<td style="text-align:right;">
+イーソル(株)
+</td>
+<td style="text-align:right;">
+本日のＱＵＩＣＫエクイティ・コメント
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-4.7700%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">171.00 (rank: 21.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4435
+</td>
+<td style="text-align:right;">
+(株)カオナビ
+</td>
+<td style="text-align:right;">
+IPO初値一覧：6月4日の予定―大英産業
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-5.0600%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">19.00 (rank: 119)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7064
+</td>
+<td style="text-align:right;">
+(株)ハウテレビジョン
+</td>
+<td style="text-align:right;">
+本日のＱＵＩＣＫエクイティ・コメント
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb329">240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-5.4300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">135.00 (rank: 27.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7064
+</td>
+<td style="text-align:right;">
+(株)ハウテレビジョン
+</td>
+<td style="text-align:right;">
+ハウテレビ （7064） ストップ安（3,810円）到達まで60円
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbf4c">-15</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-5.4300%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">135.00 (rank: 27.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6628
+</td>
+<td style="text-align:right;">
+オンキヨー(株)
+</td>
+<td style="text-align:right;">
+悪地合いに警戒しつつ中小型株の循環物色、IPOは大英産業／新興市場週間見通し
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-6.5200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">183.00 (rank: 17.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6628
+</td>
+<td style="text-align:right;">
+オンキヨー(株)
+</td>
+<td style="text-align:right;">
+AI: オンキヨー(6628) その他(9.83%→10.77%) エボリューション・テクノロジー・メディア・アンド・テレコミュなど[変更報告]
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb020">300</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-6.5200%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">183.00 (rank: 17.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7676
+</td>
+<td style="text-align:right;">
+(株)グッドスピード
+</td>
+<td style="text-align:right;">
+【買い気配スタート】日経ダブや日経ベア2、楽天Dベアなど67銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbf4c">-15</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-9.4100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">927.00 (rank: 3.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7676
+</td>
+<td style="text-align:right;">
+(株)グッドスピード
+</td>
+<td style="text-align:right;">
+【空売り規制】日本一Ｓやイーソルなど発動（13銘柄：10時）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc41">60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">-9.4100%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">927.00 (rank: 3.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8306
+</td>
+<td style="text-align:right;">
+(株)三菱ＵＦＪフィナンシャル・グループ
+</td>
+<td style="text-align:right;">
+◇海外送金を即時決済　日米欧の銀行、決済通貨の発行構想
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca6a">-240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.4900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">32.00 (rank: 66.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8306
+</td>
+<td style="text-align:right;">
+(株)三菱ＵＦＪフィナンシャル・グループ
+</td>
+<td style="text-align:right;">
+【寄り前注文】予想値下がり上位：インターライフ、スターマイカHD、リョービなど
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd07b">-360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.4900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">32.00 (rank: 66.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2002
+</td>
+<td style="text-align:right;">
+(株)日清製粉グループ本社
+</td>
+<td style="text-align:right;">
+日清製粉Ｇ－ＪＰモルガンが目標株価引き上げ　まだ織り込まれていない低ボラの成長性
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.5600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2002
+</td>
+<td style="text-align:right;">
+(株)日清製粉グループ本社
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -24-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.5600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8604
+</td>
+<td style="text-align:right;">
+野村ホールディングス(株)
+</td>
+<td style="text-align:right;">
+投信・5月 新規参入の｢Ｔロウプライス｣は資金流入額２位(約728億円) 運用会社別資金流入・残高増減
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb329">240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.5700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">29.00 (rank: 76)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8604
+</td>
+<td style="text-align:right;">
+野村ホールディングス(株)
+</td>
+<td style="text-align:right;">
+〔Market Flash〕労働需給はタイト化、配管工では人手不足～野村
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb329">240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.5700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">29.00 (rank: 76)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6479
+</td>
+<td style="text-align:right;">
+ミネベアミツミ(株)
+</td>
+<td style="text-align:right;">
+自社株買 発表会社一覧 (06/03 16:10)現在114件
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.6300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6479
+</td>
+<td style="text-align:right;">
+ミネベアミツミ(株)
+</td>
+<td style="text-align:right;">
+自社株買 発表会社一覧 (06/03 17:40)現在127件
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.6300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6857
+</td>
+<td style="text-align:right;">
+(株)アドバンテスト
+</td>
+<td style="text-align:right;">
+6月 3日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.6800% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">22.00 (rank: 96.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6857
+</td>
+<td style="text-align:right;">
+(株)アドバンテスト
+</td>
+<td style="text-align:right;">
+Tokyo Closing Stock Prices(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.6800% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">22.00 (rank: 96.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4091
+</td>
+<td style="text-align:right;">
+大陽日酸(株)
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -14-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4091
+</td>
+<td style="text-align:right;">
+大陽日酸(株)
+</td>
+<td style="text-align:right;">
+企業の想定為替レート、資源価格の一覧、直近60日分
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc41">60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7911
+</td>
+<td style="text-align:right;">
+凸版印刷(株)
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -28-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7911
+</td>
+<td style="text-align:right;">
+凸版印刷(株)
+</td>
+<td style="text-align:right;">
+【連続下落】フェンオールが19日連続安　6.36％下落
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3861
+</td>
+<td style="text-align:right;">
+王子ホールディングス(株)
+</td>
+<td style="text-align:right;">
+◇設備投資9.9％増　19年度　本社調査
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68b">-480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2432
+</td>
+<td style="text-align:right;">
+(株)ディー・エヌ・エー
+</td>
+<td style="text-align:right;">
+5月31日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">18.00 (rank: 124)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2432
+</td>
+<td style="text-align:right;">
+(株)ディー・エヌ・エー
+</td>
+<td style="text-align:right;">
+5月31日の業績予想更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">18.00 (rank: 124)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6981
+</td>
+<td style="text-align:right;">
+(株)村田製作所
+</td>
+<td style="text-align:right;">
+動意銘柄　オンライン証券動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">93.00 (rank: 37.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6981
+</td>
+<td style="text-align:right;">
+(株)村田製作所
+</td>
+<td style="text-align:right;">
+動意銘柄／オンライン証券動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.7700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">93.00 (rank: 37.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8058
+</td>
+<td style="text-align:right;">
+三菱商事(株)
+</td>
+<td style="text-align:right;">
+自社株買 発表会社一覧 (06/03 16:10)現在114件
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.8000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">33.00 (rank: 64.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8058
+</td>
+<td style="text-align:right;">
+三菱商事(株)
+</td>
+<td style="text-align:right;">
+自社株買 発表会社一覧 (06/03 15:40)現在102件
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.8000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">33.00 (rank: 64.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4755
+</td>
+<td style="text-align:right;">
+楽天(株)
+</td>
+<td style="text-align:right;">
+[SDC]League Table：株式市場、総引受額
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.9000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">73.00 (rank: 41.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4755
+</td>
+<td style="text-align:right;">
+楽天(株)
+</td>
+<td style="text-align:right;">
+起債観測：国内SB 6月3日
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.9000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">73.00 (rank: 41.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3436
+</td>
+<td style="text-align:right;">
+(株)ＳＵＭＣＯ
+</td>
+<td style="text-align:right;">
+再)企業の想定為替レート、資源価格の一覧、直近60日分
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca6a">-240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.9500% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">111.00 (rank: 30.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3436
+</td>
+<td style="text-align:right;">
+(株)ＳＵＭＣＯ
+</td>
+<td style="text-align:right;">
+企業の想定為替レート、資源価格の一覧、直近60日分
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">-60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.9500% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">111.00 (rank: 30.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4321
+</td>
+<td style="text-align:right;">
+ケネディクス(株)
+</td>
+<td style="text-align:right;">
+自社株買 発表会社一覧 (06/03 16:10)現在114件
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.9600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">31.00 (rank: 69.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4321
+</td>
+<td style="text-align:right;">
+ケネディクス(株)
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">0.9600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">31.00 (rank: 69.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1925
+</td>
+<td style="text-align:right;">
+大和ハウス工業(株)
+</td>
+<td style="text-align:right;">
+6月 3日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.0300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">27.00 (rank: 82)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1925
+</td>
+<td style="text-align:right;">
+大和ハウス工業(株)
+</td>
+<td style="text-align:right;">
+【材料発生】ココカラファインが16.62%の大幅高、東電力HDは2.32%高
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc41">60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.0300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">27.00 (rank: 82)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9022
+</td>
+<td style="text-align:right;">
+東海旅客鉄道(株)
+</td>
+<td style="text-align:right;">
+Tokyo Closing Stock Prices(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.0700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9022
+</td>
+<td style="text-align:right;">
+東海旅客鉄道(株)
+</td>
+<td style="text-align:right;">
+東京Marketナビゲーター1600★３日・日経平均は4日続落　売買代金首位はソフトバンクG
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.0700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9984
+</td>
+<td style="text-align:right;">
+ソフトバンクグループ(株)
+</td>
+<td style="text-align:right;">
+銘柄ラウンドUP(2)トヨタ､スズキ､スマバ､出光興産､クレセゾン､ソフトバンクG
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.1400% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">436.00 (rank: 5.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9984
+</td>
+<td style="text-align:right;">
+ソフトバンクグループ(株)
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -14-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.1400% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">436.00 (rank: 5.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9983
+</td>
+<td style="text-align:right;">
+(株)ファーストリテイリング
+</td>
+<td style="text-align:right;">
+底堅さは意識されるものの、トレンドは悪化傾向／クロージング
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">55.00 (rank: 51.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9983
+</td>
+<td style="text-align:right;">
+(株)ファーストリテイリング
+</td>
+<td style="text-align:right;">
+◇ソニー、デジタル人材の初任給優遇　最大２割増の730万円
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68b">-480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">55.00 (rank: 51.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6758
+</td>
+<td style="text-align:right;">
+ソニー(株)
+</td>
+<td style="text-align:right;">
+前場コメント No.9　日清製粉Ｇ、東洋水産、東京電力、八洲電機、ソニーなど
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2100% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">231.00 (rank: 11.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6758
+</td>
+<td style="text-align:right;">
+ソニー(株)
+</td>
+<td style="text-align:right;">
+6月 3日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2100% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">231.00 (rank: 11.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6762
+</td>
+<td style="text-align:right;">
+ＴＤＫ(株)
+</td>
+<td style="text-align:right;">
+6月 3日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">38.00 (rank: 60.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6762
+</td>
+<td style="text-align:right;">
+ＴＤＫ(株)
+</td>
+<td style="text-align:right;">
+RR【ＣＬＳＡ証券】　Amit Garg[U-PF]||TDK：Fragile earnings structure(31 May 2019)／ＴＤＫ(6762)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbc43">45</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">38.00 (rank: 60.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4217
+</td>
+<td style="text-align:right;">
+日立化成(株)
+</td>
+<td style="text-align:right;">
+上昇率ランキング(期間別)-大引時点
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4217
+</td>
+<td style="text-align:right;">
+日立化成(株)
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Week Ahead -2-(2)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9086
+</td>
+<td style="text-align:right;">
+(株)日立物流
+</td>
+<td style="text-align:right;">
+RR【いちよし】　甲斐　友美子||企業レポート：エーアイテイー／ＡＩＴ(9381)等
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6098
+</td>
+<td style="text-align:right;">
+(株)リクルートホールディングス
+</td>
+<td style="text-align:right;">
+5月31日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2800% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">26.00 (rank: 86.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6098
+</td>
+<td style="text-align:right;">
+(株)リクルートホールディングス
+</td>
+<td style="text-align:right;">
+日経平均寄与度ランキング(大引)マイナストップはソフトバンクG(9984)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.2800% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">26.00 (rank: 86.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4502
+</td>
+<td style="text-align:right;">
+武田薬品工業(株)
+</td>
+<td style="text-align:right;">
+動意銘柄　オンライン証券動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.3300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4502
+</td>
+<td style="text-align:right;">
+武田薬品工業(株)
+</td>
+<td style="text-align:right;">
+◇主な成り行き注文（東証・後場）コロプラ154万株の買い越し
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.3300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7735
+</td>
+<td style="text-align:right;">
+(株)ＳＣＲＥＥＮホールディングス
+</td>
+<td style="text-align:right;">
+6月 3日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.3900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">27.00 (rank: 82)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7735
+</td>
+<td style="text-align:right;">
+(株)ＳＣＲＥＥＮホールディングス
+</td>
+<td style="text-align:right;">
+RR【ドイツ証券株式】　優 吉田||半導体関連セクター: 株式市場は既にHuaweiスマホ消失を織り込みつつある
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcd73">-300</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.3900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">27.00 (rank: 82)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5706
+</td>
+<td style="text-align:right;">
+三井金属
+</td>
+<td style="text-align:right;">
+RR【野村證券】　松本 裕司||鉄鋼・非鉄・電線：米国による対メキシコ輸入関税影響 - 住友電気工業等の業績にマイナス影響リスク 多くの会社が自動車関連で生産拠点を持つ
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">-180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">18.00 (rank: 124)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5706
+</td>
+<td style="text-align:right;">
+三井金属
+</td>
+<td style="text-align:right;">
+転換銘柄一覧（その１）／パラボリック・シグナル転換銘柄一覧
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbf4c">-15</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">18.00 (rank: 124)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4651
+</td>
+<td style="text-align:right;">
+(株)サニックス
+</td>
+<td style="text-align:right;">
+RR【シェアードリサーチ】　＜ シェアードリサーチ ＞||サニックス／サニックス(4651)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">29.00 (rank: 76)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8111
+</td>
+<td style="text-align:right;">
+(株)ゴールドウイン
+</td>
+<td style="text-align:right;">
+【連続下落】フェンオールが19日連続安　6.36％下落
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6506
+</td>
+<td style="text-align:right;">
+(株)安川電機
+</td>
+<td style="text-align:right;">
+6月 3日の業績予想更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">65.00 (rank: 47.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6506
+</td>
+<td style="text-align:right;">
+(株)安川電機
+</td>
+<td style="text-align:right;">
+◇東証寄り付き　大幅続落　貿易摩擦の懸念続く　景気敏感安い
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc150">-45</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">65.00 (rank: 47.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7733
+</td>
+<td style="text-align:right;">
+オリンパス(株)
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -19-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">14.00 (rank: 145)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7733
+</td>
+<td style="text-align:right;">
+オリンパス(株)
+</td>
+<td style="text-align:right;">
+米国株は下落、メキシコへの強硬姿勢を嫌気（31日）／海外市場動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">-180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.4900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">14.00 (rank: 145)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3038
+</td>
+<td style="text-align:right;">
+(株)神戸物産
+</td>
+<td style="text-align:right;">
+【売り気配スタート】日経レバやソフトバンクG、武田など616銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04e">-30</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.5200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">54.00 (rank: 53.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3038
+</td>
+<td style="text-align:right;">
+(株)神戸物産
+</td>
+<td style="text-align:right;">
+上昇率ランキング(期間別)-大引時点
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.5200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">54.00 (rank: 53.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9466
+</td>
+<td style="text-align:right;">
+(株)アイドママーケティングコミュニケーション
+</td>
+<td style="text-align:right;">
+◇日中リタリバ(ハイ＆ロー)[15:00] アイモバイル、トップカルチャ、バリューHR が上位に浮上
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.5600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">68.00 (rank: 45.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9466
+</td>
+<td style="text-align:right;">
+(株)アイドママーケティングコミュニケーション
+</td>
+<td style="text-align:right;">
+下落率ランキング(期間別)-大引時点
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.5600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">68.00 (rank: 45.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3185
+</td>
+<td style="text-align:right;">
+夢展望(株)
+</td>
+<td style="text-align:right;">
+その他||TDnet その他(第三者割当により発行された第７回新株予約権（行使価額修正条項付き）の月間行使状況に関するお知らせ)／夢展望(3185)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.7500% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2413
+</td>
+<td style="text-align:right;">
+エムスリー(株)
+</td>
+<td style="text-align:right;">
+今週の注目銘柄─ ブル/ベア比率は更に低下、注目銘柄も分散化し牽引役が見当たらない状態
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">-180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.7500% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">47.00 (rank: 56)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7201
+</td>
+<td style="text-align:right;">
+日産自動車(株)
+</td>
+<td style="text-align:right;">
+◇日本版司法取引 導入１年　定着に課題　内部通報で実態把握
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">-1320</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.9300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">25.00 (rank: 88.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7201
+</td>
+<td style="text-align:right;">
+日産自動車(株)
+</td>
+<td style="text-align:right;">
+日産、２０２０年に新型ＥＶ投入へ　四輪駆動のＳＵＶ
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcd">-960</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">1.9300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">25.00 (rank: 88.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6838
+</td>
+<td style="text-align:right;">
+(株)多摩川ホールディングス
+</td>
+<td style="text-align:right;">
+◇新興株前引け　ジャスダック、マザーズ続落　バルテス株購入で換金売りも
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca6a">-240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">10.9500%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">63.00 (rank: 49.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6838
+</td>
+<td style="text-align:right;">
+(株)多摩川ホールディングス
+</td>
+<td style="text-align:right;">
+日本一Ｓ&lt;3851&gt;などが引き続きランクイン、スマホゲーム「魔界戦記ディスガイアRPG」のサービス再開を19年秋に延期／出来高変化動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04e">-30</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">10.9500%</span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">63.00 (rank: 49.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6976
+</td>
+<td style="text-align:right;">
+太陽誘電(株)
+</td>
+<td style="text-align:right;">
+5％ルール・取得（31日）－太陽誘電　三井住友トラストＡＭが11.54％→11.68％
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">-180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.1600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">198.00 (rank: 15.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6976
+</td>
+<td style="text-align:right;">
+太陽誘電(株)
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.1600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">198.00 (rank: 15.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7198
+</td>
+<td style="text-align:right;">
+アルヒ(株)
+</td>
+<td style="text-align:right;">
+6月 3日の株価レーティング更新銘柄一覧 - QUICKコンセンサス
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">540</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.1700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7198
+</td>
+<td style="text-align:right;">
+アルヒ(株)
+</td>
+<td style="text-align:right;">
+売買回転率ランキング(当日、5日平均) コロプラ、日本通信、enishが上位
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.1700% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3656
+</td>
+<td style="text-align:right;">
+ＫＬａｂ(株)
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.1900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3656
+</td>
+<td style="text-align:right;">
+ＫＬａｂ(株)
+</td>
+<td style="text-align:right;">
+☆株、先週動いた銘柄は　レオパレスが下落、Ｊディスプレは上昇
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">-180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.1900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3916
+</td>
+<td style="text-align:right;">
+デジタル・インフォメーション・テクノロジー(株)
+</td>
+<td style="text-align:right;">
+丸井Ｇ　積極的株主還元もあり22/3期にかけてEPS年率14％成長、配当同22％成長へ（リサーチネット6/3）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.2100% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">16.00 (rank: 133.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6777
+</td>
+<td style="text-align:right;">
+ｓａｎｔｅｃ(株)
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.2300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">15.00 (rank: 141)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6963
+</td>
+<td style="text-align:right;">
+ローム(株)
+</td>
+<td style="text-align:right;">
+【売り気配スタート】日経レバやソフトバンクG、武田など616銘柄
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04e">-30</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.2600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6963
+</td>
+<td style="text-align:right;">
+ローム(株)
+</td>
+<td style="text-align:right;">
+【連続上昇】コロプラやテクノアソシエが8日連続高　コロプラは30.19％上昇
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.2600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6232
+</td>
+<td style="text-align:right;">
+(株)自律制御システム研究所
+</td>
+<td style="text-align:right;">
+◇ドローン、産業向け広がる　けん引役はスタートアップ
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd383">-420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.4300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">109.00 (rank: 33.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6232
+</td>
+<td style="text-align:right;">
+(株)自律制御システム研究所
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.4300% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">109.00 (rank: 33.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3655
+</td>
+<td style="text-align:right;">
+(株)ブレインパッド
+</td>
+<td style="text-align:right;">
+【連続下落】フェンオールが19日連続安　6.36％下落
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaa10">420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.4900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">111.00 (rank: 30.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3655
+</td>
+<td style="text-align:right;">
+(株)ブレインパッド
+</td>
+<td style="text-align:right;">
+AI: ブレインP(3655) 保有減少(11.84%→10.51%) アセットマネジメントOne[変更報告]
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.4900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">111.00 (rank: 30.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6080
+</td>
+<td style="text-align:right;">
+Ｍ＆Ａキャピタルパートナーズ(株)
+</td>
+<td style="text-align:right;">
+上昇率ランキング(期間別)-大引時点
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.6400% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">13.00 (rank: 152)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4588
+</td>
+<td style="text-align:right;">
+オンコリスバイオファーマ(株)
+</td>
+<td style="text-align:right;">
+前日のＱＵＩＣＫエクイティ・コメント
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd383">-420</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.9200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">320.00 (rank: 7.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4588
+</td>
+<td style="text-align:right;">
+オンコリスバイオファーマ(株)
+</td>
+<td style="text-align:right;">
+オンライン証券動向（31日）～ファストリ、ソフトバンクＧが買い越し
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd07b">-360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">2.9200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">320.00 (rank: 7.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1724
+</td>
+<td style="text-align:right;">
+シンクレイヤ(株)
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb631">180</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">3.5200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">160.00 (rank: 25.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1724
+</td>
+<td style="text-align:right;">
+シンクレイヤ(株)
+</td>
+<td style="text-align:right;">
+東京Marketナビゲーター1600★３日・日経平均は4日続落　売買代金首位はソフトバンクG
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">3.5200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">160.00 (rank: 25.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4565
+</td>
+<td style="text-align:right;">
+そーせいグループ(株)
+</td>
+<td style="text-align:right;">
+【寄り前成り行き注文】コロプラは12万株の買い越し、みずほは141万株の売り越し
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04e">-30</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">3.7000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: green">1374.00 (rank: 1.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4565
+</td>
+<td style="text-align:right;">
+そーせいグループ(株)
+</td>
+<td style="text-align:right;">
+動意銘柄　オンライン証券動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">-60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">3.7000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: green">1374.00 (rank: 1.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4441
+</td>
+<td style="text-align:right;">
+トビラシステムズ(株)
+</td>
+<td style="text-align:right;">
+【空売り規制】イーブックやギークスなど発動（31銘柄：13時）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.1200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">70.00 (rank: 43.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4441
+</td>
+<td style="text-align:right;">
+トビラシステムズ(株)
+</td>
+<td style="text-align:right;">
+トビラシステムズ－3日続落　4月度「迷惑情報フィルタサービス」月間利用者数は6.2％増
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd07b">-360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.1200% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">70.00 (rank: 43.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3710
+</td>
+<td style="text-align:right;">
+ジョルダン(株)
+</td>
+<td style="text-align:right;">
+◎ジョルダン、「ジョルダン乗換案内」アプリにMasabi社のモバイルチケッティングサービス「Justride」を導入
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.5800% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">24.00 (rank: 92)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3710
+</td>
+<td style="text-align:right;">
+ジョルダン(株)
+</td>
+<td style="text-align:right;">
+その他||TDnet ＰＲ情報等(「ジョルダン乗換案内」アプリへのモバイルチケッティングサービスの導入決定)／ジョルダン(3710)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb020">300</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.5800% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">24.00 (rank: 92)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3914
+</td>
+<td style="text-align:right;">
+ＪＩＧ－ＳＡＷ(株)
+</td>
+<td style="text-align:right;">
+【寄り前注文】予想売買急増：フェスタリアHD、ココカラファイン、ガーラなど
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">-60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.8600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3914
+</td>
+<td style="text-align:right;">
+ＪＩＧ－ＳＡＷ(株)
+</td>
+<td style="text-align:right;">
+ウインテスト&lt;6721&gt;がランクイン、国内大手電気機器メーカーよりLCDアレイ検査装置受注／出来高変化動向
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb020">300</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.8600% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3010
+</td>
+<td style="text-align:right;">
+価値開発(株)
+</td>
+<td style="text-align:right;">
+前場／動いた株・出来た株
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb329">240</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.9000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3010
+</td>
+<td style="text-align:right;">
+価値開発(株)
+</td>
+<td style="text-align:right;">
+後場／動いた株・出来た株
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">4.9000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">20.00 (rank: 108)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2440
+</td>
+<td style="text-align:right;">
+(株)ぐるなび
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -12-(2)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">5.3000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">170.00 (rank: 23.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2440
+</td>
+<td style="text-align:right;">
+(株)ぐるなび
+</td>
+<td style="text-align:right;">
+Asia-Pacific Corporate Calendar - Month Ahead -15-(1)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa708">480</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">5.3000% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">170.00 (rank: 23.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9878
+</td>
+<td style="text-align:right;">
+(株)セキド
+</td>
+<td style="text-align:right;">
+その他||TDnet その他(当社株式の時価総額に係る猶予期間の解除についてのお知らせ)／セキド(9878)
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">5.9100% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">217.00 (rank: 13.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9878
+</td>
+<td style="text-align:right;">
+(株)セキド
+</td>
+<td style="text-align:right;">
+前場／動いた株・出来た株
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">-60</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">5.9100% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">217.00 (rank: 13.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9424
+</td>
+<td style="text-align:right;">
+日本通信(株)
+</td>
+<td style="text-align:right;">
+【寄り前成り行き注文】メディカネットは13万株の買い越し、みずほは138万株の売り越し
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">6.3400% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">19.00 (rank: 119)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9424
+</td>
+<td style="text-align:right;">
+日本通信(株)
+</td>
+<td style="text-align:right;">
+【寄り前成り行き注文】コロプラは12万株の買い越し、みずほは141万株の売り越し
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">-120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">6.3400% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">19.00 (rank: 119)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6177
+</td>
+<td style="text-align:right;">
+ＡｐｐＢａｎｋ(株)
+</td>
+<td style="text-align:right;">
+株式空売り残高：報告者別一覧（東証3日公表分）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">360</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">7.2900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">30.00 (rank: 72.5)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6177
+</td>
+<td style="text-align:right;">
+ＡｐｐＢａｎｋ(株)
+</td>
+<td style="text-align:right;">
+AppBank （6177） 5分前比急落 -7.04%（370円）
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb939">120</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: tomato">7.2900% </span>
+</td>
+<td style="text-align:right;">
+<span style="color: gray">30.00 (rank: 72.5)</span>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

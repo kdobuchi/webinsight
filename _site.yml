@@ -8,6 +8,8 @@ navbar:
       href: report.html
     - text: "運用レポート利用状況報告"
       href: monthly_report_toshin.html
+    - text: "銘柄ニュース一日"
+      href: news_meigara.html
 output:
   html_document:
 output_dir: "docs"

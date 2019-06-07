@@ -42,7 +42,6 @@ data_all[18] <- data.frame(lapply(data_all[18],iconv,from="utf-8",to="cp932"))
 # columnList <- c("fund_code", "fund_true_name", "sales_co","man_co","nickname","weekly_rep","monthly_rep")
 
 columnList <- c("asset_manage_co", "fund_true_name","nickname","fund_code","sales_co","weekly_rep","monthly_rep")
-
 ## 三菱UFJ銀行
 
 mitubushi <- subset(data_all , grepl("RPM", btmu_partition))
@@ -80,35 +79,33 @@ smbc <- smbc[, columnList]
 
 
 ## 岡三証券
-
-okasan <- subset(data_all , oks_fund_name != "")
+okasan <- subset(data_all , oks_attribute != "")
 sales_co <- rep("岡三証券",nrow(okasan))
 okasan <- cbind(okasan,sales_co)
-okasan$monthly_rep[nchar(okasan$monthly_rep) > 3] <- "〇"
-okasan$weekly_rep[nchar(okasan$weekly_rep) > 3] <- "〇"
+okasan$monthly_rep[grepl("MOR", okasan$oks_attribute) == TRUE & nchar(okasan$monthly_rep) > 3] <- "〇"
+okasan$weekly_rep[grepl("WER", okasan$oks_attribute) == TRUE & nchar(okasan$weekly_rep) > 3] <- "〇"
+okasan[grepl("MOR", okasan$oks_attribute) == TRUE & okasan$asset_manage_code == '01' , "monthly_rep"] <- "〇"
+okasan[grepl("WER", okasan$oks_attribute) == TRUE & okasan$asset_manage_code == '01' , "weekly_rep"] <- "〇"
 okasan <- okasan[, columnList]
 
-
-
 ## 岡三オンライン証券
-
-okasan_on <- subset(data_all , oos_fund_name != "" )
+okasan_on <- subset(data_all , oos_attribute != "" )
 sales_co <- rep("岡三オンライン証券",nrow(okasan_on))
 okasan_on <- cbind(okasan_on,sales_co)
-okasan_on$monthly_rep[nchar(okasan_on$monthly_rep) > 3] <- "〇"
-okasan_on$weekly_rep[nchar(okasan_on$weekly_rep) > 3] <- "〇"
+okasan_on$monthly_rep[grepl("MOR", okasan_on$oos_attribute) == TRUE & nchar(okasan_on$monthly_rep) > 3] <- "〇"
+okasan_on$weekly_rep[grepl("WER", okasan_on$oos_attribute) == TRUE & nchar(okasan_on$weekly_rep) > 3] <- "〇"
+okasan_on[grepl("MOR", okasan_on$oos_attribute) == TRUE & okasan_on$asset_manage_code == '01' , "monthly_rep"] <- "〇"
+okasan_on[grepl("WER", okasan_on$oos_attribute) == TRUE & okasan_on$asset_manage_code == '01' , "weekly_rep"] <- "〇"
 okasan_on<- okasan_on[, columnList]
 
-## GMOクリック証券
 
-gmo <- subset(data_all , gmocls_reward != "" )
+## GMOクリック証券
+gmo <- subset(data_all , gmocls_category != "" )
 sales_co <- rep("GMOクリック証券",nrow(gmo))
 gmo <- cbind(gmo,sales_co)
-gmo$monthly_rep[nchar(gmo$monthly_rep) > 3] <- "〇"
-gmo$weekly_rep[nchar(gmo$weekly_rep) > 3] <- "〇"
+gmo$monthly_rep[grepl("MOR", gmo$gmocls_category) == TRUE & nchar(gmo$monthly_rep) > 3] <- "〇"
+gmo$weekly_rep[grepl("WER", gmo$gmocls_category) == TRUE & nchar(gmo$weekly_rep) > 3] <- "〇"
 gmo<- gmo[, columnList]
-
-
 
 
 
